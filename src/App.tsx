@@ -313,14 +313,15 @@ const ariaSamples = [
 ];
 
 const experience = [
-  ["SEP 2026 — PRESENT", "ISOQOL", "Social Listening Consultant", "Listening across LinkedIn, X and the wider web to map conversation around patient-reported outcomes, quality of life research and the society’s audiences."],
+  ["SEP 2026 — PRESENT · CONTRACT TO NOV 2026", "ISOQOL", "Social Listening Consultant", "Listening across LinkedIn, X and the wider web to map conversation around patient-reported outcomes, quality of life research and the society’s audiences."],
   ["FEB 2022 — JUL 2026", "Buckinghamshire Business First", "Social Media Marketing Manager", "Owned social channels, content planning and reporting for a business growth hub supporting SMEs. Led the “Part of Something Bigger” brand positioning campaign."],
   ["NOV 2022 — FEB 2023", "ARIA", "Digital Communications Manager · Launch Team", "Built launch-period digital strategy and produced social, web and email communications ahead of the agency’s public launch."],
   ["MAY 2021 — DEC 2021", "2112 Communications", "Social Media Manager", "Managed LinkedIn publishing, paid activation and stakeholder approvals for HSBC Asset Management."],
   ["DEC 2020 — MAR 2021", "ABBA Voyage", "Digital Marketing Consultant", "Researched existing and emerging audiences and developed paid media recommendations ahead of launch."],
   ["MAR 2020 — NOV 2020", "dentsu", "Social Media Strategist", "Worked across J.P. Morgan Asset Management, Novartis UK and Unilever, building strategy, audience insight and KPI frameworks."],
   ["JUL 2015 — MAY 2019", "Hartley-Stone Limited", "Account Manager, Social Media", "Planned and published B2B social content for technology and industrial clients including Vanderbilt, Siemens UK and Lucideon; produced client reports and presentations, and built long-term client relationships."],
-  ["MAY 2012 — MAR 2020", "Two Lane Social", "Social Media Manager / Freelance Consultant", "Began freelance social media work and volunteering while at university. Later built and managed my own freelance client portfolio, including a small wealth management company, charities, solopreneurs and an innovation institute, delivering social strategy, content and advertising."],
+  ["MAY 2015 — MAR 2020", "Two Lane Social + self-employed clients", "Social Media Manager / Freelance Consultant", "Ran social media for founders of SMEs, start-ups and financial services businesses, from content to advertising. Clients included a small wealth management company, charities, solopreneurs and an innovation institute."],
+  ["FROM 2012", "Freelance + volunteer work", "While at university", "Started freelance social media work and volunteering alongside university."],
 ];
 
 const capabilities = [
@@ -868,7 +869,7 @@ function App() {
             description="“Part of Something Bigger” connected member stories and event video across PR, video, digital and marketing teams. I owned the weekly rhythm and check-ins to keep the campaign coordinated."
             metric="+859%"
             measure="LinkedIn link clicks"
-            note="Weighted monthly average: 1,333 → 12,780"
+            note="Weighted monthly average · 2022/23: 1,333 → 2025/26: 12,780"
             secondaryMetric="12–15%"
             secondaryMeasure="Average LinkedIn click-through rate"
             secondaryNote="2024–25 average · up from 7–8% in 2022"
@@ -1002,7 +1003,7 @@ function App() {
           </div>
           <div className="camilla-education-languages">
             <h3>Languages</h3>
-            <span>English · Spanish · French</span>
+            <span>English (native) · Spanish (fluent) · French (fluent written)</span>
           </div>
         </div>
       </section>
