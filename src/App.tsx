@@ -872,17 +872,6 @@ function App() {
             roleDescription="Audience research, competitor review, content planning and KPI frameworks, working with regional marketing teams."
           />
           <CaseStudy
-            project="aria"
-            artwork="ARIA"
-            category="ARIA · Digital communications launch"
-            title="Give a new agency a clear voice."
-            description="Built launch-period digital strategy and produced social, web and email communications ahead of the Advanced Research and Invention Agency’s public launch. I authored the social posts shown here for founding-team recruitment and Programme Director outreach."
-            metric="4,500+"
-            measure="Social followers from zero"
-            note="During a two-month launch period"
-            variant="reverse"
-          />
-          <CaseStudy
             project="hsbc"
             category="HSBC Asset Management · B2B LinkedIn"
             title="Reach the people making the decisions."
@@ -914,6 +903,17 @@ function App() {
             metric="2020–21"
             measure="Pre-launch strategy"
             note="Audience research · Paid media recommendations"
+          />
+          <CaseStudy
+            project="aria"
+            artwork="ARIA"
+            category="ARIA · Digital communications launch"
+            title="Give a new agency a clear voice."
+            description="Built launch-period digital strategy and produced social, web and email communications ahead of the Advanced Research and Invention Agency’s public launch. I authored the social posts shown here for founding-team recruitment and Programme Director outreach."
+            metric="4,500+"
+            measure="Social followers from zero"
+            note="During a two-month launch period"
+            variant="reverse"
           />
 
           <div className="camilla-work-small">
