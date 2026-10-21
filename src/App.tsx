@@ -45,6 +45,9 @@ import abbaPresalesPostImage from "./assets/abba-social-presales.jpg";
 import abbaCountdownPostImage from "./assets/abba-social-countdown.jpg";
 import ariaSocialRecruitmentImage from "./assets/aria-social-recruitment.jpg";
 import ariaSocialProgrammeDirectorImage from "./assets/aria-social-programme-director.jpg";
+import ariaVideoInterviewSafetyImage from "./assets/aria-video-interview-safety.jpg";
+import ariaProgrammeDirectorsArticleImage from "./assets/aria-programme-directors-article.jpg";
+import ariaVideoFoundingCohortImage from "./assets/aria-video-founding-cohort.jpg";
 
 const testimonials = [
   {
@@ -283,6 +286,21 @@ const abbaSamples = [
 
 const ariaSamples = [
   {
+    image: ariaVideoInterviewSafetyImage,
+    alt: "Screenshot of an ARIA web article with a subtitled interview video, edited to match ARIA’s prescribed simple branding.",
+    caption: "Edited video · ARIA simple branding",
+  },
+  {
+    image: ariaVideoFoundingCohortImage,
+    alt: "Screenshot of an ARIA article with a subtitled interview video featuring a founding-cohort member.",
+    caption: "Edited video · Founding cohort interview",
+  },
+  {
+    image: ariaProgrammeDirectorsArticleImage,
+    alt: "Screenshot of ARIA’s Introducing Our Programme Directors article and its key takeaways.",
+    caption: "Article · Introducing Programme Directors",
+  },
+  {
     image: ariaSocialRecruitmentImage,
     alt: "Screenshot of ARIA social posts authored by Camilla: a founding-team recruitment call and an update closing the Programme Director open call.",
     caption: "Authored posts · Founding team recruitment",
@@ -376,8 +394,8 @@ function CampaignArtwork({ project, style }: { project: "bigger" | "aria" | "ski
       )}
       {project === "aria" && (
         <>
-          <span className="cdp-art-note">AUTHORED SOCIAL POSTS · RECRUITMENT + PROGRAMME DIRECTOR OUTREACH · 2023</span>
-          <div className="cdp-bigger-gallery cdp-aria-gallery" tabIndex={0} aria-label="ARIA social posts authored by Camilla about founding-team recruitment and Programme Director outreach. Scroll to explore and open images at full size.">
+          <span className="cdp-art-note">VIDEO EDITS + AUTHORED SOCIAL POSTS · ARIA SIMPLE BRANDING · 2023</span>
+          <div className="cdp-bigger-gallery cdp-aria-gallery" tabIndex={0} aria-label="ARIA interview-video screenshots edited to the prescribed simple branding, alongside social posts authored by Camilla. Scroll to explore and open images at full size.">
             {ariaSamples.map((sample) => (
               <figure key={sample.caption}>
                 <a href={sample.image} target="_blank" rel="noreferrer" aria-label={`Open full-size image: ${sample.caption}`}>
@@ -909,10 +927,11 @@ function App() {
             artwork="ARIA"
             category="ARIA · Digital communications launch"
             title="Give a new agency a clear voice."
-            description="Built launch-period digital strategy and produced social, web and email communications ahead of the Advanced Research and Invention Agency’s public launch. I authored the social posts shown here for founding-team recruitment and Programme Director outreach."
+            description="Built launch-period digital strategy and produced social, web and email communications ahead of the Advanced Research and Invention Agency’s public launch. The gallery includes authored recruitment posts, a Programme Director article and interview-video examples."
             metric="4,500+"
             measure="Social followers from zero"
             note="During a two-month launch period"
+            roleDescription="Edited the interview videos to match ARIA’s prescribed simple branding, and authored social posts for founding-team recruitment and Programme Director outreach."
             variant="reverse"
           />
 
