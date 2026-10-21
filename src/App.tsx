@@ -344,7 +344,7 @@ function CampaignArtwork({ project, style }: { project: "bigger" | "aria" | "ski
         : project === "abba"
           ? "ABBA Voyage pre-launch audience research and paid media recommendations"
         : project === "skills"
-          ? "Bucks Skills Show TikTok video ad"
+          ? "Buckinghamshire Skills Hub TikTok video ad"
           : `${style} campaign artwork placeholder`;
 
   return (
@@ -417,7 +417,7 @@ function CampaignArtwork({ project, style }: { project: "bigger" | "aria" | "ski
             playsInline
             preload="metadata"
             poster={bucksSkillsShowPoster}
-            aria-label="Bucks Skills Show TikTok ad conceived by Camilla Du Preez, who also helped film it"
+            aria-label="Buckinghamshire Skills Hub TikTok ad conceived by Camilla Du Preez, who also helped film it"
           >
             <source src={bucksSkillsShowVideo} type="video/mp4" />
             Your browser does not support embedded video.
@@ -938,7 +938,7 @@ function App() {
           <div className="camilla-work-small">
             <CaseStudy
               project="skills"
-              artwork="Bucks Skills Show"
+              artwork="Buckinghamshire Skills Hub"
               category="Buckinghamshire Business First · Paid activation"
               title="From creative idea to registrations."
               description="I conceived the idea, helped film this TikTok ad and ran the paid ads myself. The campaign contributed to 20% of event registrations."
