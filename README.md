@@ -1,13 +1,13 @@
 # Camilla Du Preez — Social Media Portfolio
 
-Personal portfolio site for social media and digital communications work. This public repository contains the site source and the portfolio visuals used by the site.
+Personal portfolio site for social media and digital communications work. This public repository contains the source code and the portfolio visuals used by the site.
 
-## Local preview
+## Website
 
-Install Node.js 22 or newer, then run `npm install` and `npm run dev`.
+The built site is published at https://camillaspica.github.io/. Every push to `main` deploys the committed `dist/` folder.
 
-## GitHub Pages
+## Updating the site
 
-Every push to `main` builds the Vite site and deploys it to https://camillaspica.github.io/.
+Edit the source in `src/`, run `npm install` and `npm run build`, then commit both your source changes and the updated `dist/` folder. The Pages workflow publishes the built folder directly.
 
-The site is built from the public source in this repository. After purchasing a custom domain, add it in this repository's Pages settings.
+After purchasing a custom domain, add it in this repository's Pages settings.
