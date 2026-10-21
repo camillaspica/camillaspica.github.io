@@ -868,6 +868,20 @@ function App() {
             videoUrl="https://lnkd.in/p/eAA3xgvh"
           />
           <CaseStudy
+            project="jpmam"
+            artwork="J.P. Morgan Asset Management"
+            category="J.P. Morgan Asset Management · dentsu · Social strategy"
+            title="One social framework across 12 EMEA markets."
+            description="I developed a regional social strategy across 12 EMEA markets, connecting audience and competitor research to content planning, KPIs and reporting. The gallery brings together selected LinkedIn content examples, top-post analysis and a social-listening conversation-trend chart. The supplied 2020 weekly-content review also records a native 529 PDF test with 167% higher CTR than off-platform links."
+            metric="12"
+            measure="EMEA markets"
+            note="Strategy framework · 2020"
+            secondaryMetric="5×"
+            secondaryMeasure="Peer reach for sponsored fixed-income content"
+            secondaryNote="Six-month competitor review; a benchmark finding, not a campaign result."
+            roleDescription="Audience research, competitor review, content planning and KPI frameworks, working with regional marketing teams."
+          />
+          <CaseStudy
             project="aria"
             artwork="ARIA"
             category="ARIA · Digital communications launch"
@@ -887,20 +901,6 @@ function App() {
             metric="~600"
             measure="First-stage enquiries a month"
             note="Targeting treasurers and CFOs"
-          />
-          <CaseStudy
-            project="jpmam"
-            artwork="J.P. Morgan Asset Management"
-            category="J.P. Morgan Asset Management · dentsu · Social strategy"
-            title="One social framework across 12 EMEA markets."
-            description="I developed a regional social strategy across 12 EMEA markets, connecting audience and competitor research to content planning, KPIs and reporting. The gallery brings together selected LinkedIn content examples, top-post analysis and a social-listening conversation-trend chart. The supplied 2020 weekly-content review also records a native 529 PDF test with 167% higher CTR than off-platform links."
-            metric="12"
-            measure="EMEA markets"
-            note="Strategy framework · 2020"
-            secondaryMetric="5×"
-            secondaryMeasure="Peer reach for sponsored fixed-income content"
-            secondaryNote="Six-month competitor review; a benchmark finding, not a campaign result."
-            roleDescription="Audience research, competitor review, content planning and KPI frameworks, working with regional marketing teams."
           />
           <CaseStudy
             project="novartis"
