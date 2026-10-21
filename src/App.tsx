@@ -12,7 +12,6 @@ import bbfMartinStoryImage from "./assets/bbf-knowledge-martin-member-story.webp
 import bbfExpoStoryImage from "./assets/bbf-business-expo-member-story.webp";
 import bucksSkillsShowVideo from "./assets/bucks-skills-show-tiktok.mp4";
 import bucksSkillsShowPoster from "./assets/bucks-skills-show-tiktok-poster.jpg";
-import hsbcCampaignImage from "./assets/hsbc-campaign-visual.jpeg";
 import jpmamAnniversaryImage from "./assets/jpmam-leadership-anniversary.webp";
 import jpmamThoughtLeadershipImage from "./assets/jpmam-thought-leadership.webp";
 import jpmamTechTrendsImage from "./assets/jpmam-tech-trends-live.webp";
@@ -315,11 +314,9 @@ const capabilities = [
   ["Campaign delivery", "Coordinate content, publishing, paid activation and reporting."],
 ];
 
-function CampaignArtwork({ project, style }: { project: "bigger" | "aria" | "hsbc" | "skills" | "jpmam" | "novartis" | "abba"; style: string }) {
+function CampaignArtwork({ project, style }: { project: "bigger" | "aria" | "skills" | "jpmam" | "novartis" | "abba"; style: string }) {
   const artworkLabel = project === "bigger"
     ? `${style} member-story campaign posts`
-    : project === "hsbc"
-      ? "HSBC Asset Management campaign visual"
     : project === "aria"
       ? "ARIA social posts authored by Camilla about founding-team recruitment and Programme Director outreach"
     : project === "jpmam"
@@ -333,7 +330,7 @@ function CampaignArtwork({ project, style }: { project: "bigger" | "aria" | "hsb
           : `${style} campaign artwork placeholder`;
 
   return (
-    <div className={`cdp-artwork cdp-artwork-${project}`} role={project === "bigger" || project === "aria" || project === "hsbc" || project === "jpmam" || project === "novartis" || project === "abba" || project === "skills" ? "group" : "img"} aria-label={artworkLabel}>
+    <div className={`cdp-artwork cdp-artwork-${project}`} role={project === "bigger" || project === "aria" || project === "jpmam" || project === "novartis" || project === "abba" || project === "skills" ? "group" : "img"} aria-label={artworkLabel}>
       {project === "bigger" && (
         <div className="cdp-bigger-gallery" tabIndex={0} aria-label="Campaign post gallery. Scroll horizontally to view all nine examples.">
           {bbfCampaignPosts.map((post) => (
@@ -393,11 +390,6 @@ function CampaignArtwork({ project, style }: { project: "bigger" | "aria" | "hsb
           </div>
         </>
       )}
-      {project === "hsbc" && (
-        <a className="cdp-hsbc-visual" href={hsbcCampaignImage} target="_blank" rel="noreferrer" aria-label="Open full-size HSBC Asset Management campaign visual">
-          <img src={hsbcCampaignImage} alt="HSBC Asset Management banner with the HSBC logo above an abstract red light-trail image." />
-        </a>
-      )}
       {project === "skills" && (
         <>
           <span className="cdp-art-note">TIKTOK VIDEO AD · 0:33</span>
@@ -441,7 +433,7 @@ function CaseStudy({
   title: string;
   category: string;
   description: string;
-  artwork: string;
+  artwork?: string;
   variant?: "reverse";
   metric: string;
   measure: string;
@@ -453,8 +445,8 @@ function CaseStudy({
   videoUrl?: string;
 }) {
   return (
-    <article className={`cdp-case ${variant === "reverse" ? "cdp-case-reverse" : ""}`} data-testid={`case-study-${project}`}>
-      <CampaignArtwork project={project} style={artwork} />
+    <article className={`cdp-case ${project === "hsbc" ? "camilla-case-no-artwork" : ""} ${variant === "reverse" ? "cdp-case-reverse" : ""}`} data-testid={`case-study-${project}`}>
+      {project !== "hsbc" && <CampaignArtwork project={project} style={artwork ?? ""} />}
       <div className="cdp-case-copy">
         <div className="cdp-case-category">{category}</div>
         <h3>{title}</h3>
@@ -569,6 +561,8 @@ function App() {
         .camilla-work-heading p { color:var(--body); max-width:320px; font-size:12px; line-height:1.7; margin:0; }
         .camilla-case { display:grid; grid-template-columns:1.14fr .86fr; margin:0 0 24px; min-height:470px; background:var(--cloud); }
         .camilla-case-reverse { grid-template-columns:.86fr 1.14fr; }
+        .camilla-case-no-artwork { grid-template-columns:1fr; min-height:auto; }
+        .camilla-case-no-artwork .cdp-case-copy > p { max-width:680px; }
         .camilla-case-reverse .cdp-artwork { order:2; }
         .camilla-case-reverse .cdp-case-copy { order:1; }
         .cdp-artwork { position:relative; min-height:470px; overflow:hidden; display:grid; place-items:center; isolation:isolate; }
@@ -584,9 +578,6 @@ function App() {
         .cdp-jpmam-gallery { padding-top:42px; }
         .cdp-jpmam-gallery figure { flex-basis:270px; }
         .cdp-jpmam-gallery img { max-height:400px; }
-        .cdp-hsbc-visual { display:block; width:100%; min-height:470px; cursor:zoom-in; background:#fff; }
-        .cdp-hsbc-visual:focus-visible { outline:2px solid var(--blue); outline-offset:-5px; }
-        .cdp-hsbc-visual img { display:block; width:100%; height:auto; max-height:none; object-fit:contain; box-shadow:none; }
         .cdp-novartis-gallery { padding-top:42px; }
         .cdp-novartis-gallery figure { flex-basis:345px; }
         .cdp-novartis-gallery a { display:block; width:100%; cursor:zoom-in; }
@@ -599,7 +590,6 @@ function App() {
         .cdp-aria-ring { position:absolute; width:360px; height:130px; border:2px solid var(--blue); border-radius:50%; transform:rotate(-40deg); }
         .cdp-ring-b { width:370px; height:190px; transform:rotate(50deg); border-color:var(--yellow); }
         .cdp-aria-caption { position:absolute; bottom:50px; left:23px; color:var(--navy); font:600 16px/1.1 'Lora',serif; letter-spacing:-.04em; }
-        .cdp-artwork-hsbc { background:#eee7db; }
         .cdp-artwork-skills { background:#17231d; }
         .cdp-skills-video { display:block; width:auto; max-width:calc(100% - 36px); max-height:430px; aspect-ratio:9 / 16; object-fit:contain; background:#111; box-shadow:0 16px 40px rgba(0,0,0,.32); }
         .cdp-skills-shape { position:absolute; border-radius:50%; border:1px solid var(--navy); }
@@ -894,7 +884,6 @@ function App() {
           />
           <CaseStudy
             project="hsbc"
-            artwork="HSBC Asset Management"
             category="HSBC Asset Management · B2B LinkedIn"
             title="Reach the people making the decisions."
             description="LinkedIn publishing and paid activation aimed at treasurers and CFOs, with compliance workflows, stakeholder approvals and optimisation reporting."
