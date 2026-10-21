@@ -939,7 +939,7 @@ function App() {
             <CaseStudy
               project="skills"
               artwork="Buckinghamshire Skills Hub"
-              category="Buckinghamshire Business First · Paid activation"
+              category="Buckinghamshire Skills Hub · Paid activation connected to my work with Buckinghamshire Business First"
               title="From creative idea to registrations."
               description="I conceived the idea, helped film this TikTok ad and ran the paid ads myself. The campaign contributed to 20% of event registrations."
               metric="20%"
