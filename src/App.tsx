@@ -159,22 +159,22 @@ const ariaSamples = [
   {
     image: ariaVideoInterviewSafetyImage,
     alt: "Screenshot of an ARIA web article with a subtitled interview video, edited to match ARIA’s prescribed simple branding.",
-    caption: "Edited video · ARIA simple branding",
+    caption: "Video I helped create and edit · ARIA simple branding",
   },
   {
     image: ariaVideoFoundingCohortImage,
     alt: "Screenshot of an ARIA article with a subtitled interview video featuring a founding-cohort member.",
-    caption: "Edited video · Founding cohort interview",
+    caption: "Video I helped create and edit · Founding cohort interview",
   },
   {
     image: ariaSocialRecruitmentImage,
     alt: "Screenshot of ARIA social posts authored by Camilla: a founding-team recruitment call and an update closing the Programme Director open call.",
-    caption: "Authored posts · Founding team recruitment",
+    caption: "Posts I wrote · Founding team recruitment",
   },
   {
     image: ariaSocialProgrammeDirectorImage,
     alt: "Screenshot of ARIA social posts authored by Camilla, inviting Programme Director applicants to identify experts and highlighting a diverse cohort.",
-    caption: "Authored posts · Programme Director outreach",
+    caption: "Posts I wrote · Programme Director outreach",
   },
 ];
 
@@ -260,7 +260,7 @@ function CampaignArtwork({ project, style }: { project: "bigger" | "aria" | "ski
       )}
       {project === "aria" && (
         <>
-          <span className="cdp-art-note">VIDEO EDITS + AUTHORED SOCIAL POSTS · ARIA SIMPLE BRANDING · 2023</span>
+          <span className="cdp-art-note">CREATED NOV 2022 – FEB 2023 · PUBLISHED AFTER MY CONTRACT ENDED</span>
           <div className="cdp-bigger-gallery cdp-aria-gallery" tabIndex={0} aria-label="ARIA interview-video screenshots edited to the prescribed simple branding, alongside social posts authored by Camilla. Scroll to explore and open images at full size.">
             {ariaSamples.map((sample) => (
               <figure key={sample.caption}>
@@ -1042,11 +1042,11 @@ function App() {
             category="ARIA · Digital communications launch"
             title="Give a new agency a clear voice."
             brief="Launch a brand-new government research agency with no existing audience, and help it recruit its first Programme Directors."
-            description="Built launch-period digital strategy and produced social, web and email communications ahead of the Advanced Research and Invention Agency’s public launch. The gallery includes interview-video edits and authored recruitment posts."
+            description="Built launch-period digital strategy and produced social, web and email communications ahead of the Advanced Research and Invention Agency’s public launch. The gallery includes interview videos I helped create and edit, and recruitment posts I wrote."
             metric="4,500+"
             measure="Social followers from zero"
             note="During a two-month launch period"
-            roleDescription="Edited the interview videos to match ARIA’s prescribed simple branding, and authored social posts for founding-team recruitment and Programme Director outreach."
+            roleDescription="Helped create and edit the interview videos to match ARIA’s prescribed simple branding, and wrote social posts for founding-team recruitment and Programme Director outreach. This content was made during my contract and published by ARIA after it ended."
             variant="reverse"
           />
 
