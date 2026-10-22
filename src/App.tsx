@@ -30,6 +30,7 @@ import ariaSocialProgrammeDirectorImage from "./assets/aria-social-programme-dir
 import ariaVideoInterviewSafetyImage from "./assets/aria-video-interview-safety.jpg";
 import ariaVideoFoundingCohortImage from "./assets/aria-video-founding-cohort.jpg";
 import bbfAwardsReelImage from "./assets/bbf-awards-2025-reel.webp";
+import bbfTheatreReelImage from "./assets/bbf-waterside-theatre-reel.webp";
 
 const testimonials = [
   {
@@ -980,6 +981,12 @@ function App() {
                     <img src={bbfAwardsReelImage} alt="Buckinghamshire Business First Instagram reel from the Buckinghamshire Business Awards 2025, congratulating finalists and winners, with 8,847 views, 74 likes, 6 comments, 2 reposts and 3 shares." />
                   </a>
                   <figcaption><strong>Reel · Buckinghamshire Business Awards 2025</strong><span>I filmed, edited and produced it, music included.</span><span>8,847 views · 74 likes · 6 comments · 3 shares</span></figcaption>
+                </figure>
+                <figure>
+                  <a href="https://www.instagram.com/bbf_uk/reels/" target="_blank" rel="noreferrer" aria-label="See Buckinghamshire Business First reels on Instagram">
+                    <img src={bbfTheatreReelImage} alt="Buckinghamshire Business First Instagram reel filmed at Aylesbury Waterside Theatre, showing the theatre's red illuminated sign, with 1,152 views." />
+                  </a>
+                  <figcaption><strong>Reel · Event at Aylesbury Waterside Theatre · 2025</strong><span>I filmed, edited and produced it, music included.</span><span>1,152 views</span></figcaption>
                 </figure>
               </div>
             </div>
