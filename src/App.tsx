@@ -11,7 +11,7 @@ import bbfVictoriaVideoImage from "./assets/bbf-opportunity-victoria-video.webp"
 import bbfMartinStoryImage from "./assets/bbf-knowledge-martin-member-story.webp";
 import bbfExpoStoryImage from "./assets/bbf-business-expo-member-story.webp";
 import bbfNameSwitchAdImage from "./assets/bbf-nameswitch-sponsored-video.jpeg";
-import bbfNameSwitchAdLibraryImage from "./assets/bbf-nameswitch-ad-library.png";
+import bbfNameSwitchAdLibraryImage from "./assets/bbf-nameswitch-ad-library.webp";
 import bbfNextGenBusinessAdImage from "./assets/bbf-next-gen-business-ad-library.webp";
 import bucksSkillsHubRegistrationAdImage from "./assets/bucks-skills-hub-sponsored-registration.jpeg";
 import bucksSkillsShowVideo from "./assets/bucks-skills-show-tiktok.mp4";
@@ -25,17 +25,10 @@ import jpmamTopImpressionsImage from "./assets/jpmam-top-impressions-post.webp";
 import jpmamTopEngagementImage from "./assets/jpmam-top-engagement-post.webp";
 import novartisAmrPost1Image from "./assets/novartis-amr-post-1.webp";
 import novartisAmrPost2Image from "./assets/novartis-amr-post-2.webp";
-import novartisAmrPost3Image from "./assets/novartis-amr-post-3.webp";
 import novartisAmrPost4Image from "./assets/novartis-amr-post-4.webp";
-import novartisAmrPost5Image from "./assets/novartis-amr-post-5.webp";
-import novartisAmrPost6Image from "./assets/novartis-amr-post-6.webp";
 import novartisFacebookAudienceImage from "./assets/novartis-facebook-audience.webp";
 import novartisLinkedInFollowersImage from "./assets/novartis-linkedin-followers.webp";
 import novartisDiversityImage1 from "./assets/novartis-diversity-1.webp";
-import novartisDiversityImage2 from "./assets/novartis-diversity-2.webp";
-import novartisDiversityImage3 from "./assets/novartis-diversity-3.webp";
-import novartisDiversityImage4 from "./assets/novartis-diversity-4.webp";
-import novartisDiversityImage5 from "./assets/novartis-diversity-5.webp";
 import abbaCampaignPhasesImage from "./assets/abba-campaign-phases.webp";
 import abbaPartnerToolkitImage from "./assets/abba-partner-toolkit.webp";
 import abbaWebsiteTimelineImage from "./assets/abba-website-timeline.webp";
@@ -51,6 +44,8 @@ import ariaSocialProgrammeDirectorImage from "./assets/aria-social-programme-dir
 import ariaVideoInterviewSafetyImage from "./assets/aria-video-interview-safety.jpg";
 import ariaProgrammeDirectorsArticleImage from "./assets/aria-programme-directors-article.jpg";
 import ariaVideoFoundingCohortImage from "./assets/aria-video-founding-cohort.jpg";
+import bbfOrloSentimentImage from "./assets/bbf-orlo-brand-sentiment.webp";
+import bbfOrloBestTimesImage from "./assets/bbf-orlo-best-times.webp";
 
 const testimonials = [
   {
@@ -173,24 +168,9 @@ const novartisSamples = [
     caption: "AMR Action Fund · Industry collaboration",
   },
   {
-    image: novartisAmrPost3Image,
-    alt: "Novartis AMR social graphic featuring a scientist at a microscope and highlighting partnership with ABPI and biopharmaceutical companies.",
-    caption: "Partnership · Antibiotic development",
-  },
-  {
     image: novartisAmrPost4Image,
     alt: "Novartis AMR social graphic connecting COVID-19 and infection risk with the need to address antimicrobial resistance.",
     caption: "AMR awareness · Infection risk",
-  },
-  {
-    image: novartisAmrPost5Image,
-    alt: "Novartis AMR social graphic featuring a researcher and describing antibiotic research challenges and partnership with IFPMA.",
-    caption: "Research · Industry partnership",
-  },
-  {
-    image: novartisAmrPost6Image,
-    alt: "Novartis AMR Action Fund social graphic showing two lab colleagues and a message about joint research support.",
-    caption: "AMR Action Fund · Research support",
   },
   {
     image: novartisFacebookAudienceImage,
@@ -206,26 +186,6 @@ const novartisSamples = [
     image: novartisDiversityImage1,
     alt: "Colleagues collaborating around a desk, selected as a visual for Novartis diversity and inclusion messaging.",
     caption: "Diversity & inclusion · #NovartisLife",
-  },
-  {
-    image: novartisDiversityImage2,
-    alt: "Colleagues in a small-group workplace discussion, used with messaging about workforce diversity and patient needs.",
-    caption: "Workforce diversity · Customer insight",
-  },
-  {
-    image: novartisDiversityImage3,
-    alt: "A colleague taking part in a workplace meeting, paired with a campaign message about representation in management.",
-    caption: "Representation · Women in leadership",
-  },
-  {
-    image: novartisDiversityImage4,
-    alt: "A Novartis colleague working at a desk, used as a campaign visual about employee culture.",
-    caption: "Workplace culture · Employee story",
-  },
-  {
-    image: novartisDiversityImage5,
-    alt: "Colleagues talking together outdoors, selected for a Novartis diversity and inclusion campaign visual.",
-    caption: "Diversity & inclusion · Shared culture",
   },
 ];
 
@@ -443,10 +403,11 @@ function CampaignArtwork({ project, style }: { project: "bigger" | "aria" | "ski
 }
 
 function CaseStudy({
-  project, title, category, description, artwork, variant, metric, measure, note, secondaryMetric, secondaryMeasure, secondaryNote, roleDescription, videoUrl,
+  project, title, category, brief, description, artwork, variant, metric, measure, note, secondaryMetric, secondaryMeasure, secondaryNote, roleDescription, videoUrl,
 }: {
-  project: "bigger" | "aria" | "hsbc" | "skills" | "jpmam" | "novartis" | "abba";
+  project: "bigger" | "aria" | "hsbc" | "skills" | "jpmam" | "novartis" | "abba" | "listening" | "community";
   title: string;
+  brief?: string;
   category: string;
   description: string;
   artwork?: string;
@@ -461,11 +422,17 @@ function CaseStudy({
   videoUrl?: string;
 }) {
   return (
-    <article className={`cdp-case ${project === "hsbc" ? "camilla-case-no-artwork" : ""} ${variant === "reverse" ? "cdp-case-reverse" : ""}`} data-testid={`case-study-${project}`}>
-      {project !== "hsbc" && <CampaignArtwork project={project} style={artwork ?? ""} />}
+    <article id={project} className={`cdp-case ${project === "hsbc" || project === "listening" || project === "community" ? "camilla-case-no-artwork" : ""} ${variant === "reverse" ? "cdp-case-reverse" : ""}`} data-testid={`case-study-${project}`}>
+      {project !== "hsbc" && project !== "listening" && project !== "community" && <CampaignArtwork project={project} style={artwork ?? ""} />}
       <div className="cdp-case-copy">
         <div className="cdp-case-category">{category}</div>
         <h3>{title}</h3>
+        {brief && (
+          <div className="cdp-case-brief">
+            <span>THE BRIEF</span>
+            <p>{brief}</p>
+          </div>
+        )}
         <p>{description}</p>
         {roleDescription && (
           <div className="cdp-case-role">
@@ -559,7 +526,7 @@ function PaidMediaSection() {
             <article className="camilla-paid-case">
               <div className="camilla-paid-case-kicker">01 / Programme sign-ups</div>
               <h4>Fewer updates.<br />More action.</h4>
-              <p><strong>The challenge</strong> Programme teams wanted frequent posts on the main channels, while the data showed that volume was dragging performance.</p>
+              <p><strong>The challenge</strong> Programme teams wanted frequent posts on the main channels; in 2022/23 the four accounts published around 2,300 posts. The data showed that volume was dragging performance.</p>
               <p><strong>What changed</strong> I worked with the team to focus on fewer, member-story-led posts, supported by a small targeted paid push.</p>
               <div className="camilla-paid-case-outcome"><strong>Sign-ups increased</strong><span>Engagement held</span></div>
             </article>
@@ -639,12 +606,12 @@ function App() {
         .camilla * { box-sizing:border-box; }
         .camilla a { color:inherit; }
         .camilla-shell { width:min(1280px,calc(100% - 96px)); margin:0 auto; }
-        .camilla-kicker { font:500 10px/1.45 'DM Mono',monospace; letter-spacing:.1em; text-transform:uppercase; }
+        .camilla-kicker { font:500 12px/1.45 'DM Mono',monospace; letter-spacing:.1em; text-transform:uppercase; }
         .camilla-header { height:75px; display:flex; justify-content:space-between; align-items:center; }
         .camilla-brand { text-decoration:none; display:flex; align-items:center; gap:10px; font:600 13px 'Lora',serif; letter-spacing:-.03em; }
         .camilla-monogram { width:30px; height:30px; border-radius:8px; background:var(--yellow); color:var(--navy); display:grid; place-items:center; font:700 12px 'Lora',serif; transform:rotate(-6deg); }
         .camilla-nav { display:flex; align-items:center; gap:29px; }
-        .camilla-nav a { text-decoration:none; font-size:11px; font-weight:600; transition:opacity .2s ease; }
+        .camilla-nav a { text-decoration:none; font-size:13px; font-weight:600; transition:opacity .2s ease; }
         .camilla-nav a:hover { opacity:.65; }
         .camilla-nav .camilla-nav-contact { background:var(--navy); color:var(--white); padding:11px 15px; display:flex; align-items:center; gap:12px; border-radius:3px; }
         .camilla-hero { background:var(--blue-deep); color:var(--white); position:relative; overflow:hidden; }
@@ -658,12 +625,12 @@ function App() {
         .camilla-hero h1 span { color:var(--yellow); }
         .camilla-hero-foot { display:flex; align-items:end; justify-content:space-between; gap:30px; padding-bottom:37px; }
         .camilla-hero-foot p { max-width:490px; color:#e4e8e1; font-size:15px; line-height:1.7; margin:0; }
-        .camilla-hero-foot a { flex:none; color:var(--navy); background:var(--yellow); display:flex; gap:13px; align-items:center; padding:14px 17px; text-decoration:none; border-radius:3px; font-size:11px; font-weight:700; }
+        .camilla-hero-foot a { flex:none; color:var(--navy); background:var(--yellow); display:flex; gap:13px; align-items:center; padding:14px 17px; text-decoration:none; border-radius:3px; font-size:13px; font-weight:700; }
         .camilla-hero-art { height:clamp(340px,42vw,550px); display:grid; grid-template-columns:1.15fr .85fr; gap:9px; padding:9px; background:#303e32; position:relative; overflow:hidden; }
         .camilla-hero-photo { min-width:0; position:relative; overflow:hidden; background:#a9b4a2; }
         .camilla-hero-photo img { display:block; width:100%; height:100%; object-fit:cover; object-position:center 44%; }
         .camilla-hero-photo::after { content:""; position:absolute; inset:45% 0 0; background:linear-gradient(180deg,transparent,rgba(25,39,31,.58)); pointer-events:none; }
-        .camilla-photo-caption { position:absolute; z-index:1; left:18px; right:18px; bottom:17px; display:flex; justify-content:space-between; gap:12px; color:var(--white); font:500 8px 'DM Mono',monospace; letter-spacing:.1em; text-transform:uppercase; }
+        .camilla-photo-caption { position:absolute; z-index:1; left:18px; right:18px; bottom:17px; display:flex; justify-content:space-between; gap:12px; color:var(--white); font:500 12px 'DM Mono',monospace; letter-spacing:.1em; text-transform:uppercase; }
         .camilla-hero-message { min-width:0; position:relative; display:flex; flex-direction:column; justify-content:space-between; gap:15px; padding:clamp(20px,4vw,42px); background:var(--yellow); color:var(--navy); }
         .camilla-testimonial-head { display:flex; align-items:center; justify-content:space-between; gap:10px; }
         .camilla-testimonial-count { color:#555b50; }
@@ -676,14 +643,14 @@ function App() {
         .camilla-testimonial-slide blockquote p { margin:0; font:500 clamp(15px,1.35vw,18px)/1.42 'Lora',serif; letter-spacing:-.025em; }
         .camilla-testimonial-slide figcaption { display:grid; gap:5px; }
         .camilla-testimonial-slide figcaption strong { font:700 12px/1.3 'DM Sans',sans-serif; }
-        .camilla-testimonial-slide figcaption span { color:#555b50; font:500 8px/1.55 'DM Mono',monospace; letter-spacing:.04em; }
+        .camilla-testimonial-slide figcaption span { color:#555b50; font:500 12px/1.55 'DM Mono',monospace; letter-spacing:.04em; }
         .camilla-testimonial-dots { display:flex; align-items:center; gap:4px; }
         .camilla-testimonial-dots button { display:grid; place-items:center; width:22px; height:22px; border:0; padding:0; background:transparent; cursor:pointer; }
         .camilla-testimonial-dots button span { display:block; width:6px; height:6px; border-radius:50%; background:rgba(41,46,42,.38); transition:width .2s ease,background .2s ease; }
         .camilla-testimonial-dots button[aria-pressed="true"] span { width:16px; border-radius:99px; background:var(--blue-deep); }
         .camilla-marquee { background:var(--yellow); overflow:hidden; }
-        .camilla-marquee-track { display:flex; width:max-content; align-items:center; gap:25px; padding:14px 0; animation:camilla-marquee 26s linear infinite; }
-        .camilla-marquee span { font:600 11px 'Lora',serif; letter-spacing:.08em; text-transform:uppercase; }
+        .camilla-marquee-track { display:flex; width:max-content; align-items:center; gap:25px; padding:14px 0; animation:camilla-marquee 55s linear infinite; }
+        .camilla-marquee span { font:600 13px 'Lora',serif; letter-spacing:.08em; text-transform:uppercase; }
         .camilla-marquee i { font-style:normal; font-size:16px; }
         @keyframes camilla-marquee { to { transform:translateX(-50%); } }
         .camilla-intro { padding:105px 0 91px; display:grid; grid-template-columns:.55fr 1.45fr; gap:8%; }
@@ -692,12 +659,12 @@ function App() {
         .camilla-intro h2 em { color:var(--blue); font-style:normal; }
         .camilla-intro-foot { grid-column:2; display:flex; align-items:end; justify-content:space-between; gap:35px; margin-top:4px; }
         .camilla-intro-foot p { color:var(--body); font-size:13px; line-height:1.8; max-width:570px; margin:0; }
-        .camilla-text-link { display:inline-flex; align-items:center; gap:9px; text-decoration:none; border-bottom:1px solid var(--blue); padding-bottom:7px; font-size:11px; font-weight:700; white-space:nowrap; }
+        .camilla-text-link { display:inline-flex; align-items:center; gap:9px; text-decoration:none; border-bottom:1px solid var(--blue); padding-bottom:7px; font-size:13px; font-weight:700; white-space:nowrap; }
         .camilla-work { background:var(--white); padding:94px 0 100px; }
         .camilla-work-heading { display:flex; justify-content:space-between; align-items:end; gap:30px; margin-bottom:47px; }
         .camilla-work-heading .camilla-kicker { color:var(--blue); }
         .camilla-work-heading h2 { font:500 clamp(44px,6vw,78px)/.94 'Lora',serif; letter-spacing:-.075em; margin:12px 0 0; }
-        .camilla-work-heading p { color:var(--body); max-width:320px; font-size:12px; line-height:1.7; margin:0; }
+        .camilla-work-heading p { color:var(--body); max-width:320px; font-size:14px; line-height:1.7; margin:0; }
         .camilla-case { display:grid; grid-template-columns:1.14fr .86fr; margin:0 0 24px; min-height:470px; background:var(--cloud); }
         .camilla-case-reverse { grid-template-columns:.86fr 1.14fr; }
         .camilla-case-no-artwork { grid-template-columns:1fr; min-height:auto; }
@@ -706,14 +673,14 @@ function App() {
         .camilla-case-reverse .cdp-case-copy { order:1; }
         .cdp-artwork { position:relative; min-height:470px; overflow:hidden; display:grid; place-items:center; isolation:isolate; }
         .cdp-artwork::before { content:""; position:absolute; inset:0; z-index:-1; opacity:.18; background-image:linear-gradient(rgba(41,46,42,.4) 1px,transparent 1px),linear-gradient(90deg,rgba(41,46,42,.4) 1px,transparent 1px); background-size:35px 35px; mask-image:linear-gradient(to bottom,black,transparent); }
-        .cdp-art-note { position:absolute; top:17px; left:19px; z-index:4; font:500 8px 'DM Mono',monospace; letter-spacing:.1em; }
+        .cdp-art-note { position:absolute; top:17px; left:19px; z-index:4; font:500 12px 'DM Mono',monospace; letter-spacing:.1em; }
         .cdp-artwork-bigger { min-height:470px; background:#e0e3d4; }
         .cdp-bigger-gallery { position:relative; height:100%; min-height:470px; width:100%; display:flex; justify-content:flex-start; align-items:center; gap:14px; padding:22px; overflow-x:auto; overflow-y:hidden; scroll-snap-type:x mandatory; scrollbar-width:thin; scrollbar-color:rgba(41,46,42,.42) transparent; }
         .cdp-bigger-gallery:focus-visible { outline:2px solid var(--blue); outline-offset:-5px; }
         .cdp-bigger-gallery figure { flex:0 0 205px; height:100%; min-width:0; margin:0; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:8px; scroll-snap-align:start; }
         .cdp-bigger-gallery img { display:block; height:calc(100% - 22px); max-height:420px; width:100%; object-fit:contain; background:#fbf9f3; box-shadow:0 12px 28px rgba(41,46,42,.16); }
-        .cdp-bigger-gallery figcaption { color:var(--navy); font:500 8px 'DM Mono',monospace; letter-spacing:.08em; text-transform:uppercase; text-align:center; }
-        .cdp-bigger-gallery-hint { position:absolute; z-index:2; top:10px; right:10px; display:flex; align-items:center; gap:5px; padding:6px 8px; color:var(--navy); background:rgba(251,249,243,.94); font:500 7px 'DM Mono',monospace; letter-spacing:.08em; pointer-events:none; }
+        .cdp-bigger-gallery figcaption { color:var(--navy); font:500 12px 'DM Mono',monospace; letter-spacing:.08em; text-transform:uppercase; text-align:center; }
+        .cdp-bigger-gallery-hint { position:absolute; z-index:2; top:10px; right:10px; display:flex; align-items:center; gap:5px; padding:6px 8px; color:var(--navy); background:rgba(251,249,243,.94); font:500 12px 'DM Mono',monospace; letter-spacing:.08em; pointer-events:none; }
         .cdp-jpmam-gallery { padding-top:42px; }
         .cdp-jpmam-gallery figure { flex-basis:270px; }
         .cdp-jpmam-gallery img { max-height:400px; }
@@ -725,7 +692,7 @@ function App() {
         .cdp-artwork-aria { background:#aabdc0; }
         .cdp-aria-sphere { width:255px; height:255px; background:var(--navy); color:var(--white); display:flex; flex-direction:column; justify-content:center; align-items:center; border-radius:50%; text-align:center; position:relative; z-index:2; }
         .cdp-aria-sphere span { font:600 75px/.9 'Lora',serif; letter-spacing:-.1em; color:var(--yellow); }
-        .cdp-aria-sphere small { font:8px/1.5 'DM Mono',monospace; letter-spacing:.08em; margin-top:13px; }
+        .cdp-aria-sphere small { font:12px/1.5 'DM Mono',monospace; letter-spacing:.08em; margin-top:13px; }
         .cdp-aria-ring { position:absolute; width:360px; height:130px; border:2px solid var(--blue); border-radius:50%; transform:rotate(-40deg); }
         .cdp-ring-b { width:370px; height:190px; transform:rotate(50deg); border-color:var(--yellow); }
         .cdp-aria-caption { position:absolute; bottom:50px; left:23px; color:var(--navy); font:600 16px/1.1 'Lora',serif; letter-spacing:-.04em; }
@@ -735,23 +702,23 @@ function App() {
         .cdp-skills-one { width:280px; height:280px; left:-85px; top:-105px; }
         .cdp-skills-two { width:410px; height:410px; right:-142px; bottom:-175px; border-width:28px; opacity:.28; }
         .cdp-skills-copy { position:relative; z-index:2; transform:rotate(-5deg); }
-        .cdp-skills-copy small { font:500 9px 'DM Mono',monospace; letter-spacing:.16em; }
+        .cdp-skills-copy small { font:500 12px 'DM Mono',monospace; letter-spacing:.16em; }
         .cdp-skills-copy strong { display:block; font:700 clamp(63px,8vw,106px)/.76 'Lora',serif; letter-spacing:-.1em; margin:12px 0; }
-        .cdp-skills-copy i { font:500 8px 'DM Mono',monospace; letter-spacing:.14em; font-style:normal; }
-        .cdp-skills-social { position:absolute; right:17px; top:50%; display:grid; gap:8px; font:500 8px 'DM Mono',monospace; writing-mode:vertical-rl; }
+        .cdp-skills-copy i { font:500 12px 'DM Mono',monospace; letter-spacing:.14em; font-style:normal; }
+        .cdp-skills-social { position:absolute; right:17px; top:50%; display:grid; gap:8px; font:500 12px 'DM Mono',monospace; writing-mode:vertical-rl; }
         .cdp-artwork-jpmam { background:#dcd8ca; }
         .cdp-artwork-novartis { background:#e6eef2; }
         .cdp-artwork-abba { background:#080808; color:#fff; }
         .cdp-strategy-art { width:100%; height:100%; min-height:470px; display:flex; flex-direction:column; justify-content:space-between; padding:30px; position:relative; overflow:hidden; }
         .cdp-strategy-art::after { content:""; position:absolute; width:320px; height:320px; border:1px solid rgba(41,46,42,.24); border-radius:50%; right:-138px; bottom:-160px; pointer-events:none; }
         .cdp-novartis-art { background:#e6e1d3; }
-        .cdp-strategy-head { display:flex; justify-content:space-between; gap:16px; color:#495249; font:500 8px 'DM Mono',monospace; letter-spacing:.1em; text-transform:uppercase; }
+        .cdp-strategy-head { display:flex; justify-content:space-between; gap:16px; color:#495249; font:500 12px 'DM Mono',monospace; letter-spacing:.1em; text-transform:uppercase; }
         .cdp-strategy-tags { display:flex; flex-wrap:wrap; gap:7px; position:relative; z-index:1; }
-        .cdp-strategy-tags span { border:1px solid rgba(41,46,42,.27); border-radius:99px; padding:8px 10px; color:#4c554d; font:500 8px 'DM Mono',monospace; letter-spacing:.03em; }
+        .cdp-strategy-tags span { border:1px solid rgba(41,46,42,.27); border-radius:99px; padding:8px 10px; color:#4c554d; font:500 12px 'DM Mono',monospace; letter-spacing:.03em; }
         .cdp-novartis-thesis { max-width:470px; color:var(--blue-deep); font:500 clamp(31px,4.2vw,53px)/1.03 'Lora',serif; letter-spacing:-.065em; margin:0; position:relative; z-index:1; }
         .cdp-novartis-pillars { display:grid; grid-template-columns:repeat(3,1fr); gap:8px; position:relative; z-index:1; }
         .cdp-novartis-pillars div { min-height:107px; display:flex; flex-direction:column; justify-content:space-between; padding:12px; background:rgba(251,249,243,.73); border:1px solid rgba(41,46,42,.13); }
-        .cdp-novartis-pillars small { color:var(--blue); font:500 8px 'DM Mono',monospace; }
+        .cdp-novartis-pillars small { color:var(--blue); font:500 12px 'DM Mono',monospace; }
         .cdp-novartis-pillars strong { color:var(--navy); font:500 16px/1.05 'Lora',serif; }
         .cdp-abba-art { background:#e7dece; }
         .cdp-artwork-abba .cdp-art-note { color:#f4f0e7; }
@@ -762,32 +729,44 @@ function App() {
         .cdp-abba-gallery img { max-height:390px; }
         .cdp-abba-gallery figcaption { color:#f4f0e7; }
         .cdp-case-copy { padding:clamp(30px,5vw,68px); display:flex; flex-direction:column; justify-content:center; }
-        .cdp-case-category { color:var(--blue); font:500 9px 'DM Mono',monospace; letter-spacing:.11em; text-transform:uppercase; }
+        .cdp-case-category { color:var(--blue); font:500 12px 'DM Mono',monospace; letter-spacing:.11em; text-transform:uppercase; }
         .cdp-case-copy h3 { font:500 clamp(32px,4vw,51px)/.99 'Lora',serif; letter-spacing:-.065em; margin:18px 0 16px; }
-        .cdp-case-copy > p { color:var(--body); font-size:12px; line-height:1.75; max-width:455px; margin:0; }
+        .cdp-case-copy > p { color:var(--body); font-size:14px; line-height:1.75; max-width:455px; margin:0; }
         .camilla-results { background:var(--cloud); padding:22px 26px 26px; margin:0 0 24px; }
         .camilla-results > .camilla-kicker { color:var(--blue); }
         .camilla-results-grid { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:18px 26px; margin-top:16px; }
         .camilla-results-grid > div { display:grid; align-content:start; gap:5px; border-top:1px solid var(--line); padding-top:13px; }
         .camilla-results-grid strong { color:var(--blue); font:600 clamp(32px,3.6vw,46px)/.95 'Lora',serif; letter-spacing:-.07em; }
-        .camilla-results-grid span { color:var(--navy); font-size:12px; font-weight:600; }
-        .camilla-results-grid small { color:#626b63; font:500 9px/1.5 'DM Mono',monospace; letter-spacing:.03em; }
+        .camilla-results-grid span { color:var(--navy); font-size:14px; font-weight:600; }
+        .camilla-results-grid small { color:#626b63; font:500 12px/1.5 'DM Mono',monospace; letter-spacing:.03em; }
+        .camilla-reporting { margin-top:24px; border-top:1px solid var(--line); padding-top:16px; }
+        .camilla-reporting > .camilla-kicker { color:var(--blue); }
+        .camilla-reporting-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:18px; margin-top:12px; }
+        .camilla-reporting-grid figure { margin:0; }
+        .camilla-reporting-grid a { display:block; cursor:zoom-in; }
+        .camilla-reporting-grid img { display:block; width:100%; height:auto; background:#fbf9f3; box-shadow:0 10px 24px rgba(41,46,42,.12); }
+        .camilla-reporting-grid figcaption { margin-top:8px; color:#596158; font:500 12px/1.5 'DM Mono',monospace; letter-spacing:.03em; }
+        .camilla-open-roles { margin:16px 0 4px; color:var(--body); font-size:14px; line-height:1.6; }
         .camilla-education-tools span { line-height:1.7; }
+        .cdp-case { scroll-margin-top:24px; }
+        .cdp-case-brief { margin:0 0 14px; padding-left:12px; border-left:2px solid var(--yellow); }
+        .cdp-case-brief > span { display:block; color:var(--blue); font:500 12px 'DM Mono',monospace; letter-spacing:.1em; margin-bottom:4px; }
+        .cdp-case-brief p { margin:0; color:var(--navy); font-size:14px; line-height:1.6; max-width:455px; }
         .cdp-case-stat { display:grid; grid-template-columns:auto 1fr; align-items:end; gap:16px; border-top:1px solid var(--line); margin-top:28px; padding-top:15px; }
         .cdp-case-stat > strong { color:var(--blue); font:600 clamp(41px,5vw,61px)/.93 'Lora',serif; letter-spacing:-.08em; white-space:nowrap; }
         .cdp-case-stat > div { padding-bottom:3px; }
-        .cdp-case-stat span { display:block; font:500 9px/1.55 'DM Mono',monospace; letter-spacing:.035em; text-transform:uppercase; }
-        .cdp-case-stat small { display:block; color:#626b63; margin-top:5px; font-size:9px; line-height:1.4; }
-        .cdp-case-role { margin-top:13px; color:var(--body); font-size:10px; line-height:1.65; }
-        .cdp-case-role > span { display:block; color:var(--blue); font:500 8px 'DM Mono',monospace; letter-spacing:.1em; margin-bottom:4px; }
+        .cdp-case-stat span { display:block; font:500 12px/1.55 'DM Mono',monospace; letter-spacing:.035em; text-transform:uppercase; }
+        .cdp-case-stat small { display:block; color:#626b63; margin-top:5px; font-size:13px; line-height:1.4; }
+        .cdp-case-role { margin-top:13px; color:var(--body); font-size:13px; line-height:1.65; }
+        .cdp-case-role > span { display:block; color:var(--blue); font:500 12px 'DM Mono',monospace; letter-spacing:.1em; margin-bottom:4px; }
         .cdp-case-role p { margin:0; }
-        .cdp-case-video-link { width:max-content; max-width:100%; display:inline-flex; align-items:center; gap:7px; margin-top:13px; padding-bottom:4px; border-bottom:1px solid var(--blue); color:var(--blue) !important; font-size:10px; font-weight:700; text-decoration:none; }
+        .cdp-case-video-link { width:max-content; max-width:100%; display:inline-flex; align-items:center; gap:7px; margin-top:13px; padding-bottom:4px; border-bottom:1px solid var(--blue); color:var(--blue) !important; font-size:13px; font-weight:700; text-decoration:none; }
         .cdp-case-video-link:hover { opacity:.72; }
         .cdp-case-stat-secondary { display:grid; grid-template-columns:auto 1fr; align-items:end; gap:12px; border-top:1px solid var(--line); margin-top:16px; padding-top:13px; }
         .cdp-case-stat-secondary > strong { color:var(--blue); font:600 clamp(29px,3.8vw,42px)/.95 'Lora',serif; letter-spacing:-.07em; white-space:nowrap; }
         .cdp-case-stat-secondary > div { padding-bottom:2px; }
-        .cdp-case-stat-secondary span { display:block; font:500 8px/1.5 'DM Mono',monospace; letter-spacing:.035em; text-transform:uppercase; }
-        .cdp-case-stat-secondary small { display:block; color:#626b63; margin-top:3px; font-size:8px; line-height:1.4; }
+        .cdp-case-stat-secondary span { display:block; font:500 12px/1.5 'DM Mono',monospace; letter-spacing:.035em; text-transform:uppercase; }
+        .cdp-case-stat-secondary small { display:block; color:#626b63; margin-top:3px; font-size:13px; line-height:1.4; }
         .cdp-work-small { display:grid; grid-template-columns:1fr 1fr; gap:20px; }
         .cdp-work-small > .cdp-case { grid-column:1 / -1; grid-template-columns:1.14fr .86fr; margin:0; }
         .camilla-paid-media { padding:92px 0 100px; background:var(--navy); color:var(--white); }
@@ -795,7 +774,7 @@ function App() {
         .camilla-paid-heading .camilla-kicker { color:var(--yellow); }
         .camilla-paid-heading h2 { margin:13px 0 0; font:500 clamp(43px,6vw,76px)/.94 'Lora',serif; letter-spacing:-.07em; }
         .camilla-paid-heading h2 em { color:var(--yellow); font-style:normal; }
-        .camilla-paid-heading > p { max-width:460px; margin:0 0 3px; color:#d0d6cd; font-size:12px; line-height:1.8; }
+        .camilla-paid-heading > p { max-width:460px; margin:0 0 3px; color:#d0d6cd; font-size:14px; line-height:1.8; }
         .camilla-paid-spotlight { display:grid; grid-template-columns:.85fr 1.15fr; background:var(--cloud); color:var(--navy); }
         .camilla-paid-visual { min-height:500px; display:flex; flex-direction:column; justify-content:center; align-items:center; gap:16px; padding:42px 26px 22px; background:#18231d; }
         .camilla-paid-visual > .camilla-kicker { align-self:flex-start; color:#f2eadb; }
@@ -803,21 +782,21 @@ function App() {
         .camilla-paid-showcase-gallery figure { display:grid; align-content:center; gap:12px; min-width:0; margin:0; }
         .camilla-paid-showcase-gallery video { display:block; width:100%; max-width:100%; max-height:420px; aspect-ratio:9 / 16; object-fit:contain; background:#111; }
         .camilla-paid-showcase-gallery img { display:block; width:100%; max-height:420px; aspect-ratio:1; object-fit:contain; background:var(--cloud); }
-        .camilla-paid-showcase-gallery figcaption { color:#f2eadb; font:500 8px/1.5 'DM Mono',monospace; letter-spacing:.04em; text-transform:uppercase; }
-        .camilla-paid-video-caption { align-self:flex-start; color:#d0d6cd; font:500 8px/1.4 'DM Mono',monospace; letter-spacing:.06em; text-transform:uppercase; }
+        .camilla-paid-showcase-gallery figcaption { color:#f2eadb; font:500 12px/1.5 'DM Mono',monospace; letter-spacing:.04em; text-transform:uppercase; }
+        .camilla-paid-video-caption { align-self:flex-start; color:#d0d6cd; font:500 12px/1.4 'DM Mono',monospace; letter-spacing:.06em; text-transform:uppercase; }
         .camilla-paid-results { padding:clamp(28px,4vw,54px); }
         .camilla-paid-results > .camilla-kicker { color:var(--blue); }
         .camilla-paid-results h3 { margin:16px 0 14px; font:500 clamp(33px,4vw,50px)/1 'Lora',serif; letter-spacing:-.065em; }
-        .camilla-paid-results > p { max-width:470px; margin:0; color:var(--body); font-size:11px; line-height:1.75; }
+        .camilla-paid-results > p { max-width:470px; margin:0; color:var(--body); font-size:13px; line-height:1.75; }
         .camilla-paid-primary-result { display:grid; grid-template-columns:auto 1fr; align-items:center; gap:15px; margin-top:24px; padding:16px 0; border-top:1px solid var(--line); border-bottom:1px solid var(--line); }
         .camilla-paid-primary-result > strong { color:var(--blue); font:600 clamp(43px,5vw,60px)/.9 'Lora',serif; letter-spacing:-.08em; }
-        .camilla-paid-primary-result span { display:block; font:500 9px/1.5 'DM Mono',monospace; letter-spacing:.04em; text-transform:uppercase; }
-        .camilla-paid-primary-result small { display:block; margin-top:4px; color:#626b63; font-size:9px; }
+        .camilla-paid-primary-result span { display:block; font:500 12px/1.5 'DM Mono',monospace; letter-spacing:.04em; text-transform:uppercase; }
+        .camilla-paid-primary-result small { display:block; margin-top:4px; color:#626b63; font-size:13px; }
         .camilla-paid-metrics { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:15px 22px; padding-top:18px; }
         .camilla-paid-metrics > div { display:grid; gap:4px; }
         .camilla-paid-metrics strong { color:var(--navy); font:500 clamp(21px,2.7vw,31px)/1 'Lora',serif; letter-spacing:-.05em; }
-        .camilla-paid-metrics span { color:#596158; font:500 8px/1.55 'DM Mono',monospace; letter-spacing:.035em; text-transform:uppercase; }
-        .camilla-paid-metrics span small { display:block; margin-top:2px; color:#737a71; font:400 8px/1.4 'DM Sans',sans-serif; letter-spacing:0; text-transform:none; }
+        .camilla-paid-metrics span { color:#596158; font:500 12px/1.55 'DM Mono',monospace; letter-spacing:.035em; text-transform:uppercase; }
+        .camilla-paid-metrics span small { display:block; margin-top:2px; color:#737a71; font:400 13px/1.4 'DM Sans',sans-serif; letter-spacing:0; text-transform:none; }
         .camilla-paid-cases { margin-top:59px; }
         .camilla-paid-cases-heading { margin-bottom:22px; }
         .camilla-paid-cases-heading .camilla-kicker { color:var(--yellow); }
@@ -825,69 +804,69 @@ function App() {
         .camilla-paid-cases-heading h3 em { color:var(--yellow); font-style:normal; }
         .camilla-paid-case-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:13px; }
         .camilla-paid-case { min-width:0; padding:clamp(23px,3vw,35px); background:var(--cloud); color:var(--navy); }
-        .camilla-paid-case-kicker { color:var(--blue); font:500 8px/1.5 'DM Mono',monospace; letter-spacing:.08em; text-transform:uppercase; }
+        .camilla-paid-case-kicker { color:var(--blue); font:500 12px/1.5 'DM Mono',monospace; letter-spacing:.08em; text-transform:uppercase; }
         .camilla-paid-case h4 { margin:14px 0 15px; font:500 clamp(25px,3vw,36px)/1.04 'Lora',serif; letter-spacing:-.055em; }
-        .camilla-paid-case p { max-width:520px; margin:0 0 12px; color:var(--body); font-size:12px; line-height:1.7; }
-        .camilla-paid-case p strong { display:block; margin-bottom:3px; color:var(--blue); font:500 9px 'DM Mono',monospace; letter-spacing:.07em; text-transform:uppercase; }
+        .camilla-paid-case p { max-width:520px; margin:0 0 12px; color:var(--body); font-size:14px; line-height:1.7; }
+        .camilla-paid-case p strong { display:block; margin-bottom:3px; color:var(--blue); font:500 12px 'DM Mono',monospace; letter-spacing:.07em; text-transform:uppercase; }
         .camilla-paid-case-outcome { display:flex; flex-wrap:wrap; align-items:baseline; gap:8px 16px; margin-top:18px; padding-top:14px; border-top:1px solid var(--line); }
         .camilla-paid-case-outcome strong { color:var(--blue); font:500 20px/1.2 'Lora',serif; }
-        .camilla-paid-case-outcome span { color:#626b63; font-size:10px; }
+        .camilla-paid-case-outcome span { color:#626b63; font-size:13px; }
         .camilla-paid-case-metrics { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:15px; margin:20px 0 14px; padding:15px 0; border-top:1px solid var(--line); border-bottom:1px solid var(--line); }
         .camilla-paid-case-metrics > div { display:grid; gap:4px; }
         .camilla-paid-case-metrics strong, .camilla-paid-case-wide-metrics strong { color:var(--blue); font:500 clamp(24px,3vw,34px)/1 'Lora',serif; letter-spacing:-.05em; }
-        .camilla-paid-case-metrics span, .camilla-paid-case-wide-metrics span { color:#596158; font:500 9px/1.5 'DM Mono',monospace; letter-spacing:.035em; text-transform:uppercase; }
-        .camilla-paid-case p.camilla-paid-case-note { margin:0; color:#626b63; font-size:10px; }
+        .camilla-paid-case-metrics span, .camilla-paid-case-wide-metrics span { color:#596158; font:500 12px/1.5 'DM Mono',monospace; letter-spacing:.035em; text-transform:uppercase; }
+        .camilla-paid-case p.camilla-paid-case-note { margin:0; color:#626b63; font-size:13px; }
         .camilla-paid-case-image { margin:19px 0 0; padding-top:14px; border-top:1px solid var(--line); }
         .camilla-paid-case-image img { display:block; width:100%; height:auto; }
-        .camilla-paid-case-image figcaption { margin-top:8px; color:#596158; font:500 8px/1.55 'DM Mono',monospace; letter-spacing:.035em; text-transform:uppercase; }
+        .camilla-paid-case-image figcaption { margin-top:8px; color:#596158; font:500 12px/1.55 'DM Mono',monospace; letter-spacing:.035em; text-transform:uppercase; }
         .camilla-paid-case-wide { grid-column:1 / -1; display:grid; grid-template-columns:.78fr 1.22fr; align-items:center; gap:6%; background:#e6e5d9; }
         .camilla-paid-case-wide h4 { margin-bottom:10px; }
         .camilla-paid-case-wide-copy p { margin-bottom:0; }
         .camilla-paid-case-wide-metrics { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:20px 25px; }
         .camilla-paid-case-wide-metrics > div { display:grid; gap:5px; padding-top:10px; border-top:1px solid #c4c8b9; }
-        .camilla-paid-case-wide-metrics small { color:#626b63; font-size:8px; line-height:1.5; }
-        .camilla-paid-case-wide p { font-size:11px; }
+        .camilla-paid-case-wide-metrics small { color:#626b63; font-size:13px; line-height:1.5; }
+        .camilla-paid-case-wide p { font-size:13px; }
         .camilla-paid-ad-feature { display:grid; grid-template-columns:minmax(250px,.78fr) 1.22fr; margin:14px 0 0; background:var(--cloud); color:var(--navy); }
         .camilla-paid-ad-gallery { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); align-items:center; gap:10px; padding:clamp(20px,3vw,36px); background:#e8e6dd; }
         .camilla-paid-ad-gallery img { display:block; width:100%; max-height:560px; object-fit:contain; }
         .camilla-paid-ad-copy { align-self:center; padding:clamp(26px,4vw,54px); }
         .camilla-paid-ad-copy h4 { margin:14px 0 12px; font:500 clamp(27px,3.3vw,39px)/1.04 'Lora',serif; letter-spacing:-.055em; }
-        .camilla-paid-ad-copy > p { max-width:470px; margin:0; color:var(--body); font-size:12px; line-height:1.7; }
+        .camilla-paid-ad-copy > p { max-width:470px; margin:0; color:var(--body); font-size:14px; line-height:1.7; }
         .camilla-paid-ad-copy > p.camilla-paid-ad-flight { margin-top:10px; color:#596158; }
         .camilla-paid-ad-metrics { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:12px; margin-top:23px; padding-top:15px; border-top:1px solid var(--line); }
         .camilla-paid-ad-metrics > div { display:grid; gap:5px; }
         .camilla-paid-ad-metrics strong { color:var(--blue); font:500 clamp(22px,2.8vw,32px)/1 'Lora',serif; letter-spacing:-.05em; }
-        .camilla-paid-ad-metrics span { color:#596158; font:500 8px/1.5 'DM Mono',monospace; letter-spacing:.035em; text-transform:uppercase; }
-        .camilla-paid-ad-copy > small { display:block; margin-top:12px; color:#737a71; font-size:9px; line-height:1.5; }
+        .camilla-paid-ad-metrics span { color:#596158; font:500 12px/1.5 'DM Mono',monospace; letter-spacing:.035em; text-transform:uppercase; }
+        .camilla-paid-ad-copy > small { display:block; margin-top:12px; color:#737a71; font-size:13px; line-height:1.5; }
         .camilla-about { background:var(--navy); color:var(--white); padding:91px 0 95px; }
         .camilla-about-top { display:grid; grid-template-columns:.8fr 1.2fr; gap:8%; align-items:end; margin-bottom:48px; }
         .camilla-about-top .camilla-kicker { color:var(--yellow); }
         .camilla-about-top h2 { font:500 clamp(42px,6vw,76px)/.94 'Lora',serif; letter-spacing:-.07em; margin:13px 0 0; }
-        .camilla-about-top p { color:#d0d6cd; max-width:460px; font-size:12px; line-height:1.75; margin:0 0 4px; }
+        .camilla-about-top p { color:#d0d6cd; max-width:460px; font-size:14px; line-height:1.75; margin:0 0 4px; }
         .camilla-cv { border-top:1px solid #58635a; }
         .camilla-role { display:grid; grid-template-columns:165px .82fr 1.18fr; gap:26px; align-items:start; padding:21px 0; border-bottom:1px solid #58635a; }
         .camilla-role-date { color:#c0c8bc; padding-top:5px; }
         .camilla-role h3 { font:500 19px 'Lora',serif; letter-spacing:-.035em; margin:0 0 5px; }
-        .camilla-role-title { color:var(--yellow); font-size:10px; line-height:1.5; }
-        .camilla-role p { color:#d0d6cd; font-size:11px; line-height:1.7; margin:0; max-width:550px; }
+        .camilla-role-title { color:var(--yellow); font-size:13px; line-height:1.5; }
+        .camilla-role p { color:#d0d6cd; font-size:13px; line-height:1.7; margin:0; max-width:550px; }
         .camilla-practice { padding:93px 0 0; }
         .camilla-practice-grid { display:grid; grid-template-columns:.8fr 1.2fr; gap:9%; }
         .camilla-practice .camilla-kicker { color:var(--blue); }
         .camilla-practice h2 { font:500 clamp(42px,6vw,71px)/.94 'Lora',serif; letter-spacing:-.07em; margin:14px 0 20px; }
-        .camilla-practice-intro { color:var(--body); font-size:12px; line-height:1.75; max-width:390px; }
+        .camilla-practice-intro { color:var(--body); font-size:14px; line-height:1.75; max-width:390px; }
         .camilla-capabilities { border-top:1px solid var(--line); }
         .camilla-capability { border-bottom:1px solid var(--line); padding:17px 0; display:grid; grid-template-columns:1fr auto; gap:16px; align-items:start; }
         .camilla-capability h3 { font:600 14px 'Lora',serif; margin:0; }
-        .camilla-capability p { color:#626b63; font-size:10px; line-height:1.55; margin:5px 0 0; }
-        .camilla-capability span { color:var(--blue); font:500 9px 'DM Mono',monospace; }
+        .camilla-capability p { color:#626b63; font-size:13px; line-height:1.55; margin:5px 0 0; }
+        .camilla-capability span { color:var(--blue); font:500 12px 'DM Mono',monospace; }
         .camilla-education-section { padding:73px 0 89px; }
         .camilla-education-section h2 { font:500 25px 'Lora',serif; letter-spacing:-.04em; margin:0; border-bottom:1px solid var(--line); padding-bottom:17px; }
-        .camilla-education { display:grid; grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr); gap:24px 42px; margin-top:0; padding-top:19px; color:var(--body); font-size:10px; line-height:1.55; }
-        .camilla-education h3 { display:block; color:var(--blue); font:500 8px 'DM Mono',monospace; letter-spacing:.1em; margin:0 0 9px; }
+        .camilla-education { display:grid; grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr); gap:24px 42px; margin-top:0; padding-top:19px; color:var(--body); font-size:13px; line-height:1.55; }
+        .camilla-education h3 { display:block; color:var(--blue); font:500 12px 'DM Mono',monospace; letter-spacing:.1em; margin:0 0 9px; }
         .camilla-education-list, .camilla-certification-list { list-style:none; margin:0; padding:0; }
         .camilla-education-list li + li { margin-top:11px; }
         .camilla-education-list strong, .camilla-education-list span { display:block; }
-        .camilla-education-list span { color:#626b63; font-size:9px; }
+        .camilla-education-list span { color:#626b63; font-size:13px; }
         .camilla-certification-list { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:7px 18px; }
         .camilla-education-languages { grid-column:1 / -1; display:flex; align-items:baseline; gap:20px; border-top:1px solid var(--line); padding-top:12px; }
         .camilla-education-languages h3 { margin:0; }
@@ -900,7 +879,7 @@ function App() {
         .camilla-contact-links a { display:flex; align-items:center; justify-content:space-between; gap:14px; padding:15px 0; border-bottom:1px solid rgba(41,46,42,.34); text-decoration:none; font:600 13px 'Lora',serif; }
         .camilla-contact-links a:hover { padding-left:6px; }
         .camilla-contact-project { margin-top:23px; padding-top:17px; border-top:1px solid rgba(41,46,42,.34); }
-        .camilla-contact-project p { max-width:410px; margin:7px 0 0; color:var(--body); font-size:12px; line-height:1.7; }
+        .camilla-contact-project p { max-width:410px; margin:7px 0 0; color:var(--body); font-size:14px; line-height:1.7; }
         .camilla-contact-project a { margin-top:4px; }
         .camilla-footer { border-top:1px solid rgba(41,46,42,.3); margin-top:80px; padding-top:16px; display:flex; justify-content:space-between; gap:20px; position:relative; z-index:1; color:#4c554d; }
         .camilla-footer a { text-decoration:none; }
@@ -912,7 +891,7 @@ function App() {
           .camilla-shell { width:min(100% - 40px,620px); }
           .camilla-header { height:64px; }
           .camilla-nav { gap:13px; }
-          .camilla-nav a { font-size:10px; }
+          .camilla-nav a { font-size:12px; }
           .camilla-nav a:nth-child(3), .camilla-nav a:nth-child(4) { display:none; }
           .camilla-hero-inner { padding-top:36px; }
           .camilla-hero h1 { font-size:clamp(62px,12vw,100px); margin:40px 0 20px; }
@@ -930,6 +909,7 @@ function App() {
           .camilla-work-heading p { margin-top:16px; }
           .camilla-results { padding:20px 18px 22px; }
           .camilla-results-grid { grid-template-columns:repeat(2,minmax(0,1fr)); }
+          .camilla-reporting-grid { grid-template-columns:1fr; }
           .camilla-education-tools { flex-direction:column; gap:8px; }
           .camilla-case, .camilla-case-reverse { grid-template-columns:1fr; }
           .camilla-work-small > .camilla-case { grid-template-columns:1fr; }
@@ -961,7 +941,7 @@ function App() {
           .cdp-novartis-pillars div { min-height:90px; padding:9px; }
           .cdp-novartis-pillars strong { font-size:14px; }
           .cdp-abba-gallery figure { flex-basis:290px; }
-          .cdp-strategy-tags span { font-size:7px; }
+          .cdp-strategy-tags span { font-size:13px; }
           .cdp-work-small { grid-template-columns:1fr; gap:24px; }
           .camilla-about-top { grid-template-columns:1fr; gap:18px; margin-bottom:32px; }
           .camilla-role { grid-template-columns:1fr; gap:7px; }
@@ -977,7 +957,7 @@ function App() {
         }
         @media (max-width:400px) {
           .camilla-shell { width:calc(100% - 30px); }
-          .camilla-brand { font-size:11px; }
+          .camilla-brand { font-size:13px; }
           .camilla-nav { gap:8px; }
           .camilla-nav a:first-child { display:none; }
           .camilla-hero h1 { font-size:clamp(50px,13vw,59px); }
@@ -985,9 +965,9 @@ function App() {
           .camilla-hero-art { height:auto; grid-template-columns:1fr; gap:6px; padding:6px; }
           .camilla-hero-photo { height:295px; }
           .camilla-hero-message { min-height:430px; padding:18px 16px; }
-          .camilla-testimonial-head .camilla-kicker { font-size:8px; }
+          .camilla-testimonial-head .camilla-kicker { font-size:13px; }
           .camilla-testimonial-slide blockquote p { font-size:15px; }
-          .camilla-photo-caption { left:10px; right:10px; bottom:10px; flex-direction:column; gap:4px; font-size:7px; }
+          .camilla-photo-caption { left:10px; right:10px; bottom:10px; flex-direction:column; gap:4px; font-size:13px; }
           .cdp-artwork { min-height:275px; }
           .cdp-artwork-bigger { min-height:275px; }
           .cdp-bigger-gallery { height:275px; gap:8px; padding:10px; }
@@ -1082,6 +1062,23 @@ function App() {
               <div><strong>7.94%</strong><span>LinkedIn engagement rate</span><small>Weighted average</small></div>
               <div><strong>12–15%</strong><span>LinkedIn click-through rate</span><small>2024–25 average · up from 7–8% in 2022</small></div>
             </div>
+            <div className="camilla-reporting">
+              <div className="camilla-kicker">From my reporting · Orlo annual report · Apr 2022 – Mar 2023</div>
+              <div className="camilla-reporting-grid">
+                <figure>
+                  <a href={bbfOrloSentimentImage} target="_blank" rel="noreferrer" aria-label="Open full-size image: brand sentiment and inbound messages">
+                    <img src={bbfOrloSentimentImage} alt="Orlo brand sentiment report for Buckinghamshire Business First, April 2022 to March 2023: 2.1k inbound messages, 62.5% positive, 17.8% semi-positive, 15.6% neutral, 3.4% semi-negative and 0.8% negative, split across X, Facebook, Instagram and LinkedIn." />
+                  </a>
+                  <figcaption>Brand sentiment · 2.1k inbound messages across four networks</figcaption>
+                </figure>
+                <figure>
+                  <a href={bbfOrloBestTimesImage} target="_blank" rel="noreferrer" aria-label="Open full-size image: best times to post heatmap">
+                    <img src={bbfOrloBestTimesImage} alt="Orlo best-times-to-post heatmap for Buckinghamshire Business First, rating each hour and weekday, with 9am, 4pm, 10am and 3pm as the strongest slots." />
+                  </a>
+                  <figcaption>Best times to post · used to plan the content calendar</figcaption>
+                </figure>
+              </div>
+            </div>
           </div>
 
           <CaseStudy
@@ -1089,15 +1086,25 @@ function App() {
             artwork="Buckinghamshire Business First"
             category="Buckinghamshire Business First · In-house campaign"
             title="Make local business feel like a movement."
+            brief="Show local businesses that BBF membership means being part of a wider business community, not just using a support service."
             description="“Part of Something Bigger” connected member stories and event video across PR, video, digital and marketing teams. I owned the weekly rhythm and check-ins to keep the campaign coordinated."
             roleDescription="Created the campaign strategy, copy and design, developed the hashtag approach, and led reporting."
             videoUrl="https://lnkd.in/p/eAA3xgvh"
+          />
+          <CaseStudy
+            project="listening"
+            category="ISOQOL · Social listening · Current contract"
+            title="Listen first, then decide what to say."
+            brief="Give a global scientific society a clear picture of who talks about quality of life research, where, and what they care about."
+            description="I set up and run social listening in Brandwatch across LinkedIn, X and the wider web for the International Society for Quality of Life Research. The work covers conversation and sentiment around patient-reported outcomes, the #ISOQOL conversation around the 2026 annual conference, and share of voice against peer organisations."
+            roleDescription="Built the Boolean queries that separate ISOQOL from similarly named organisations, mapped the society's audiences and the topics each follows, researched search and AI-search visibility in Semrush, and write insight reports for the communications team."
           />
           <CaseStudy
             project="jpmam"
             artwork="J.P. Morgan Asset Management"
             category="J.P. Morgan Asset Management · dentsu · Social strategy"
             title="One social framework across 12 EMEA markets."
+            brief="Bring 12 EMEA markets under one social approach, with shared audience insight, content planning and reporting."
             description="I developed a regional social strategy across 12 EMEA markets, connecting audience and competitor research to content planning, KPIs and reporting. The gallery brings together selected LinkedIn content examples, top-post analysis and a social-listening conversation-trend chart."
             metric="12"
             measure="EMEA markets"
@@ -1108,6 +1115,7 @@ function App() {
             project="hsbc"
             category="HSBC Asset Management · B2B LinkedIn"
             title="Reach the people making the decisions."
+            brief="Reach treasurers and CFOs on LinkedIn and turn that attention into enquiries, inside a regulated approvals process."
             description="Managed LinkedIn publishing and paid activation for treasurers and CFOs, with compliance workflows, stakeholder approvals and optimisation reporting."
             metric="~600"
             measure="First-stage enquiries a month"
@@ -1115,10 +1123,22 @@ function App() {
             roleDescription="Managed LinkedIn paid campaign delivery through Sprinklr, reported performance and recommended optimisations, and handled compliance and multi-stage approvals."
           />
           <CaseStudy
+            project="community"
+            category="Community management · Buckinghamshire Business First · dentsu · ARIA · freelance"
+            title="Know when to answer, and when to hand it on."
+            brief="Keep online conversation healthy and on-brand, and make sure sensitive comments reach the right people quickly."
+            description="At dentsu I recruited and managed a multilingual moderation team and built social listening and response frameworks. At ARIA I developed community management processes ahead of launch. At BBF I handled inbound messages across X, Facebook, Instagram and LinkedIn. I have also built response matrices for sensitive interactions, setting out which conversations stay with the social team and which are escalated elsewhere in the organisation, and I ran and moderated webinars for freelance clients."
+            roleDescription="Hiring and managing moderators, writing response and escalation guidance, and moderating live sessions."
+            metric="2.1k"
+            measure="Inbound messages in one year at BBF"
+            note="Apr 2022 – Mar 2023 · 80% positive or semi-positive · 4% negative or semi-negative"
+          />
+          <CaseStudy
             project="novartis"
             artwork="Novartis UK"
             category="Novartis UK · dentsu · Social strategy"
             title="Make a complex healthcare story more human."
+            brief="Set a 2020 UK social strategy built around the patient journey, reputation, and attracting and retaining talent."
             description="The 2020 UK strategy focused on the patient journey, reputation, and attracting and retaining talent. Selected material pairs AMR Action Fund posts with Facebook and LinkedIn audience snapshots and #NovartisLife diversity campaign assets."
             roleDescription="For Novartis UK, I contributed to audience and competitor research, social strategy and content planning for antimicrobial-resistance communications and the #NovartisLife diversity campaign."
           />
@@ -1127,6 +1147,7 @@ function App() {
             artwork="ABBA Voyage"
             category="Aniara (later ABBA Voyage) · Digital Marketing Consultant"
             title="Understand the audience before the spotlight."
+            brief="Work out who the audience was, where they were and where to spend, before the show even had its final name."
             description="I joined the project while it was still called Aniara, before the ABBA Voyage name had been decided. I contributed to initial market research and social media launch planning, planned launch posts like these, developed more than £1 million of paid media recommendations, and presented them to investors. Selected materials cover audience segments, priority markets, campaign phases, partner guidance and the website roadmap."
             metric="2020–21"
             measure="Pre-launch strategy"
@@ -1137,6 +1158,7 @@ function App() {
             artwork="ARIA"
             category="ARIA · Digital communications launch"
             title="Give a new agency a clear voice."
+            brief="Launch a brand-new government research agency with no existing audience, and help it recruit its first Programme Directors."
             description="Built launch-period digital strategy and produced social, web and email communications ahead of the Advanced Research and Invention Agency’s public launch. The gallery includes authored recruitment posts, a Programme Director article and interview-video examples."
             metric="4,500+"
             measure="Social followers from zero"
@@ -1218,6 +1240,7 @@ function App() {
             <div className="camilla-contact-links">
               <a href="mailto:camillaadupreez@gmail.com"><span>camillaadupreez@gmail.com</span><MoveUpRight size={16} /></a>
               <a href="https://www.linkedin.com/in/camilladupreez" target="_blank" rel="noreferrer"><span>LinkedIn · Camilla Du Preez</span><MoveUpRight size={16} /></a>
+              <p className="camilla-open-roles">Open to new roles in social media, community and digital communications · London</p>
               <div className="camilla-contact-project" data-testid="current-project">
                 <div className="camilla-kicker">Currently building</div>
                 <p>I’m working on a social listening agent. More screenshots and project details will be added as the work develops.</p>
