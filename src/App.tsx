@@ -514,17 +514,28 @@ function PaidMediaSection() {
         <div className="camilla-paid-spotlight">
           <div className="camilla-paid-visual">
             <div className="camilla-kicker">Buckinghamshire Skills Hub · Bucks Skills Show</div>
-            <video
-              controls
-              playsInline
-              preload="metadata"
-              poster={bucksSkillsShowPoster}
-              aria-label="TikTok ad for the Bucks Skills Show, conceived by Camilla Du Preez, who also helped film it"
-            >
-              <source src={bucksSkillsShowVideo} type="video/mp4" />
-              Your browser does not support embedded video.
-            </video>
-            <span className="camilla-paid-video-caption">TikTok creative · Campaign also ran on YouTube</span>
+            <div className="camilla-paid-showcase-gallery">
+              <figure>
+                <video
+                  controls
+                  playsInline
+                  preload="metadata"
+                  poster={bucksSkillsShowPoster}
+                  aria-label="TikTok ad for the Bucks Skills Show, conceived by Camilla Du Preez, who also helped film it"
+                >
+                  <source src={bucksSkillsShowVideo} type="video/mp4" />
+                  Your browser does not support embedded video.
+                </video>
+                <figcaption>TikTok creative · Campaign also ran on YouTube</figcaption>
+              </figure>
+              <figure>
+                <img
+                  src={bucksSkillsHubRegistrationAdImage}
+                  alt="Buckinghamshire Skills Hub sponsored registration ad for the Bucks Skills Show, inviting students, educators and employers to book a place."
+                />
+                <figcaption>Sponsored ad · 127 reactions · 12 comments · 28 shares</figcaption>
+              </figure>
+            </div>
           </div>
 
           <div className="camilla-paid-results">
@@ -596,25 +607,6 @@ function PaidMediaSection() {
             </figcaption>
           </figure>
 
-          <figure className="camilla-paid-ad-feature">
-            <div className="camilla-paid-ad-gallery camilla-paid-ad-gallery-single">
-              <img
-                src={bucksSkillsHubRegistrationAdImage}
-                alt="Buckinghamshire Skills Hub sponsored registration ad for the Bucks Skills Show, with a Book Now button."
-              />
-            </div>
-            <figcaption className="camilla-paid-ad-copy">
-              <div className="camilla-paid-case-kicker">Sponsored registration ad · Buckinghamshire Skills Hub</div>
-              <h4>Registration open for the Bucks Skills Show.</h4>
-              <p>Sponsored social creative inviting students, educators and employers to book a place at the hands-on event exploring careers, skills and opportunities across Buckinghamshire.</p>
-              <div className="camilla-paid-ad-metrics camilla-paid-ad-metrics-three" aria-label="Engagement totals visible in the supplied sponsored-ad screenshot">
-                <div><strong>127</strong><span>Reactions</span></div>
-                <div><strong>12</strong><span>Comments</span></div>
-                <div><strong>28</strong><span>Shares</span></div>
-              </div>
-              <small>On-post totals visible in the supplied ad screenshot.</small>
-            </figcaption>
-          </figure>
         </div>
       </div>
     </section>
@@ -796,7 +788,11 @@ function App() {
         .camilla-paid-spotlight { display:grid; grid-template-columns:.85fr 1.15fr; background:var(--cloud); color:var(--navy); }
         .camilla-paid-visual { min-height:500px; display:flex; flex-direction:column; justify-content:center; align-items:center; gap:16px; padding:42px 26px 22px; background:#18231d; }
         .camilla-paid-visual > .camilla-kicker { align-self:flex-start; color:#f2eadb; }
-        .camilla-paid-visual video { display:block; width:auto; max-width:100%; max-height:420px; aspect-ratio:9 / 16; object-fit:contain; background:#111; }
+        .camilla-paid-showcase-gallery { display:grid; grid-template-columns:1fr 1fr; align-items:center; gap:12px; width:100%; }
+        .camilla-paid-showcase-gallery figure { display:grid; align-content:center; gap:12px; min-width:0; margin:0; }
+        .camilla-paid-showcase-gallery video { display:block; width:100%; max-width:100%; max-height:420px; aspect-ratio:9 / 16; object-fit:contain; background:#111; }
+        .camilla-paid-showcase-gallery img { display:block; width:100%; max-height:420px; aspect-ratio:1; object-fit:contain; background:var(--cloud); }
+        .camilla-paid-showcase-gallery figcaption { color:#f2eadb; font:500 8px/1.5 'DM Mono',monospace; letter-spacing:.04em; text-transform:uppercase; }
         .camilla-paid-video-caption { align-self:flex-start; color:#d0d6cd; font:500 8px/1.4 'DM Mono',monospace; letter-spacing:.06em; text-transform:uppercase; }
         .camilla-paid-results { padding:clamp(28px,4vw,54px); }
         .camilla-paid-results > .camilla-kicker { color:var(--blue); }
@@ -839,7 +835,6 @@ function App() {
         .camilla-paid-case-wide p { font-size:11px; }
         .camilla-paid-ad-feature { display:grid; grid-template-columns:minmax(250px,.78fr) 1.22fr; margin:14px 0 0; background:var(--cloud); color:var(--navy); }
         .camilla-paid-ad-gallery { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); align-items:center; gap:10px; padding:clamp(20px,3vw,36px); background:#e8e6dd; }
-        .camilla-paid-ad-gallery-single { grid-template-columns:1fr; }
         .camilla-paid-ad-gallery img { display:block; width:100%; max-height:560px; object-fit:contain; }
         .camilla-paid-ad-copy { align-self:center; padding:clamp(26px,4vw,54px); }
         .camilla-paid-ad-copy h4 { margin:14px 0 12px; font:500 clamp(27px,3.3vw,39px)/1.04 'Lora',serif; letter-spacing:-.055em; }
@@ -847,7 +842,6 @@ function App() {
         .camilla-paid-ad-copy > p.camilla-paid-ad-flight { margin-top:10px; color:#596158; }
         .camilla-paid-ad-metrics { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:12px; margin-top:23px; padding-top:15px; border-top:1px solid var(--line); }
         .camilla-paid-ad-metrics > div { display:grid; gap:5px; }
-        .camilla-paid-ad-metrics-three { grid-template-columns:repeat(3,minmax(0,1fr)); }
         .camilla-paid-ad-metrics strong { color:var(--blue); font:500 clamp(22px,2.8vw,32px)/1 'Lora',serif; letter-spacing:-.05em; }
         .camilla-paid-ad-metrics span { color:#596158; font:500 8px/1.5 'DM Mono',monospace; letter-spacing:.035em; text-transform:uppercase; }
         .camilla-paid-ad-copy > small { display:block; margin-top:12px; color:#737a71; font-size:9px; line-height:1.5; }
@@ -928,7 +922,7 @@ function App() {
           .camilla-paid-ad-gallery { grid-template-columns:1fr; }
           .camilla-paid-heading { gap:18px; margin-bottom:30px; }
           .camilla-paid-visual { min-height:390px; }
-          .camilla-paid-visual video { max-height:310px; }
+          .camilla-paid-showcase-gallery video, .camilla-paid-showcase-gallery img { max-height:310px; }
           .camilla-paid-metrics { grid-template-columns:repeat(2,minmax(0,1fr)); }
           .camilla-paid-case-grid { grid-template-columns:1fr; }
           .camilla-paid-case-wide { grid-column:auto; }
