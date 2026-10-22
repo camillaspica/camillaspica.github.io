@@ -12,6 +12,7 @@ import bbfMartinStoryImage from "./assets/bbf-knowledge-martin-member-story.webp
 import bbfExpoStoryImage from "./assets/bbf-business-expo-member-story.webp";
 import bbfNameSwitchAdImage from "./assets/bbf-nameswitch-sponsored-video.jpeg";
 import bbfNameSwitchAdLibraryImage from "./assets/bbf-nameswitch-ad-library.png";
+import bbfNextGenBusinessAdImage from "./assets/bbf-next-gen-business-ad-library.webp";
 import bucksSkillsHubRegistrationAdImage from "./assets/bucks-skills-hub-sponsored-registration.jpeg";
 import bucksSkillsShowVideo from "./assets/bucks-skills-show-tiktok.mp4";
 import bucksSkillsShowPoster from "./assets/bucks-skills-show-tiktok-poster.jpg";
@@ -607,6 +608,27 @@ function PaidMediaSection() {
             </figcaption>
           </figure>
 
+          <figure className="camilla-paid-ad-feature">
+            <div className="camilla-paid-ad-gallery camilla-paid-ad-gallery-single">
+              <img
+                src={bbfNextGenBusinessAdImage}
+                alt="Meta Ad Library screenshot for Buckinghamshire Business First's Next Gen Business Network sponsored image ad, showing its campaign dates and estimated impressions."
+              />
+            </div>
+            <figcaption className="camilla-paid-ad-copy">
+              <div className="camilla-paid-case-kicker">Meta Ad Library · Next Gen Business Network</div>
+              <h4>A local event, promoted to the right audience.</h4>
+              <p>Sponsored single-image ad inviting local businesses to join the Next Gen Business Network on 24 October 2024 at The Beech House in Amersham.</p>
+              <p className="camilla-paid-ad-flight">Ad Library record: ran from 7 to 23 October 2024; 99% of impressions were in the UK.</p>
+              <div className="camilla-paid-ad-metrics" aria-label="Performance and event details shown in the supplied Ad Library screenshot">
+                <div><strong>8,742</strong><span>Estimated impressions</span></div>
+                <div><strong>99%</strong><span>United Kingdom</span></div>
+                <div><strong>24 Oct</strong><span>Event date · 2024</span></div>
+                <div><strong>£25</strong><span>Ticket price</span></div>
+              </div>
+            </figcaption>
+          </figure>
+
         </div>
       </div>
     </section>
@@ -835,6 +857,7 @@ function App() {
         .camilla-paid-case-wide p { font-size:11px; }
         .camilla-paid-ad-feature { display:grid; grid-template-columns:minmax(250px,.78fr) 1.22fr; margin:14px 0 0; background:var(--cloud); color:var(--navy); }
         .camilla-paid-ad-gallery { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); align-items:center; gap:10px; padding:clamp(20px,3vw,36px); background:#e8e6dd; }
+        .camilla-paid-ad-gallery-single { grid-template-columns:1fr; }
         .camilla-paid-ad-gallery img { display:block; width:100%; max-height:560px; object-fit:contain; }
         .camilla-paid-ad-copy { align-self:center; padding:clamp(26px,4vw,54px); }
         .camilla-paid-ad-copy h4 { margin:14px 0 12px; font:500 clamp(27px,3.3vw,39px)/1.04 'Lora',serif; letter-spacing:-.055em; }
