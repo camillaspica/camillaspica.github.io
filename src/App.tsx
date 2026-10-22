@@ -581,9 +581,9 @@ function PaidMediaSection() {
               <figure className="camilla-paid-case-image">
                 <img
                   src={bbfNextGenBusinessAdImage}
-                  alt="Meta Ad Library screenshot of Buckinghamshire Business First's Next Gen Business Network sponsored image ad."
+                  alt="LinkedIn Ad Library screenshot of Buckinghamshire Business First's Next Gen Business Network sponsored image ad."
                 />
-                <figcaption>Meta Ad Library creative · Next Gen Business Network · 8,742 estimated impressions · 99% UK · 7–23 October 2024</figcaption>
+                <figcaption>LinkedIn Ad Library creative · Next Gen Business Network · 8,742 estimated impressions · 99% UK · 7–23 October 2024</figcaption>
               </figure>
             </article>
 
