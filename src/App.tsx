@@ -42,7 +42,6 @@ import abbaWebsiteTimelineImage from "./assets/abba-website-timeline.webp";
 import abbaAudienceSegmentsImage from "./assets/abba-audience-segments.png";
 import abbaAudienceProfilesImage from "./assets/abba-audience-profiles.png";
 import abbaAudienceLocationsImage from "./assets/abba-audience-locations.png";
-import abbaGroupPhotoImage from "./assets/abba-group-photo.jpg";
 import abbaRevealDatePostImage from "./assets/abba-social-reveal-date.jpg";
 import abbaLaunchTeaserPostImage from "./assets/abba-social-launch-teaser.jpg";
 import abbaPresalesPostImage from "./assets/abba-social-presales.jpg";
@@ -67,7 +66,7 @@ const testimonials = [
   {
     name: "Prof Sa'ad Medhat",
     role: "NEF: The Innovation Institute · Freelance client",
-    quote: "Her expertise in this area has helped my organisation, NEF: The Innovation Institute, to create and position its products and services on LinkedIn and Twitter. … She is a good researcher, a skill that is much needed in underpinning social media campaigns and interactions.",
+    quote: "[Her social media] expertise has helped my organisation, NEF: The Innovation Institute, to create and position its products and services on LinkedIn and Twitter. … She is a good researcher, a skill that is much needed in underpinning social media campaigns and interactions.",
   },
   {
     name: "Andrew Scadding",
@@ -252,11 +251,6 @@ const abbaSamples = [
     caption: "Planned post · 100-day countdown",
   },
   {
-    image: abbaGroupPhotoImage,
-    alt: "A group portrait of the four ABBA members against a bright yellow background, included as visual reference for the ABBA Voyage case study.",
-    caption: "Press image · ABBA group portrait · reference only",
-  },
-  {
     image: abbaAudienceSegmentsImage,
     alt: "ABBA Voyage audience research slide describing Pure Pop Fans, ABBA Babies and core ABBA fans, with messaging themes for each group.",
     caption: "Audience insight · Three audience segments",
@@ -283,8 +277,8 @@ const abbaSamples = [
   },
   {
     image: abbaWebsiteTimelineImage,
-    alt: "Website roadmap from November 2020 content and UX planning to a May 2021 launch.",
-    caption: "Website roadmap · Nov 2020–May 2021",
+    alt: "Project website roadmap, running from content and UX planning to a planned May 2021 launch.",
+    caption: "Website roadmap · Planned May 2021 launch",
   },
 ];
 
@@ -317,14 +311,14 @@ const ariaSamples = [
 ];
 
 const experience = [
-  ["SEP 2026 — PRESENT · CONTRACT TO NOV 2026", "ISOQOL", "Social Listening Consultant", "Listening across LinkedIn, X and the wider web to map conversation around patient-reported outcomes, quality of life research and the society’s audiences."],
-  ["FEB 2022 — JUL 2026", "Buckinghamshire Business First", "Social Media Marketing Manager", "Owned social channels, content planning and reporting for a business growth hub supporting SMEs. Led the “Part of Something Bigger” brand positioning campaign."],
-  ["NOV 2022 — FEB 2023", "ARIA", "Digital Communications Manager · Launch Team", "Built launch-period digital strategy and produced social, web and email communications ahead of the agency’s public launch."],
-  ["MAY 2021 — DEC 2021", "2112 Communications", "Social Media Manager", "Managed LinkedIn publishing, paid activation and stakeholder approvals for HSBC Asset Management."],
-  ["DEC 2020 — MAR 2021", "ABBA Voyage", "Digital Marketing Consultant", "Researched existing and emerging audiences and developed paid media recommendations ahead of launch."],
-  ["MAR 2020 — NOV 2020", "dentsu", "Social Media Strategist", "Worked across J.P. Morgan Asset Management, Novartis UK and Unilever, building strategy, audience insight and KPI frameworks."],
+  ["SEP 2026 — PRESENT · CONTRACT TO NOV 2026", "ISOQOL", "Social Listening Consultant", "Setting up and running social listening in Brandwatch across LinkedIn, X and the wider web, tracking conversation and sentiment around patient-reported outcomes and quality of life research. Benchmarking share of voice against peer organisations and reporting emerging themes to the communications team."],
+  ["FEB 2022 — JUL 2026", "Buckinghamshire Business First", "Social Media Marketing Manager", "Ran LinkedIn, Instagram, Facebook and X day to day for a business growth hub supporting SMEs, from the content calendar to reporting. Led the “Part of Something Bigger” brand positioning campaign, ghostwrote LinkedIn content for the Managing Director, created Net Zero Bucks sustainability content and wrote the employee social media playbook."],
+  ["NOV 2022 — FEB 2023 · CONTRACT", "ARIA", "Digital Communications Manager · Launch Team", "Built launch-period digital strategy and produced social, web and email communications ahead of the agency’s public launch."],
+  ["MAY 2021 — DEC 2021 · CONTRACT", "2112 Communications", "Social Media Manager", "Managed LinkedIn publishing, paid activation and stakeholder approvals for HSBC Asset Management."],
+  ["DEC 2020 — MAR 2021 · CONTRACT", "ABBA Voyage", "Digital Marketing Consultant", "Researched existing and emerging audiences and developed paid media recommendations ahead of launch."],
+  ["MAR 2020 — NOV 2020", "dentsu", "Social Media Strategist", "Worked across J.P. Morgan Asset Management, Novartis UK and Unilever, building strategy, audience insight and KPI frameworks. Recruited and managed a multilingual moderation team."],
+  ["MAY 2015 — MAR 2020", "Two Lane Social + self-employed clients", "Social Media Manager / Freelance Consultant", "Ran social media for founders of SMEs, start-ups and financial services businesses, from content to advertising. Wrote an email launch sequence that brought in around £7,000 at a 42% open rate, and ran and moderated client webinars. Earlier freelance and volunteer work included NEF: The Innovation Institute and Thai Children's Trust."],
   ["JUL 2015 — MAY 2019", "Hartley-Stone Limited", "Account Manager, Social Media", "Planned and published B2B social content for technology and industrial clients including Vanderbilt, Siemens UK and Lucideon; produced client reports and presentations, and built long-term client relationships."],
-  ["MAY 2015 — MAR 2020", "Two Lane Social + self-employed clients", "Social Media Manager / Freelance Consultant", "Started freelance social media work and volunteering alongside university in 2012, including work with NEF: The Innovation Institute and Thai Children's Trust. Through Two Lane Social, I managed social content and paid campaigns for founder-led SMEs and start-ups; separate freelance clients included a small wealth management company, charities and solopreneurs."],
 ];
 
 const capabilities = [
@@ -578,7 +572,7 @@ function PaidMediaSection() {
                 <div><strong>~£19</strong><span>Cost per registration</span></div>
                 <div><strong>£25</strong><span>Target</span></div>
               </div>
-              <p className="camilla-paid-case-note">Membership was free to join, with annual paid tiers at £500 and £2,500. Using the £500 Partner tier, a simple first-year, revenue-only break-even estimate is about 3.8% of registrants upgrading (3.8% × £500 = £19), before other costs.</p>
+              <p className="camilla-paid-case-note">Membership was free to join, with annual paid tiers at £500 and £2,500. If around 3.8% of registrants upgraded to Partner (£500), the £19 would be covered in the first year.</p>
               <figure className="camilla-paid-case-image">
                 <img
                   src={bbfNextGenBusinessAdImage}
@@ -771,6 +765,14 @@ function App() {
         .cdp-case-category { color:var(--blue); font:500 9px 'DM Mono',monospace; letter-spacing:.11em; text-transform:uppercase; }
         .cdp-case-copy h3 { font:500 clamp(32px,4vw,51px)/.99 'Lora',serif; letter-spacing:-.065em; margin:18px 0 16px; }
         .cdp-case-copy > p { color:var(--body); font-size:12px; line-height:1.75; max-width:455px; margin:0; }
+        .camilla-results { background:var(--cloud); padding:22px 26px 26px; margin:0 0 24px; }
+        .camilla-results > .camilla-kicker { color:var(--blue); }
+        .camilla-results-grid { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:18px 26px; margin-top:16px; }
+        .camilla-results-grid > div { display:grid; align-content:start; gap:5px; border-top:1px solid var(--line); padding-top:13px; }
+        .camilla-results-grid strong { color:var(--blue); font:600 clamp(32px,3.6vw,46px)/.95 'Lora',serif; letter-spacing:-.07em; }
+        .camilla-results-grid span { color:var(--navy); font-size:12px; font-weight:600; }
+        .camilla-results-grid small { color:#626b63; font:500 9px/1.5 'DM Mono',monospace; letter-spacing:.03em; }
+        .camilla-education-tools span { line-height:1.7; }
         .cdp-case-stat { display:grid; grid-template-columns:auto 1fr; align-items:end; gap:16px; border-top:1px solid var(--line); margin-top:28px; padding-top:15px; }
         .cdp-case-stat > strong { color:var(--blue); font:600 clamp(41px,5vw,61px)/.93 'Lora',serif; letter-spacing:-.08em; white-space:nowrap; }
         .cdp-case-stat > div { padding-bottom:3px; }
@@ -926,6 +928,9 @@ function App() {
           .camilla-work, .camilla-about { padding:72px 0; }
           .camilla-work-heading { display:block; margin-bottom:32px; }
           .camilla-work-heading p { margin-top:16px; }
+          .camilla-results { padding:20px 18px 22px; }
+          .camilla-results-grid { grid-template-columns:repeat(2,minmax(0,1fr)); }
+          .camilla-education-tools { flex-direction:column; gap:8px; }
           .camilla-case, .camilla-case-reverse { grid-template-columns:1fr; }
           .camilla-work-small > .camilla-case { grid-template-columns:1fr; }
           .camilla-case-reverse .cdp-artwork, .camilla-case-reverse .cdp-case-copy { order:initial; }
@@ -1004,7 +1009,7 @@ function App() {
       <section className="camilla-hero" id="top">
         <div className="camilla-shell camilla-hero-inner">
           <div className="camilla-hero-meta camilla-kicker">
-            <span className="camilla-availability"><i /> London-based · Social &amp; digital communications</span>
+            <span className="camilla-availability"><i /> London · Social Media Marketing Manager · Digital Communications Manager · Social Media Strategist</span>
             <span>10+ years' experience</span>
           </div>
           <h1 className="camilla-reveal">Complex ideas.<br /><span>Clear impact.</span></h1>
@@ -1054,10 +1059,10 @@ function App() {
       </div>
 
       <section className="camilla-shell camilla-intro" id="about">
-        <div className="camilla-intro-label camilla-kicker">Senior practitioner / agency, in-house, consultancy, freelance</div>
+        <div className="camilla-intro-label camilla-kicker">Agency · in-house · consultancy · freelance</div>
         <h2>Good communication starts with a useful question: <em>what does this audience need to know, feel or do?</em></h2>
         <div className="camilla-intro-foot">
-          <p>I’m an experienced social and digital communications strategist, not a content factory. I bring listening, audience understanding and clear thinking together with the hands-on craft of making the work happen.</p>
+          <p>I’ve spent over ten years in social media and digital communications, mostly in B2B, in-house and agency. I bring listening, audience understanding and clear thinking together with the hands-on craft of making the work happen.</p>
           <a className="camilla-text-link" href="#experience">A little about me <ArrowRight size={14} /></a>
         </div>
       </section>
@@ -1069,18 +1074,22 @@ function App() {
             <p>Each project starts with the audience and the business need. Here’s a closer look at the thinking, coordination and outcomes.</p>
           </div>
 
+          <div className="camilla-results" aria-labelledby="camilla-results-title">
+            <div className="camilla-kicker" id="camilla-results-title">Channel results · Buckinghamshire Business First · 2022–2026</div>
+            <div className="camilla-results-grid">
+              <div><strong>+859%</strong><span>LinkedIn link clicks</span><small>Weighted monthly average · 1,333 (2022/23) → 12,780 (2025/26)</small></div>
+              <div><strong>+722%</strong><span>Instagram engagement rate</span><small>0.52% → 4.30%</small></div>
+              <div><strong>7.94%</strong><span>LinkedIn engagement rate</span><small>Weighted average</small></div>
+              <div><strong>12–15%</strong><span>LinkedIn click-through rate</span><small>2024–25 average · up from 7–8% in 2022</small></div>
+            </div>
+          </div>
+
           <CaseStudy
             project="bigger"
             artwork="Buckinghamshire Business First"
             category="Buckinghamshire Business First · In-house campaign"
             title="Make local business feel like a movement."
             description="“Part of Something Bigger” connected member stories and event video across PR, video, digital and marketing teams. I owned the weekly rhythm and check-ins to keep the campaign coordinated."
-            metric="+859%"
-            measure="Channel-wide LinkedIn link-click growth over three years"
-            note="Weighted monthly average across the full channel · 2022/23: 1,333 → 2025/26: 12,780 · not attributable to this campaign"
-            secondaryMetric="12–15%"
-            secondaryMeasure="Average LinkedIn click-through rate"
-            secondaryNote="2024–25 average · up from 7–8% in 2022"
             roleDescription="Created the campaign strategy, copy and design, developed the hashtag approach, and led reporting."
             videoUrl="https://lnkd.in/p/eAA3xgvh"
           />
@@ -1089,7 +1098,7 @@ function App() {
             artwork="J.P. Morgan Asset Management"
             category="J.P. Morgan Asset Management · dentsu · Social strategy"
             title="One social framework across 12 EMEA markets."
-            description="I developed a regional social strategy across 12 EMEA markets, connecting audience and competitor research to content planning, KPIs and reporting. The gallery brings together selected LinkedIn content examples, top-post analysis and a social-listening conversation-trend chart. The 2020 weekly-content review also records a native PDF test for U.S. 529 college-savings-plan content with 167% higher CTR than off-platform links."
+            description="I developed a regional social strategy across 12 EMEA markets, connecting audience and competitor research to content planning, KPIs and reporting. The gallery brings together selected LinkedIn content examples, top-post analysis and a social-listening conversation-trend chart."
             metric="12"
             measure="EMEA markets"
             note="Strategy framework · 2020"
@@ -1169,7 +1178,7 @@ function App() {
       </section>
 
       <section className="camilla-shell camilla-education-section" aria-labelledby="camilla-education-title">
-        <h2 id="camilla-education-title">Education &amp; certifications</h2>
+        <h2 id="camilla-education-title">Education, certifications &amp; tools</h2>
         <div className="camilla-education">
           <div>
             <h3>Education</h3>
@@ -1190,6 +1199,10 @@ function App() {
               <li>Interaction Design Foundation</li>
               <li>n8n Essentials: Your First Workflows</li>
             </ul>
+          </div>
+          <div className="camilla-education-languages camilla-education-tools">
+            <h3>Tools</h3>
+            <span>Sprout Social · Orlo · Sprinklr · Emplifi (SocialBakers) · Brandwatch · Talkwalker · Semrush · Canva · CapCut · Adobe Photoshop · Illustrator · Premiere Pro · After Effects · LinkedIn Campaign Manager · Meta Ads Manager · Google Analytics (GA4) · HubSpot · Salesforce · Mailchimp · WordPress · Monday.com · ChatGPT · Claude</span>
           </div>
           <div className="camilla-education-languages">
             <h3>Languages</h3>
