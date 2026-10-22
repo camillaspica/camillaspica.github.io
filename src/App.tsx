@@ -1005,7 +1005,7 @@ function App() {
         <div className="camilla-shell camilla-hero-inner">
           <div className="camilla-hero-meta camilla-kicker">
             <span className="camilla-availability"><i /> London-based · Social &amp; digital communications</span>
-            <span>10+ years in the work</span>
+            <span>10+ years' experience</span>
           </div>
           <h1 className="camilla-reveal">Complex ideas.<br /><span>Clear impact.</span></h1>
           <div className="camilla-hero-foot camilla-reveal-delay">
@@ -1065,7 +1065,7 @@ function App() {
       <section className="camilla-work" id="work">
         <div className="camilla-shell">
           <div className="camilla-work-heading">
-            <div><h2>Selected Visuals and Impact</h2></div>
+            <div><h2>Selected visuals and impact</h2></div>
             <p>Each project starts with the audience and the business need. Here’s a closer look at the thinking, coordination and outcomes.</p>
           </div>
 
