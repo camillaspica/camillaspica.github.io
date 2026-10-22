@@ -4,11 +4,6 @@ import portraitImage from "./assets/camilla-portrait.webp";
 import bbfNetworkingImage from "./assets/bbf-networking-member-story.webp";
 import bbfOpportunityImage from "./assets/bbf-opportunity-member-story.webp";
 import bbf15YearVideoImage from "./assets/bbf-15-year-video-post.webp";
-import bbfSandraInterviewImage from "./assets/bbf-member-interview-sandra.webp";
-import bbfCommunityImpactImage from "./assets/bbf-community-impact-interview.webp";
-import bbfMargaretVideoImage from "./assets/bbf-networking-margaret-video.webp";
-import bbfVictoriaVideoImage from "./assets/bbf-opportunity-victoria-video.webp";
-import bbfMartinStoryImage from "./assets/bbf-knowledge-martin-member-story.webp";
 import bbfExpoStoryImage from "./assets/bbf-business-expo-member-story.webp";
 import bbfNameSwitchAdImage from "./assets/bbf-nameswitch-sponsored-video.jpeg";
 import bbfNameSwitchAdLibraryImage from "./assets/bbf-nameswitch-ad-library.webp";
@@ -16,9 +11,6 @@ import bbfNextGenBusinessAdImage from "./assets/bbf-next-gen-business-ad-library
 import bucksSkillsHubRegistrationAdImage from "./assets/bucks-skills-hub-sponsored-registration.jpeg";
 import bucksSkillsShowVideo from "./assets/bucks-skills-show-tiktok.mp4";
 import bucksSkillsShowPoster from "./assets/bucks-skills-show-tiktok-poster.jpg";
-import jpmamAnniversaryImage from "./assets/jpmam-leadership-anniversary.webp";
-import jpmamThoughtLeadershipImage from "./assets/jpmam-thought-leadership.webp";
-import jpmamTechTrendsImage from "./assets/jpmam-tech-trends-live.webp";
 import jpmamSentimentImage from "./assets/jpmam-sentiment-trend.webp";
 import jpmamActivationVideoImage from "./assets/jpmam-activation-video-post.webp";
 import jpmamTopImpressionsImage from "./assets/jpmam-top-impressions-post.webp";
@@ -30,19 +22,12 @@ import novartisFacebookAudienceImage from "./assets/novartis-facebook-audience.w
 import novartisLinkedInFollowersImage from "./assets/novartis-linkedin-followers.webp";
 import novartisDiversityImage1 from "./assets/novartis-diversity-1.webp";
 import abbaCampaignPhasesImage from "./assets/abba-campaign-phases.webp";
-import abbaPartnerToolkitImage from "./assets/abba-partner-toolkit.webp";
-import abbaWebsiteTimelineImage from "./assets/abba-website-timeline.webp";
 import abbaAudienceSegmentsImage from "./assets/abba-audience-segments.png";
 import abbaAudienceProfilesImage from "./assets/abba-audience-profiles.png";
-import abbaAudienceLocationsImage from "./assets/abba-audience-locations.png";
 import abbaRevealDatePostImage from "./assets/abba-social-reveal-date.jpg";
-import abbaLaunchTeaserPostImage from "./assets/abba-social-launch-teaser.jpg";
-import abbaPresalesPostImage from "./assets/abba-social-presales.jpg";
-import abbaCountdownPostImage from "./assets/abba-social-countdown.jpg";
 import ariaSocialRecruitmentImage from "./assets/aria-social-recruitment.jpg";
 import ariaSocialProgrammeDirectorImage from "./assets/aria-social-programme-director.jpg";
 import ariaVideoInterviewSafetyImage from "./assets/aria-video-interview-safety.jpg";
-import ariaProgrammeDirectorsArticleImage from "./assets/aria-programme-directors-article.jpg";
 import ariaVideoFoundingCohortImage from "./assets/aria-video-founding-cohort.jpg";
 
 const testimonials = [
@@ -85,31 +70,6 @@ const bbfCampaignPosts = [
     caption: "BBF15 · Campaign video",
   },
   {
-    image: bbfSandraInterviewImage,
-    alt: "LinkedIn member interview post featuring Sandra van Rossum of PCB Technical Solutions.",
-    caption: "Member interview · Sandra van Rossum",
-  },
-  {
-    image: bbfCommunityImpactImage,
-    alt: "LinkedIn interview post about the community impact and history of Buckinghamshire Business First.",
-    caption: "Community impact · Interview",
-  },
-  {
-    image: bbfMargaretVideoImage,
-    alt: "Part of Something Bigger networking campaign video featuring Margaret Donnelly of Equilibrium Products.",
-    caption: "Networking · Margaret Donnelly",
-  },
-  {
-    image: bbfVictoriaVideoImage,
-    alt: "Part of Something Bigger opportunity campaign video featuring Victoria Brocklesby of Origin Global.",
-    caption: "Opportunity · Victoria Brocklesby",
-  },
-  {
-    image: bbfMartinStoryImage,
-    alt: "Part of Something Bigger knowledge member-story post featuring Martin Knowles of Sales Untangled.",
-    caption: "Knowledge · Martin Knowles",
-  },
-  {
     image: bbfExpoStoryImage,
     alt: "Buckinghamshire Business First member at the High Wycombe Business Expo holding a Part of Something Bigger sign.",
     caption: "Community · Business expo",
@@ -136,21 +96,6 @@ const jpmamSamples = [
     image: jpmamSentimentImage,
     alt: "Conversation results over time chart from the 2020 J.P. Morgan Asset Management EMEA social reporting framework.",
     caption: "Social listening · Conversation trend",
-  },
-  {
-    image: jpmamAnniversaryImage,
-    alt: "Representative J.P. Morgan Asset Management LinkedIn post celebrating the firm's 35th anniversary.",
-    caption: "Leadership · Brand story",
-  },
-  {
-    image: jpmamThoughtLeadershipImage,
-    alt: "Representative J.P. Morgan Asset Management LinkedIn post announcing a senior industry appointment.",
-    caption: "Thought leadership",
-  },
-  {
-    image: jpmamTechTrendsImage,
-    alt: "Tech Trends LinkedIn Live broadcast still, shown without the viewer comments panel.",
-    caption: "Tech Trends · LinkedIn Live",
   },
 ];
 
@@ -194,21 +139,6 @@ const abbaSamples = [
     caption: "Planned post · Reveal date",
   },
   {
-    image: abbaLaunchTeaserPostImage,
-    alt: "ABBA Voyage social post screenshot showing a gold-lit countdown to 2 September 2021.",
-    caption: "Planned post · Launch-date teaser",
-  },
-  {
-    image: abbaPresalesPostImage,
-    alt: "ABBA Voyage social post screenshot announcing that website pre-sales are open.",
-    caption: "Planned post · Ticket pre-sales",
-  },
-  {
-    image: abbaCountdownPostImage,
-    alt: "ABBA Voyage social post screenshot announcing a 100-day countdown in gold lettering on black.",
-    caption: "Planned post · 100-day countdown",
-  },
-  {
     image: abbaAudienceSegmentsImage,
     alt: "ABBA Voyage audience research slide describing Pure Pop Fans, ABBA Babies and core ABBA fans, with messaging themes for each group.",
     caption: "Audience insight · Three audience segments",
@@ -219,24 +149,9 @@ const abbaSamples = [
     caption: "Audience insight · Profile and media habits",
   },
   {
-    image: abbaAudienceLocationsImage,
-    alt: "ABBA Voyage audience-location research slide showing priority markets, awareness figures and UK audience locations.",
-    caption: "Audience insight · Priority markets",
-  },
-  {
     image: abbaCampaignPhasesImage,
     alt: "ABBA London strategy slide outlining a phased launch and three years of campaign activity.",
     caption: "Campaign structure · Four phases",
-  },
-  {
-    image: abbaPartnerToolkitImage,
-    alt: "ABBA London strategy slide proposing partner guidance for fonts, logos, graphics, approved imagery and content.",
-    caption: "Partner toolkit · Brand guidance",
-  },
-  {
-    image: abbaWebsiteTimelineImage,
-    alt: "Project website roadmap, running from content and UX planning to a planned May 2021 launch.",
-    caption: "Website roadmap · Planned May 2021 launch",
   },
 ];
 
@@ -250,11 +165,6 @@ const ariaSamples = [
     image: ariaVideoFoundingCohortImage,
     alt: "Screenshot of an ARIA article with a subtitled interview video featuring a founding-cohort member.",
     caption: "Edited video · Founding cohort interview",
-  },
-  {
-    image: ariaProgrammeDirectorsArticleImage,
-    alt: "Screenshot of ARIA’s Introducing Our Programme Directors article and its key takeaways.",
-    caption: "Article · Introducing Programme Directors",
   },
   {
     image: ariaSocialRecruitmentImage,
@@ -306,7 +216,7 @@ function CampaignArtwork({ project, style }: { project: "bigger" | "aria" | "ski
   return (
     <div className={`cdp-artwork cdp-artwork-${project}`} role={project === "bigger" || project === "aria" || project === "jpmam" || project === "novartis" || project === "abba" || project === "skills" ? "group" : "img"} aria-label={artworkLabel}>
       {project === "bigger" && (
-        <div className="cdp-bigger-gallery" tabIndex={0} aria-label="Campaign post gallery. Scroll horizontally to view all nine examples.">
+        <div className="cdp-bigger-gallery" tabIndex={0} aria-label="Campaign post gallery. Scroll horizontally to view all four examples.">
           {bbfCampaignPosts.map((post) => (
             <figure key={post.caption}>
               <img src={post.image} alt={post.alt} />
@@ -1121,7 +1031,7 @@ function App() {
             category="Aniara (later ABBA Voyage) · Digital Marketing Consultant"
             title="Understand the audience before the spotlight."
             brief="Work out who the audience was, where they were and where to spend, before the show even had its final name."
-            description="I joined the project while it was still called Aniara, before the ABBA Voyage name had been decided. I contributed to initial market research and social media launch planning, planned launch posts like these, developed more than £1 million of paid media recommendations, and presented them to investors. Selected materials cover audience segments, priority markets, campaign phases, partner guidance and the website roadmap."
+            description="I joined the project while it was still called Aniara, before the ABBA Voyage name had been decided. I contributed to initial market research and social media launch planning, planned launch posts like these, developed more than £1 million of paid media recommendations, and presented them to investors. The gallery shows a planned launch post alongside audience segments, audience profiles and the phased campaign structure."
             metric="2020–21"
             measure="Pre-launch strategy"
             note="Audience research · Paid media recommendations"
@@ -1132,7 +1042,7 @@ function App() {
             category="ARIA · Digital communications launch"
             title="Give a new agency a clear voice."
             brief="Launch a brand-new government research agency with no existing audience, and help it recruit its first Programme Directors."
-            description="Built launch-period digital strategy and produced social, web and email communications ahead of the Advanced Research and Invention Agency’s public launch. The gallery includes authored recruitment posts, a Programme Director article and interview-video examples."
+            description="Built launch-period digital strategy and produced social, web and email communications ahead of the Advanced Research and Invention Agency’s public launch. The gallery includes interview-video edits and authored recruitment posts."
             metric="4,500+"
             measure="Social followers from zero"
             note="During a two-month launch period"
