@@ -44,8 +44,6 @@ import ariaSocialProgrammeDirectorImage from "./assets/aria-social-programme-dir
 import ariaVideoInterviewSafetyImage from "./assets/aria-video-interview-safety.jpg";
 import ariaProgrammeDirectorsArticleImage from "./assets/aria-programme-directors-article.jpg";
 import ariaVideoFoundingCohortImage from "./assets/aria-video-founding-cohort.jpg";
-import bbfOrloSentimentImage from "./assets/bbf-orlo-brand-sentiment.webp";
-import bbfOrloBestTimesImage from "./assets/bbf-orlo-best-times.webp";
 
 const testimonials = [
   {
@@ -739,13 +737,6 @@ function App() {
         .camilla-results-grid strong { color:var(--blue); font:600 clamp(32px,3.6vw,46px)/.95 'Lora',serif; letter-spacing:-.07em; }
         .camilla-results-grid span { color:var(--navy); font-size:14px; font-weight:600; }
         .camilla-results-grid small { color:#626b63; font:500 12px/1.5 'DM Mono',monospace; letter-spacing:.03em; }
-        .camilla-reporting { margin-top:24px; border-top:1px solid var(--line); padding-top:16px; }
-        .camilla-reporting > .camilla-kicker { color:var(--blue); }
-        .camilla-reporting-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:18px; margin-top:12px; }
-        .camilla-reporting-grid figure { margin:0; }
-        .camilla-reporting-grid a { display:block; cursor:zoom-in; }
-        .camilla-reporting-grid img { display:block; width:100%; height:auto; background:#fbf9f3; box-shadow:0 10px 24px rgba(41,46,42,.12); }
-        .camilla-reporting-grid figcaption { margin-top:8px; color:#596158; font:500 12px/1.5 'DM Mono',monospace; letter-spacing:.03em; }
         .camilla-open-roles { margin:16px 0 4px; color:var(--body); font-size:14px; line-height:1.6; }
         .camilla-education-tools span { line-height:1.7; }
         .cdp-case { scroll-margin-top:24px; }
@@ -909,8 +900,7 @@ function App() {
           .camilla-work-heading p { margin-top:16px; }
           .camilla-results { padding:20px 18px 22px; }
           .camilla-results-grid { grid-template-columns:repeat(2,minmax(0,1fr)); }
-          .camilla-reporting-grid { grid-template-columns:1fr; }
-          .camilla-education-tools { flex-direction:column; gap:8px; }
+            .camilla-education-tools { flex-direction:column; gap:8px; }
           .camilla-case, .camilla-case-reverse { grid-template-columns:1fr; }
           .camilla-work-small > .camilla-case { grid-template-columns:1fr; }
           .camilla-case-reverse .cdp-artwork, .camilla-case-reverse .cdp-case-copy { order:initial; }
@@ -1061,23 +1051,6 @@ function App() {
               <div><strong>+722%</strong><span>Instagram engagement rate</span><small>0.52% → 4.30%</small></div>
               <div><strong>7.94%</strong><span>LinkedIn engagement rate</span><small>Weighted average</small></div>
               <div><strong>12–15%</strong><span>LinkedIn click-through rate</span><small>2024–25 average · up from 7–8% in 2022</small></div>
-            </div>
-            <div className="camilla-reporting">
-              <div className="camilla-kicker">From my reporting · Orlo annual report · Apr 2022 – Mar 2023</div>
-              <div className="camilla-reporting-grid">
-                <figure>
-                  <a href={bbfOrloSentimentImage} target="_blank" rel="noreferrer" aria-label="Open full-size image: brand sentiment and inbound messages">
-                    <img src={bbfOrloSentimentImage} alt="Orlo brand sentiment report for Buckinghamshire Business First, April 2022 to March 2023: 2.1k inbound messages, 62.5% positive, 17.8% semi-positive, 15.6% neutral, 3.4% semi-negative and 0.8% negative, split across X, Facebook, Instagram and LinkedIn." />
-                  </a>
-                  <figcaption>Brand sentiment · 2.1k inbound messages across four networks</figcaption>
-                </figure>
-                <figure>
-                  <a href={bbfOrloBestTimesImage} target="_blank" rel="noreferrer" aria-label="Open full-size image: best times to post heatmap">
-                    <img src={bbfOrloBestTimesImage} alt="Orlo best-times-to-post heatmap for Buckinghamshire Business First, rating each hour and weekday, with 9am, 4pm, 10am and 3pm as the strongest slots." />
-                  </a>
-                  <figcaption>Best times to post · used to plan the content calendar</figcaption>
-                </figure>
-              </div>
             </div>
           </div>
 
