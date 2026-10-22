@@ -1009,7 +1009,7 @@ function App() {
       <section className="camilla-hero" id="top">
         <div className="camilla-shell camilla-hero-inner">
           <div className="camilla-hero-meta camilla-kicker">
-            <span className="camilla-availability"><i /> London · Social Media Marketing Manager · Digital Communications Manager · Social Media Strategist</span>
+            <span className="camilla-availability"><i /> London · Social Media Marketing Manager · Digital Communications Manager · Social Media Strategist · Paid Social · Professional Community Manager</span>
             <span>10+ years' experience</span>
           </div>
           <h1 className="camilla-reveal">Complex ideas.<br /><span>Clear impact.</span></h1>
