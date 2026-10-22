@@ -986,7 +986,7 @@ function App() {
                   <a href="https://www.instagram.com/bbf_uk/reels/" target="_blank" rel="noreferrer" aria-label="See Buckinghamshire Business First reels on Instagram">
                     <img src={bbfTheatreReelImage} alt="Buckinghamshire Business First Instagram reel filmed at Aylesbury Waterside Theatre, showing the theatre's red illuminated sign, with 1,152 views." />
                   </a>
-                  <figcaption><strong>Reel · Event at Aylesbury Waterside Theatre · 2025</strong><span>I filmed, edited and produced it, music included.</span><span>1,152 views</span></figcaption>
+                  <figcaption><span>1,152 views</span></figcaption>
                 </figure>
               </div>
             </div>
