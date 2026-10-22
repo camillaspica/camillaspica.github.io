@@ -1016,7 +1016,7 @@ function App() {
             category="Community management · Buckinghamshire Business First · dentsu · ARIA · freelance"
             title="Know when to answer, and when to hand it on."
             brief="Keep online conversation healthy and on-brand, and make sure sensitive comments reach the right people quickly."
-            description="At dentsu I recruited and managed a multilingual moderation team and built social listening and response frameworks. At ARIA I developed community management processes ahead of launch. At BBF I handled inbound messages across X, Facebook, Instagram and LinkedIn. I have also built response matrices for sensitive interactions, setting out which conversations stay with the social team and which are escalated elsewhere in the organisation, and I ran and moderated webinars for freelance clients."
+            description="At dentsu I recruited and managed a multilingual moderation team, built response matrices for sensitive interactions that set out which conversations stay with the social team and which are escalated elsewhere in the organisation, and set up listening workflows in Brandwatch and Talkwalker. At ARIA I developed community management processes ahead of launch. At BBF I handled inbound messages across X, Facebook, Instagram and LinkedIn. I also ran and moderated webinars for freelance clients."
             roleDescription="Hiring and managing moderators, writing response and escalation guidance, and moderating live sessions."
             metric="2.1k"
             measure="Inbound messages in one year at BBF"
