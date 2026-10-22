@@ -12,6 +12,7 @@ import bbfMartinStoryImage from "./assets/bbf-knowledge-martin-member-story.webp
 import bbfExpoStoryImage from "./assets/bbf-business-expo-member-story.webp";
 import bbfNameSwitchAdImage from "./assets/bbf-nameswitch-sponsored-video.jpeg";
 import bbfNameSwitchAdLibraryImage from "./assets/bbf-nameswitch-ad-library.png";
+import bucksSkillsHubRegistrationAdImage from "./assets/bucks-skills-hub-sponsored-registration.jpeg";
 import bucksSkillsShowVideo from "./assets/bucks-skills-show-tiktok.mp4";
 import bucksSkillsShowPoster from "./assets/bucks-skills-show-tiktok-poster.jpg";
 import jpmamAnniversaryImage from "./assets/jpmam-leadership-anniversary.webp";
@@ -594,18 +595,26 @@ function PaidMediaSection() {
               <small>On-post totals visible in the supplied ad screenshot.</small>
             </figcaption>
           </figure>
-        </div>
 
-        <div className="camilla-paid-delivery">
-          <div className="camilla-paid-delivery-heading">
-            <div className="camilla-kicker">Buckinghamshire Business First · Campaign delivery</div>
-            <p>Hands-on campaign management across the full journey, from channel mix and creative testing to conversion tracking and stakeholder reporting.</p>
-          </div>
-          <div className="camilla-paid-delivery-grid">
-            <div><span>01 / Channels</span><strong>Paid social, video &amp; search</strong><p>Meta, LinkedIn, TikTok, YouTube, Google Search and Display.</p></div>
-            <div><span>02 / Optimisation</span><strong>Budget and testing</strong><p>Managed spend and pacing; tested creative, copy, audiences and placements.</p></div>
-            <div><span>03 / Measurement</span><strong>Track the next step</strong><p>Used Meta Pixel, Conversions API and GA4 dashboards for reach, traffic, registrations and ROI.</p></div>
-          </div>
+          <figure className="camilla-paid-ad-feature">
+            <div className="camilla-paid-ad-gallery camilla-paid-ad-gallery-single">
+              <img
+                src={bucksSkillsHubRegistrationAdImage}
+                alt="Buckinghamshire Skills Hub sponsored registration ad for the Bucks Skills Show, with a Book Now button."
+              />
+            </div>
+            <figcaption className="camilla-paid-ad-copy">
+              <div className="camilla-paid-case-kicker">Sponsored registration ad · Buckinghamshire Skills Hub</div>
+              <h4>Registration open for the Bucks Skills Show.</h4>
+              <p>Sponsored social creative inviting students, educators and employers to book a place at the hands-on event exploring careers, skills and opportunities across Buckinghamshire.</p>
+              <div className="camilla-paid-ad-metrics camilla-paid-ad-metrics-three" aria-label="Engagement totals visible in the supplied sponsored-ad screenshot">
+                <div><strong>127</strong><span>Reactions</span></div>
+                <div><strong>12</strong><span>Comments</span></div>
+                <div><strong>28</strong><span>Shares</span></div>
+              </div>
+              <small>On-post totals visible in the supplied ad screenshot.</small>
+            </figcaption>
+          </figure>
         </div>
       </div>
     </section>
@@ -780,7 +789,7 @@ function App() {
         .cdp-work-small > .cdp-case { grid-column:1 / -1; grid-template-columns:1.14fr .86fr; margin:0; }
         .camilla-paid-media { padding:92px 0 100px; background:var(--navy); color:var(--white); }
         .camilla-paid-heading { display:grid; grid-template-columns:1.1fr .9fr; gap:8%; align-items:end; margin-bottom:43px; }
-        .camilla-paid-heading .camilla-kicker, .camilla-paid-delivery-heading .camilla-kicker { color:var(--yellow); }
+        .camilla-paid-heading .camilla-kicker { color:var(--yellow); }
         .camilla-paid-heading h2 { margin:13px 0 0; font:500 clamp(43px,6vw,76px)/.94 'Lora',serif; letter-spacing:-.07em; }
         .camilla-paid-heading h2 em { color:var(--yellow); font-style:normal; }
         .camilla-paid-heading > p { max-width:460px; margin:0 0 3px; color:#d0d6cd; font-size:12px; line-height:1.8; }
@@ -830,6 +839,7 @@ function App() {
         .camilla-paid-case-wide p { font-size:11px; }
         .camilla-paid-ad-feature { display:grid; grid-template-columns:minmax(250px,.78fr) 1.22fr; margin:14px 0 0; background:var(--cloud); color:var(--navy); }
         .camilla-paid-ad-gallery { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); align-items:center; gap:10px; padding:clamp(20px,3vw,36px); background:#e8e6dd; }
+        .camilla-paid-ad-gallery-single { grid-template-columns:1fr; }
         .camilla-paid-ad-gallery img { display:block; width:100%; max-height:560px; object-fit:contain; }
         .camilla-paid-ad-copy { align-self:center; padding:clamp(26px,4vw,54px); }
         .camilla-paid-ad-copy h4 { margin:14px 0 12px; font:500 clamp(27px,3.3vw,39px)/1.04 'Lora',serif; letter-spacing:-.055em; }
@@ -837,16 +847,10 @@ function App() {
         .camilla-paid-ad-copy > p.camilla-paid-ad-flight { margin-top:10px; color:#596158; }
         .camilla-paid-ad-metrics { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:12px; margin-top:23px; padding-top:15px; border-top:1px solid var(--line); }
         .camilla-paid-ad-metrics > div { display:grid; gap:5px; }
+        .camilla-paid-ad-metrics-three { grid-template-columns:repeat(3,minmax(0,1fr)); }
         .camilla-paid-ad-metrics strong { color:var(--blue); font:500 clamp(22px,2.8vw,32px)/1 'Lora',serif; letter-spacing:-.05em; }
         .camilla-paid-ad-metrics span { color:#596158; font:500 8px/1.5 'DM Mono',monospace; letter-spacing:.035em; text-transform:uppercase; }
         .camilla-paid-ad-copy > small { display:block; margin-top:12px; color:#737a71; font-size:9px; line-height:1.5; }
-        .camilla-paid-delivery { display:grid; grid-template-columns:.72fr 1.28fr; gap:8%; margin-top:35px; padding:28px 0 0; border-top:1px solid #58635a; }
-        .camilla-paid-delivery-heading p { max-width:320px; margin:11px 0 0; color:#d0d6cd; font-size:11px; line-height:1.7; }
-        .camilla-paid-delivery-grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:19px; }
-        .camilla-paid-delivery-grid > div { padding-top:11px; border-top:1px solid #58635a; }
-        .camilla-paid-delivery-grid span { display:block; margin-bottom:13px; color:var(--yellow); font:500 8px 'DM Mono',monospace; letter-spacing:.08em; text-transform:uppercase; }
-        .camilla-paid-delivery-grid strong { display:block; font:500 15px/1.2 'Lora',serif; }
-        .camilla-paid-delivery-grid p { margin:8px 0 0; color:#d0d6cd; font-size:9px; line-height:1.65; }
         .camilla-about { background:var(--navy); color:var(--white); padding:91px 0 95px; }
         .camilla-about-top { display:grid; grid-template-columns:.8fr 1.2fr; gap:8%; align-items:end; margin-bottom:48px; }
         .camilla-about-top .camilla-kicker { color:var(--yellow); }
@@ -920,13 +924,11 @@ function App() {
           .camilla-work-small > .camilla-case { grid-template-columns:1fr; }
           .camilla-case-reverse .cdp-artwork, .camilla-case-reverse .cdp-case-copy { order:initial; }
           .camilla-paid-media { padding:72px 0; }
-          .camilla-paid-heading, .camilla-paid-spotlight, .camilla-paid-delivery, .camilla-paid-case-wide, .camilla-paid-ad-feature { grid-template-columns:1fr; }
+          .camilla-paid-heading, .camilla-paid-spotlight, .camilla-paid-case-wide, .camilla-paid-ad-feature { grid-template-columns:1fr; }
           .camilla-paid-ad-gallery { grid-template-columns:1fr; }
           .camilla-paid-heading { gap:18px; margin-bottom:30px; }
           .camilla-paid-visual { min-height:390px; }
           .camilla-paid-visual video { max-height:310px; }
-          .camilla-paid-delivery { gap:23px; }
-          .camilla-paid-delivery-grid { grid-template-columns:1fr; }
           .camilla-paid-metrics { grid-template-columns:repeat(2,minmax(0,1fr)); }
           .camilla-paid-case-grid { grid-template-columns:1fr; }
           .camilla-paid-case-wide { grid-column:auto; }
@@ -982,7 +984,6 @@ function App() {
           .cdp-case-stat { grid-template-columns:1fr; gap:6px; }
           .camilla-paid-metrics { gap:14px 10px; }
           .camilla-paid-results { padding:25px 20px; }
-          .camilla-paid-delivery-grid { grid-template-columns:1fr; }
         }
       `}</style>
 
