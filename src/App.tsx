@@ -572,12 +572,12 @@ function PaidMediaSection() {
             <article className="camilla-paid-case">
               <div className="camilla-paid-case-kicker">02 / Membership acquisition</div>
               <h4>Acquisition with a path to payback.</h4>
-              <p>Reduced cost per registration to around £19, below the £25 target.</p>
+              <p>Delivered around £19 per registration against a £25 target.</p>
               <div className="camilla-paid-case-metrics">
                 <div><strong>~£19</strong><span>Cost per registration</span></div>
                 <div><strong>£25</strong><span>Target</span></div>
               </div>
-              <p className="camilla-paid-case-note">Membership was free to join, with annual paid tiers at £500 and £2,500. Break-even modelling showed that around 1.3% upgrading to Partner level would cover acquisition cost.</p>
+              <p className="camilla-paid-case-note">Membership was free to join, with annual paid tiers at £500 and £2,500. Using the £500 Partner tier, a simple first-year, revenue-only break-even estimate is about 3.8% of registrants upgrading (3.8% × £500 = £19), before other costs.</p>
               <figure className="camilla-paid-case-image">
                 <img
                   src={bbfNextGenBusinessAdImage}
