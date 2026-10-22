@@ -578,6 +578,13 @@ function PaidMediaSection() {
                 <div><strong>£25</strong><span>Target</span></div>
               </div>
               <p className="camilla-paid-case-note">Membership was free to join, with annual paid tiers at £500 and £2,500. Break-even modelling showed that around 1.3% upgrading to Partner level would cover acquisition cost.</p>
+              <figure className="camilla-paid-case-image">
+                <img
+                  src={bbfNextGenBusinessAdImage}
+                  alt="Meta Ad Library screenshot of Buckinghamshire Business First's Next Gen Business Network sponsored image ad."
+                />
+                <figcaption>Meta Ad Library creative · Next Gen Business Network · 8,742 estimated impressions · 99% UK · 7–23 October 2024</figcaption>
+              </figure>
             </article>
 
           </div>
@@ -605,27 +612,6 @@ function PaidMediaSection() {
                 <div><strong>18</strong><span>Shares</span></div>
               </div>
               <small>On-post totals visible in the supplied ad screenshot.</small>
-            </figcaption>
-          </figure>
-
-          <figure className="camilla-paid-ad-feature">
-            <div className="camilla-paid-ad-gallery camilla-paid-ad-gallery-single">
-              <img
-                src={bbfNextGenBusinessAdImage}
-                alt="Meta Ad Library screenshot for Buckinghamshire Business First's Next Gen Business Network sponsored image ad, showing its campaign dates and estimated impressions."
-              />
-            </div>
-            <figcaption className="camilla-paid-ad-copy">
-              <div className="camilla-paid-case-kicker">Meta Ad Library · Next Gen Business Network</div>
-              <h4>A local event, promoted to the right audience.</h4>
-              <p>Sponsored single-image ad inviting local businesses to join the Next Gen Business Network on 24 October 2024 at The Beech House in Amersham.</p>
-              <p className="camilla-paid-ad-flight">Ad Library record: ran from 7 to 23 October 2024; 99% of impressions were in the UK.</p>
-              <div className="camilla-paid-ad-metrics" aria-label="Performance and event details shown in the supplied Ad Library screenshot">
-                <div><strong>8,742</strong><span>Estimated impressions</span></div>
-                <div><strong>99%</strong><span>United Kingdom</span></div>
-                <div><strong>24 Oct</strong><span>Event date · 2024</span></div>
-                <div><strong>£25</strong><span>Ticket price</span></div>
-              </div>
             </figcaption>
           </figure>
 
@@ -848,6 +834,9 @@ function App() {
         .camilla-paid-case-metrics strong, .camilla-paid-case-wide-metrics strong { color:var(--blue); font:500 clamp(24px,3vw,34px)/1 'Lora',serif; letter-spacing:-.05em; }
         .camilla-paid-case-metrics span, .camilla-paid-case-wide-metrics span { color:#596158; font:500 9px/1.5 'DM Mono',monospace; letter-spacing:.035em; text-transform:uppercase; }
         .camilla-paid-case p.camilla-paid-case-note { margin:0; color:#626b63; font-size:10px; }
+        .camilla-paid-case-image { margin:19px 0 0; padding-top:14px; border-top:1px solid var(--line); }
+        .camilla-paid-case-image img { display:block; width:100%; height:auto; }
+        .camilla-paid-case-image figcaption { margin-top:8px; color:#596158; font:500 8px/1.55 'DM Mono',monospace; letter-spacing:.035em; text-transform:uppercase; }
         .camilla-paid-case-wide { grid-column:1 / -1; display:grid; grid-template-columns:.78fr 1.22fr; align-items:center; gap:6%; background:#e6e5d9; }
         .camilla-paid-case-wide h4 { margin-bottom:10px; }
         .camilla-paid-case-wide-copy p { margin-bottom:0; }
@@ -857,7 +846,6 @@ function App() {
         .camilla-paid-case-wide p { font-size:11px; }
         .camilla-paid-ad-feature { display:grid; grid-template-columns:minmax(250px,.78fr) 1.22fr; margin:14px 0 0; background:var(--cloud); color:var(--navy); }
         .camilla-paid-ad-gallery { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); align-items:center; gap:10px; padding:clamp(20px,3vw,36px); background:#e8e6dd; }
-        .camilla-paid-ad-gallery-single { grid-template-columns:1fr; }
         .camilla-paid-ad-gallery img { display:block; width:100%; max-height:560px; object-fit:contain; }
         .camilla-paid-ad-copy { align-self:center; padding:clamp(26px,4vw,54px); }
         .camilla-paid-ad-copy h4 { margin:14px 0 12px; font:500 clamp(27px,3.3vw,39px)/1.04 'Lora',serif; letter-spacing:-.055em; }
