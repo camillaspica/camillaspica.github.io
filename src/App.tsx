@@ -269,7 +269,7 @@ const ariaSamples = [
 ];
 
 const experience = [
-  ["SEP 2026 — PRESENT · CONTRACT TO NOV 2026", "ISOQOL", "Social Listening Consultant", "Setting up and running social listening in Brandwatch across LinkedIn, X and the wider web, tracking conversation and sentiment around patient-reported outcomes and quality of life research. Benchmarking share of voice against peer organisations and reporting emerging themes to the communications team."],
+  ["SEP 2026 — PRESENT · CONTRACT TO NOV 2026", "Global non-profit scientific society · confidential", "Social Listening Consultant", "Setting up and running social listening in Brandwatch across LinkedIn, X and the wider web, tracking conversation and sentiment around the society’s research field. Benchmarking share of voice against peer organisations and reporting emerging themes to the communications team."],
   ["FEB 2022 — JUL 2026", "Buckinghamshire Business First", "Social Media Marketing Manager", "Ran LinkedIn, Instagram, Facebook and X day to day for a business growth hub supporting SMEs, from the content calendar to reporting. Led the “Part of Something Bigger” brand positioning campaign, ghostwrote LinkedIn content for the Managing Director, created Net Zero Bucks sustainability content and wrote the employee social media playbook."],
   ["NOV 2022 — FEB 2023 · CONTRACT", "ARIA", "Digital Communications Manager · Launch Team", "Built launch-period digital strategy and produced social, web and email communications ahead of the agency’s public launch."],
   ["MAY 2021 — DEC 2021 · CONTRACT", "2112 Communications", "Social Media Manager", "Managed LinkedIn publishing, paid activation and stakeholder approvals for HSBC Asset Management."],
@@ -1066,11 +1066,11 @@ function App() {
           />
           <CaseStudy
             project="listening"
-            category="ISOQOL · Social listening · Current contract"
+            category="Global scientific society · Social listening · Current contract"
             title="Listen first, then decide what to say."
-            brief="Give a global scientific society a clear picture of who talks about quality of life research, where, and what they care about."
-            description="I set up and run social listening in Brandwatch across LinkedIn, X and the wider web for the International Society for Quality of Life Research. The work covers conversation and sentiment around patient-reported outcomes, the #ISOQOL conversation around the 2026 annual conference, and share of voice against peer organisations."
-            roleDescription="Built the Boolean queries that separate ISOQOL from similarly named organisations, mapped the society's audiences and the topics each follows, researched search and AI-search visibility in Semrush, and write insight reports for the communications team."
+            brief="Give a global scientific society a clear picture of who talks about its field, where, and what they care about."
+            description="I set up and run social listening in Brandwatch across LinkedIn, X and the wider web for an international non-profit research society (the client is confidential). The work covers conversation and sentiment across its research field, conference conversation, and share of voice against peer organisations."
+            roleDescription="Built Boolean queries that separate the society from similarly named organisations, mapped its audiences and the topics each follows, researched search and AI-search visibility in Semrush, and write insight reports for the communications team."
           />
           <CaseStudy
             project="jpmam"
