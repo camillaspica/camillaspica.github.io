@@ -29,6 +29,7 @@ import ariaSocialRecruitmentImage from "./assets/aria-social-recruitment.jpg";
 import ariaSocialProgrammeDirectorImage from "./assets/aria-social-programme-director.jpg";
 import ariaVideoInterviewSafetyImage from "./assets/aria-video-interview-safety.jpg";
 import ariaVideoFoundingCohortImage from "./assets/aria-video-founding-cohort.jpg";
+import bbfAwardsReelImage from "./assets/bbf-awards-2025-reel.webp";
 
 const testimonials = [
   {
@@ -648,6 +649,15 @@ function App() {
         .camilla-results-grid span { color:var(--navy); font-size:14px; font-weight:600; }
         .camilla-results-grid small { color:#626b63; font:500 12px/1.5 'DM Mono',monospace; letter-spacing:.03em; }
         .camilla-open-roles { margin:16px 0 4px; color:var(--body); font-size:14px; line-height:1.6; }
+        .camilla-instagram { margin-top:24px; border-top:1px solid var(--line); padding-top:16px; }
+        .camilla-instagram > .camilla-kicker { color:var(--blue); }
+        .camilla-instagram-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(200px,240px)); gap:20px; margin-top:12px; }
+        .camilla-instagram-grid figure { margin:0; }
+        .camilla-instagram-grid a { display:block; }
+        .camilla-instagram-grid img { display:block; width:100%; height:auto; border-radius:6px; box-shadow:0 10px 24px rgba(41,46,42,.14); }
+        .camilla-instagram-grid figcaption { display:grid; gap:3px; margin-top:9px; font-size:13px; line-height:1.45; color:var(--body); }
+        .camilla-instagram-grid figcaption strong { color:var(--navy); font-size:13px; }
+        .camilla-instagram-grid figcaption span:last-child { color:#596158; font:500 12px/1.5 'DM Mono',monospace; }
         .camilla-education-tools span { line-height:1.7; }
         .cdp-case { scroll-margin-top:24px; }
         .cdp-case-brief { margin:0 0 14px; padding-left:12px; border-left:2px solid var(--yellow); }
@@ -961,6 +971,17 @@ function App() {
               <div><strong>+722%</strong><span>Instagram engagement rate</span><small>0.52% → 4.30%</small></div>
               <div><strong>7.94%</strong><span>LinkedIn engagement rate</span><small>Weighted average</small></div>
               <div><strong>12–15%</strong><span>LinkedIn click-through rate</span><small>2024–25 average · up from 7–8% in 2022</small></div>
+            </div>
+            <div className="camilla-instagram">
+              <div className="camilla-kicker">On Instagram · Buckinghamshire Business First</div>
+              <div className="camilla-instagram-grid">
+                <figure>
+                  <a href="https://www.instagram.com/reel/DP3xk6PCGlV/" target="_blank" rel="noreferrer" aria-label="Watch the Buckinghamshire Business Awards 2025 reel on Instagram">
+                    <img src={bbfAwardsReelImage} alt="Buckinghamshire Business First Instagram reel from the Buckinghamshire Business Awards 2025, congratulating finalists and winners, with 74 likes, 6 comments, 2 reposts and 3 shares." />
+                  </a>
+                  <figcaption><strong>Reel · Buckinghamshire Business Awards 2025</strong><span>I filmed, edited and produced it, music included.</span><span>74 likes · 6 comments · 2 reposts · 3 shares</span></figcaption>
+                </figure>
+              </div>
             </div>
           </div>
 
