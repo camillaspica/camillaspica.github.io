@@ -10,6 +10,8 @@ import bbfMargaretVideoImage from "./assets/bbf-networking-margaret-video.webp";
 import bbfVictoriaVideoImage from "./assets/bbf-opportunity-victoria-video.webp";
 import bbfMartinStoryImage from "./assets/bbf-knowledge-martin-member-story.webp";
 import bbfExpoStoryImage from "./assets/bbf-business-expo-member-story.webp";
+import bbfNameSwitchAdImage from "./assets/bbf-nameswitch-sponsored-video.jpeg";
+import bbfNameSwitchAdLibraryImage from "./assets/bbf-nameswitch-ad-library.png";
 import bucksSkillsShowVideo from "./assets/bucks-skills-show-tiktok.mp4";
 import bucksSkillsShowPoster from "./assets/bucks-skills-show-tiktok-poster.jpg";
 import jpmamAnniversaryImage from "./assets/jpmam-leadership-anniversary.webp";
@@ -496,6 +498,120 @@ function CaseStudy({
   );
 }
 
+function PaidMediaSection() {
+  return (
+    <section className="camilla-paid-media" id="paid-media" aria-labelledby="paid-media-title">
+      <div className="camilla-shell">
+        <div className="camilla-paid-heading">
+          <div>
+            <div className="camilla-kicker">Paid media · Buckinghamshire Business First</div>
+            <h2 id="paid-media-title">Built to reach.<br /><em>Measured to move.</em></h2>
+          </div>
+          <p>Across BBF, I planned and optimised paid campaigns for events, membership, skills programmes and service launches—combining creative testing, audience planning and performance reporting.</p>
+        </div>
+
+        <div className="camilla-paid-spotlight">
+          <div className="camilla-paid-visual">
+            <div className="camilla-kicker">Buckinghamshire Skills Hub · Bucks Skills Show</div>
+            <video
+              controls
+              playsInline
+              preload="metadata"
+              poster={bucksSkillsShowPoster}
+              aria-label="TikTok ad for the Bucks Skills Show, conceived by Camilla Du Preez, who also helped film it"
+            >
+              <source src={bucksSkillsShowVideo} type="video/mp4" />
+              Your browser does not support embedded video.
+            </video>
+            <span className="camilla-paid-video-caption">TikTok creative · Campaign also ran on YouTube</span>
+          </div>
+
+          <div className="camilla-paid-results">
+            <div className="camilla-kicker">Paid activation · Campaign spotlight</div>
+            <h3>From creative idea<br />to registrations.</h3>
+            <p>I conceived the TikTok ad idea, helped film it and ran the paid ads. The campaign contributed to 20% of event registrations.</p>
+            <div className="camilla-paid-primary-result">
+              <strong>20%</strong>
+              <div><span>Of event registrations</span><small>Campaign contribution</small></div>
+            </div>
+            <div className="camilla-paid-metrics" aria-label="Bucks Skills Show campaign metrics">
+              <div><strong>~250k</strong><span>Impressions</span></div>
+              <div><strong>5,000+</strong><span>Clicks</span></div>
+              <div><strong>~£0.30</strong><span>Cost per click</span></div>
+            </div>
+          </div>
+        </div>
+
+        <div className="camilla-paid-cases">
+          <div className="camilla-paid-cases-heading">
+            <div className="camilla-kicker">More paid-media case studies · Buckinghamshire Business First</div>
+            <h3>Better decisions.<br /><em>Stronger outcomes.</em></h3>
+          </div>
+          <div className="camilla-paid-case-grid">
+            <article className="camilla-paid-case">
+              <div className="camilla-paid-case-kicker">01 / Programme sign-ups</div>
+              <h4>Fewer updates.<br />More action.</h4>
+              <p><strong>The challenge</strong> Programme teams wanted frequent posts on the main channels, while the data showed that volume was dragging performance.</p>
+              <p><strong>What changed</strong> I worked with the team to focus on fewer, member-story-led posts, supported by a small targeted paid push.</p>
+              <div className="camilla-paid-case-outcome"><strong>Sign-ups increased</strong><span>Engagement held</span></div>
+            </article>
+
+            <article className="camilla-paid-case">
+              <div className="camilla-paid-case-kicker">02 / Membership acquisition</div>
+              <h4>Acquisition with a path to payback.</h4>
+              <p>Reduced cost per registration to around £19, below the £25 target.</p>
+              <div className="camilla-paid-case-metrics">
+                <div><strong>~£19</strong><span>Cost per registration</span></div>
+                <div><strong>£25</strong><span>Target</span></div>
+              </div>
+              <p className="camilla-paid-case-note">Membership was free to join, with annual paid tiers at £500 and £2,500. Break-even modelling showed that around 1.3% upgrading to Partner level would cover acquisition cost.</p>
+            </article>
+
+          </div>
+
+          <figure className="camilla-paid-ad-feature">
+            <div className="camilla-paid-ad-gallery">
+              <img
+                src={bbfNameSwitchAdImage}
+                alt="Sponsored Buckinghamshire Business First Facebook video ad featuring Cécile Mazuet-Eller of NameSwitch, with a Learn More call to action."
+              />
+              <img
+                src={bbfNameSwitchAdLibraryImage}
+                alt="Meta Ad Library listing for the Buckinghamshire Business First NameSwitch sponsored video, active since 14 January 2024 across Facebook, Instagram, Messenger and Threads."
+              />
+            </div>
+            <figcaption className="camilla-paid-ad-copy">
+              <div className="camilla-paid-case-kicker">Sponsored member story · NameSwitch</div>
+              <h4>A member story with a clear next step.</h4>
+              <p>Facebook video ad featuring Cécile Mazuet-Eller sharing how Buckinghamshire businesses are growing with the right support.</p>
+              <p className="camilla-paid-ad-flight">Meta Ad Library listing: active from 14 January 2024 across Facebook, Instagram, Messenger and Threads.</p>
+              <div className="camilla-paid-ad-metrics" aria-label="Engagement totals visible in the supplied sponsored-ad screenshot">
+                <div><strong>6.4K</strong><span>Video views</span></div>
+                <div><strong>124</strong><span>Reactions</span></div>
+                <div><strong>12</strong><span>Comments</span></div>
+                <div><strong>18</strong><span>Shares</span></div>
+              </div>
+              <small>On-post totals visible in the supplied ad screenshot.</small>
+            </figcaption>
+          </figure>
+        </div>
+
+        <div className="camilla-paid-delivery">
+          <div className="camilla-paid-delivery-heading">
+            <div className="camilla-kicker">Buckinghamshire Business First · Campaign delivery</div>
+            <p>Hands-on campaign management across the full journey, from channel mix and creative testing to conversion tracking and stakeholder reporting.</p>
+          </div>
+          <div className="camilla-paid-delivery-grid">
+            <div><span>01 / Channels</span><strong>Paid social, video &amp; search</strong><p>Meta, LinkedIn, TikTok, YouTube, Google Search and Display.</p></div>
+            <div><span>02 / Optimisation</span><strong>Budget and testing</strong><p>Managed spend and pacing; tested creative, copy, audiences and placements.</p></div>
+            <div><span>03 / Measurement</span><strong>Track the next step</strong><p>Used Meta Pixel, Conversions API and GA4 dashboards for reach, traffic, registrations and ROI.</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
 function App() {
   const [activeTestimonialIndex, setActiveTestimonialIndex] = useState(0);
   const activeTestimonial = testimonials[activeTestimonialIndex];
@@ -662,6 +778,75 @@ function App() {
         .cdp-case-stat-secondary small { display:block; color:#626b63; margin-top:3px; font-size:8px; line-height:1.4; }
         .cdp-work-small { display:grid; grid-template-columns:1fr 1fr; gap:20px; }
         .cdp-work-small > .cdp-case { grid-column:1 / -1; grid-template-columns:1.14fr .86fr; margin:0; }
+        .camilla-paid-media { padding:92px 0 100px; background:var(--navy); color:var(--white); }
+        .camilla-paid-heading { display:grid; grid-template-columns:1.1fr .9fr; gap:8%; align-items:end; margin-bottom:43px; }
+        .camilla-paid-heading .camilla-kicker, .camilla-paid-delivery-heading .camilla-kicker { color:var(--yellow); }
+        .camilla-paid-heading h2 { margin:13px 0 0; font:500 clamp(43px,6vw,76px)/.94 'Lora',serif; letter-spacing:-.07em; }
+        .camilla-paid-heading h2 em { color:var(--yellow); font-style:normal; }
+        .camilla-paid-heading > p { max-width:460px; margin:0 0 3px; color:#d0d6cd; font-size:12px; line-height:1.8; }
+        .camilla-paid-spotlight { display:grid; grid-template-columns:.85fr 1.15fr; background:var(--cloud); color:var(--navy); }
+        .camilla-paid-visual { min-height:500px; display:flex; flex-direction:column; justify-content:center; align-items:center; gap:16px; padding:42px 26px 22px; background:#18231d; }
+        .camilla-paid-visual > .camilla-kicker { align-self:flex-start; color:#f2eadb; }
+        .camilla-paid-visual video { display:block; width:auto; max-width:100%; max-height:420px; aspect-ratio:9 / 16; object-fit:contain; background:#111; }
+        .camilla-paid-video-caption { align-self:flex-start; color:#d0d6cd; font:500 8px/1.4 'DM Mono',monospace; letter-spacing:.06em; text-transform:uppercase; }
+        .camilla-paid-results { padding:clamp(28px,4vw,54px); }
+        .camilla-paid-results > .camilla-kicker { color:var(--blue); }
+        .camilla-paid-results h3 { margin:16px 0 14px; font:500 clamp(33px,4vw,50px)/1 'Lora',serif; letter-spacing:-.065em; }
+        .camilla-paid-results > p { max-width:470px; margin:0; color:var(--body); font-size:11px; line-height:1.75; }
+        .camilla-paid-primary-result { display:grid; grid-template-columns:auto 1fr; align-items:center; gap:15px; margin-top:24px; padding:16px 0; border-top:1px solid var(--line); border-bottom:1px solid var(--line); }
+        .camilla-paid-primary-result > strong { color:var(--blue); font:600 clamp(43px,5vw,60px)/.9 'Lora',serif; letter-spacing:-.08em; }
+        .camilla-paid-primary-result span { display:block; font:500 9px/1.5 'DM Mono',monospace; letter-spacing:.04em; text-transform:uppercase; }
+        .camilla-paid-primary-result small { display:block; margin-top:4px; color:#626b63; font-size:9px; }
+        .camilla-paid-metrics { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:15px 22px; padding-top:18px; }
+        .camilla-paid-metrics > div { display:grid; gap:4px; }
+        .camilla-paid-metrics strong { color:var(--navy); font:500 clamp(21px,2.7vw,31px)/1 'Lora',serif; letter-spacing:-.05em; }
+        .camilla-paid-metrics span { color:#596158; font:500 8px/1.55 'DM Mono',monospace; letter-spacing:.035em; text-transform:uppercase; }
+        .camilla-paid-metrics span small { display:block; margin-top:2px; color:#737a71; font:400 8px/1.4 'DM Sans',sans-serif; letter-spacing:0; text-transform:none; }
+        .camilla-paid-cases { margin-top:59px; }
+        .camilla-paid-cases-heading { margin-bottom:22px; }
+        .camilla-paid-cases-heading .camilla-kicker { color:var(--yellow); }
+        .camilla-paid-cases-heading h3 { margin:12px 0 0; font:500 clamp(32px,4.3vw,51px)/1 'Lora',serif; letter-spacing:-.06em; }
+        .camilla-paid-cases-heading h3 em { color:var(--yellow); font-style:normal; }
+        .camilla-paid-case-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:13px; }
+        .camilla-paid-case { min-width:0; padding:clamp(23px,3vw,35px); background:var(--cloud); color:var(--navy); }
+        .camilla-paid-case-kicker { color:var(--blue); font:500 8px/1.5 'DM Mono',monospace; letter-spacing:.08em; text-transform:uppercase; }
+        .camilla-paid-case h4 { margin:14px 0 15px; font:500 clamp(25px,3vw,36px)/1.04 'Lora',serif; letter-spacing:-.055em; }
+        .camilla-paid-case p { max-width:520px; margin:0 0 12px; color:var(--body); font-size:12px; line-height:1.7; }
+        .camilla-paid-case p strong { display:block; margin-bottom:3px; color:var(--blue); font:500 9px 'DM Mono',monospace; letter-spacing:.07em; text-transform:uppercase; }
+        .camilla-paid-case-outcome { display:flex; flex-wrap:wrap; align-items:baseline; gap:8px 16px; margin-top:18px; padding-top:14px; border-top:1px solid var(--line); }
+        .camilla-paid-case-outcome strong { color:var(--blue); font:500 20px/1.2 'Lora',serif; }
+        .camilla-paid-case-outcome span { color:#626b63; font-size:10px; }
+        .camilla-paid-case-metrics { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:15px; margin:20px 0 14px; padding:15px 0; border-top:1px solid var(--line); border-bottom:1px solid var(--line); }
+        .camilla-paid-case-metrics > div { display:grid; gap:4px; }
+        .camilla-paid-case-metrics strong, .camilla-paid-case-wide-metrics strong { color:var(--blue); font:500 clamp(24px,3vw,34px)/1 'Lora',serif; letter-spacing:-.05em; }
+        .camilla-paid-case-metrics span, .camilla-paid-case-wide-metrics span { color:#596158; font:500 9px/1.5 'DM Mono',monospace; letter-spacing:.035em; text-transform:uppercase; }
+        .camilla-paid-case p.camilla-paid-case-note { margin:0; color:#626b63; font-size:10px; }
+        .camilla-paid-case-wide { grid-column:1 / -1; display:grid; grid-template-columns:.78fr 1.22fr; align-items:center; gap:6%; background:#e6e5d9; }
+        .camilla-paid-case-wide h4 { margin-bottom:10px; }
+        .camilla-paid-case-wide-copy p { margin-bottom:0; }
+        .camilla-paid-case-wide-metrics { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:20px 25px; }
+        .camilla-paid-case-wide-metrics > div { display:grid; gap:5px; padding-top:10px; border-top:1px solid #c4c8b9; }
+        .camilla-paid-case-wide-metrics small { color:#626b63; font-size:8px; line-height:1.5; }
+        .camilla-paid-case-wide p { font-size:11px; }
+        .camilla-paid-ad-feature { display:grid; grid-template-columns:minmax(250px,.78fr) 1.22fr; margin:14px 0 0; background:var(--cloud); color:var(--navy); }
+        .camilla-paid-ad-gallery { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); align-items:center; gap:10px; padding:clamp(20px,3vw,36px); background:#e8e6dd; }
+        .camilla-paid-ad-gallery img { display:block; width:100%; max-height:560px; object-fit:contain; }
+        .camilla-paid-ad-copy { align-self:center; padding:clamp(26px,4vw,54px); }
+        .camilla-paid-ad-copy h4 { margin:14px 0 12px; font:500 clamp(27px,3.3vw,39px)/1.04 'Lora',serif; letter-spacing:-.055em; }
+        .camilla-paid-ad-copy > p { max-width:470px; margin:0; color:var(--body); font-size:12px; line-height:1.7; }
+        .camilla-paid-ad-copy > p.camilla-paid-ad-flight { margin-top:10px; color:#596158; }
+        .camilla-paid-ad-metrics { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:12px; margin-top:23px; padding-top:15px; border-top:1px solid var(--line); }
+        .camilla-paid-ad-metrics > div { display:grid; gap:5px; }
+        .camilla-paid-ad-metrics strong { color:var(--blue); font:500 clamp(22px,2.8vw,32px)/1 'Lora',serif; letter-spacing:-.05em; }
+        .camilla-paid-ad-metrics span { color:#596158; font:500 8px/1.5 'DM Mono',monospace; letter-spacing:.035em; text-transform:uppercase; }
+        .camilla-paid-ad-copy > small { display:block; margin-top:12px; color:#737a71; font-size:9px; line-height:1.5; }
+        .camilla-paid-delivery { display:grid; grid-template-columns:.72fr 1.28fr; gap:8%; margin-top:35px; padding:28px 0 0; border-top:1px solid #58635a; }
+        .camilla-paid-delivery-heading p { max-width:320px; margin:11px 0 0; color:#d0d6cd; font-size:11px; line-height:1.7; }
+        .camilla-paid-delivery-grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:19px; }
+        .camilla-paid-delivery-grid > div { padding-top:11px; border-top:1px solid #58635a; }
+        .camilla-paid-delivery-grid span { display:block; margin-bottom:13px; color:var(--yellow); font:500 8px 'DM Mono',monospace; letter-spacing:.08em; text-transform:uppercase; }
+        .camilla-paid-delivery-grid strong { display:block; font:500 15px/1.2 'Lora',serif; }
+        .camilla-paid-delivery-grid p { margin:8px 0 0; color:#d0d6cd; font-size:9px; line-height:1.65; }
         .camilla-about { background:var(--navy); color:var(--white); padding:91px 0 95px; }
         .camilla-about-top { display:grid; grid-template-columns:.8fr 1.2fr; gap:8%; align-items:end; margin-bottom:48px; }
         .camilla-about-top .camilla-kicker { color:var(--yellow); }
@@ -716,7 +901,7 @@ function App() {
           .camilla-header { height:64px; }
           .camilla-nav { gap:13px; }
           .camilla-nav a { font-size:10px; }
-          .camilla-nav a:nth-child(2), .camilla-nav a:nth-child(3) { display:none; }
+          .camilla-nav a:nth-child(3), .camilla-nav a:nth-child(4) { display:none; }
           .camilla-hero-inner { padding-top:36px; }
           .camilla-hero h1 { font-size:clamp(62px,12vw,100px); margin:40px 0 20px; }
           .camilla-hero-foot { align-items:start; flex-direction:column; }
@@ -734,6 +919,19 @@ function App() {
           .camilla-case, .camilla-case-reverse { grid-template-columns:1fr; }
           .camilla-work-small > .camilla-case { grid-template-columns:1fr; }
           .camilla-case-reverse .cdp-artwork, .camilla-case-reverse .cdp-case-copy { order:initial; }
+          .camilla-paid-media { padding:72px 0; }
+          .camilla-paid-heading, .camilla-paid-spotlight, .camilla-paid-delivery, .camilla-paid-case-wide, .camilla-paid-ad-feature { grid-template-columns:1fr; }
+          .camilla-paid-ad-gallery { grid-template-columns:1fr; }
+          .camilla-paid-heading { gap:18px; margin-bottom:30px; }
+          .camilla-paid-visual { min-height:390px; }
+          .camilla-paid-visual video { max-height:310px; }
+          .camilla-paid-delivery { gap:23px; }
+          .camilla-paid-delivery-grid { grid-template-columns:1fr; }
+          .camilla-paid-metrics { grid-template-columns:repeat(2,minmax(0,1fr)); }
+          .camilla-paid-case-grid { grid-template-columns:1fr; }
+          .camilla-paid-case-wide { grid-column:auto; }
+          .camilla-paid-case-wide-metrics { gap:17px 18px; }
+          .camilla-paid-ad-metrics { grid-template-columns:repeat(2,minmax(0,1fr)); gap:17px; }
           .cdp-artwork { min-height:320px; }
           .cdp-artwork-bigger { min-height:320px; }
           .cdp-bigger-gallery { height:320px; gap:10px; padding:14px; }
@@ -782,13 +980,16 @@ function App() {
           .cdp-bigger-gallery { height:275px; gap:8px; padding:10px; }
           .cdp-bigger-gallery figure { flex-basis:155px; }
           .cdp-case-stat { grid-template-columns:1fr; gap:6px; }
+          .camilla-paid-metrics { gap:14px 10px; }
+          .camilla-paid-results { padding:25px 20px; }
+          .camilla-paid-delivery-grid { grid-template-columns:1fr; }
         }
       `}</style>
 
       <header className="camilla-header camilla-shell">
         <a className="camilla-brand" href="#top" aria-label="Camilla Du Preez home"><span className="camilla-monogram">CD</span><span>Camilla Du Preez</span></a>
         <nav className="camilla-nav" aria-label="Main navigation">
-          <a href="#work">Selected work</a><a href="#about">About</a><a href="#experience">Experience</a>
+            <a href="#work">Selected work</a><a href="#paid-media">Paid media</a><a href="#about">About</a><a href="#experience">Experience</a>
           <a className="camilla-nav-contact" href="#contact">Contact <ArrowUpRight size={13} /></a>
         </nav>
       </header>
@@ -936,20 +1137,10 @@ function App() {
             variant="reverse"
           />
 
-          <div className="camilla-work-small">
-            <CaseStudy
-              project="skills"
-              artwork="Buckinghamshire Skills Hub"
-              category="Buckinghamshire Skills Hub · Paid activation connected to my work with Buckinghamshire Business First"
-              title="From creative idea to registrations."
-              description="I conceived the idea, helped film this TikTok ad and ran the paid ads myself. The campaign contributed to 20% of event registrations."
-              metric="20%"
-              measure="Of event registrations"
-              note="~250k impressions · 5,000+ clicks at ~30p per click"
-            />
-          </div>
         </div>
       </section>
+
+      <PaidMediaSection />
 
       <section className="camilla-about" id="experience">
         <div className="camilla-shell">
