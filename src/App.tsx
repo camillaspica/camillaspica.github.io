@@ -61,17 +61,17 @@ const testimonials = [
   },
   {
     name: "Michelle Medhat",
-    role: "Director of Operations and Strategic Development · NEF: The Innovation Institute",
-    quote: "Camilla is a diligent, honest and friendly individual. She is a graduate with a good research capability. She is always keen to establish proper systems and procedures to ensure effective administration and information management and knowledge flow. She has handled complex grant schemes and interacted with senior representatives from business, education and Government including members of the Innovation Council. She is a lateral thinker and has contributed to a number of developments from a different perspectives, a trait essential in marketing communications. Camilla would thrive in a dynamic, inspiring and challenging work environment.",
+    role: "Director of Operations and Strategic Development · NEF: The Innovation Institute · Freelance client",
+    quote: "…She has interacted with senior representatives from business, education and Government, including members of the Innovation Council. She is a lateral thinker and has contributed to a number of developments from different perspectives, a trait essential in marketing communications.…",
   },
   {
     name: "Prof Sa'ad Medhat",
-    role: "NEF: The Innovation Institute",
-    quote: "Camilla is knowledgeable in the development of organisational and product profiles using social media effectively. Her expertise in this area has helped my organisation NEF: The Innovation Institute to create and position its products and services on LinkedIn and Twitter. She is a message-focused individual that can help organisations and entrepreneurs to differentiate their offer in the market-space. She is a good researcher, a skill that is much needed in underpinning social media campaigns and interactions.",
+    role: "NEF: The Innovation Institute · Freelance client",
+    quote: "Her expertise in this area has helped my organisation, NEF: The Innovation Institute, to create and position its products and services on LinkedIn and Twitter. … She is a good researcher, a skill that is much needed in underpinning social media campaigns and interactions.",
   },
   {
     name: "Andrew Scadding",
-    role: "Charity Trustee",
+    role: "Trustee · Thai Children's Trust · Volunteer work",
     quote: "A gifted social network fundraiser, a rare talent!",
   },
 ];
@@ -254,7 +254,7 @@ const abbaSamples = [
   {
     image: abbaGroupPhotoImage,
     alt: "A group portrait of the four ABBA members against a bright yellow background, included as visual reference for the ABBA Voyage case study.",
-    caption: "Reference image · ABBA group portrait",
+    caption: "Press image · ABBA group portrait · reference only",
   },
   {
     image: abbaAudienceSegmentsImage,
@@ -324,8 +324,7 @@ const experience = [
   ["DEC 2020 — MAR 2021", "ABBA Voyage", "Digital Marketing Consultant", "Researched existing and emerging audiences and developed paid media recommendations ahead of launch."],
   ["MAR 2020 — NOV 2020", "dentsu", "Social Media Strategist", "Worked across J.P. Morgan Asset Management, Novartis UK and Unilever, building strategy, audience insight and KPI frameworks."],
   ["JUL 2015 — MAY 2019", "Hartley-Stone Limited", "Account Manager, Social Media", "Planned and published B2B social content for technology and industrial clients including Vanderbilt, Siemens UK and Lucideon; produced client reports and presentations, and built long-term client relationships."],
-  ["MAY 2015 — MAR 2020", "Two Lane Social + self-employed clients", "Social Media Manager / Freelance Consultant", "Ran social media for founders of SMEs, start-ups and financial services businesses, from content to advertising. Clients included a small wealth management company, charities, solopreneurs and an innovation institute."],
-  ["FROM 2012", "Freelance + volunteer work", "While at university", "Started freelance social media work and volunteering alongside university."],
+  ["MAY 2015 — MAR 2020", "Two Lane Social + self-employed clients", "Social Media Manager / Freelance Consultant", "Started freelance social media work and volunteering alongside university in 2012, including work with NEF: The Innovation Institute and Thai Children's Trust. Through Two Lane Social, I managed social content and paid campaigns for founder-led SMEs and start-ups; separate freelance clients included a small wealth management company, charities and solopreneurs."],
 ];
 
 const capabilities = [
@@ -458,8 +457,8 @@ function CaseStudy({
   description: string;
   artwork?: string;
   variant?: "reverse";
-  metric: string;
-  measure: string;
+  metric?: string;
+  measure?: string;
   note?: string;
   secondaryMetric?: string;
   secondaryMeasure?: string;
@@ -485,10 +484,12 @@ function CaseStudy({
             <span>Watch a campaign video I edited</span><ArrowUpRight size={14} />
           </a>
         )}
-        <div className="cdp-case-stat" data-testid={`case-study-stat-${project}`}>
-          <strong>{metric}</strong>
-          <div><span>{measure}</span>{note && <small>{note}</small>}</div>
-        </div>
+        {metric && measure && (
+          <div className="cdp-case-stat" data-testid={`case-study-stat-${project}`}>
+            <strong>{metric}</strong>
+            <div><span>{measure}</span>{note && <small>{note}</small>}</div>
+          </div>
+        )}
         {secondaryMetric && secondaryMeasure && (
           <div className="cdp-case-stat-secondary" data-testid={`case-study-secondary-stat-${project}`}>
             <strong>{secondaryMetric}</strong>
@@ -605,13 +606,13 @@ function PaidMediaSection() {
               <h4>A member story with a clear next step.</h4>
               <p>Facebook video ad featuring Cécile Mazuet-Eller sharing how Buckinghamshire businesses are growing with the right support.</p>
               <p className="camilla-paid-ad-flight">Meta Ad Library listing: active from 14 January 2024 across Facebook, Instagram, Messenger and Threads.</p>
-              <div className="camilla-paid-ad-metrics" aria-label="Engagement totals visible in the supplied sponsored-ad screenshot">
+              <div className="camilla-paid-ad-metrics" aria-label="Engagement totals shown in the sponsored-ad screenshot">
                 <div><strong>6.4K</strong><span>Video views</span></div>
                 <div><strong>124</strong><span>Reactions</span></div>
                 <div><strong>12</strong><span>Comments</span></div>
                 <div><strong>18</strong><span>Shares</span></div>
               </div>
-              <small>On-post totals visible in the supplied ad screenshot.</small>
+              <small>On-post totals shown in the ad screenshot.</small>
             </figcaption>
           </figure>
 
@@ -1088,44 +1089,36 @@ function App() {
             artwork="J.P. Morgan Asset Management"
             category="J.P. Morgan Asset Management · dentsu · Social strategy"
             title="One social framework across 12 EMEA markets."
-            description="I developed a regional social strategy across 12 EMEA markets, connecting audience and competitor research to content planning, KPIs and reporting. The gallery brings together selected LinkedIn content examples, top-post analysis and a social-listening conversation-trend chart. The supplied 2020 weekly-content review also records a native 529 PDF test with 167% higher CTR than off-platform links."
+            description="I developed a regional social strategy across 12 EMEA markets, connecting audience and competitor research to content planning, KPIs and reporting. The gallery brings together selected LinkedIn content examples, top-post analysis and a social-listening conversation-trend chart. The 2020 weekly-content review also records a native PDF test for U.S. 529 college-savings-plan content with 167% higher CTR than off-platform links."
             metric="12"
             measure="EMEA markets"
             note="Strategy framework · 2020"
-            secondaryMetric="5×"
-            secondaryMeasure="Peer reach for sponsored fixed-income content"
-            secondaryNote="Six-month competitor review; a benchmark finding, not a campaign result."
             roleDescription="Audience research, competitor review, content planning and KPI frameworks, working with regional marketing teams."
           />
           <CaseStudy
             project="hsbc"
             category="HSBC Asset Management · B2B LinkedIn"
             title="Reach the people making the decisions."
-            description="LinkedIn publishing and paid activation aimed at treasurers and CFOs, with compliance workflows, stakeholder approvals and optimisation reporting."
+            description="Managed LinkedIn publishing and paid activation for treasurers and CFOs, with compliance workflows, stakeholder approvals and optimisation reporting."
             metric="~600"
             measure="First-stage enquiries a month"
-            note="Targeting treasurers and CFOs"
+            note="Helped generate through LinkedIn campaigns · treasurers and CFOs"
+            roleDescription="Managed LinkedIn paid campaign delivery through Sprinklr, reported performance and recommended optimisations, and handled compliance and multi-stage approvals."
           />
           <CaseStudy
             project="novartis"
             artwork="Novartis UK"
             category="Novartis UK · dentsu · Social strategy"
             title="Make a complex healthcare story more human."
-            description="The 2020 UK strategy set three priorities: support the patient journey, strengthen reputation, and attract and retain talent. Selected material pairs AMR Action Fund posts with Facebook and LinkedIn audience snapshots and #NovartisLife diversity campaign assets."
-            metric="3"
-            measure="Strategic objectives"
-            note="Patient journey · reputation · talent"
-            secondaryMetric="89.5%"
-            secondaryMeasure="Positive Twitter sentiment · Jan 2020 baseline"
-            secondaryNote="Facebook baseline: 82.4%"
-            roleDescription="My dentsu work included audience and competitor research, social strategy and content planning across client accounts."
+            description="The 2020 UK strategy focused on the patient journey, reputation, and attracting and retaining talent. Selected material pairs AMR Action Fund posts with Facebook and LinkedIn audience snapshots and #NovartisLife diversity campaign assets."
+            roleDescription="For Novartis UK, I contributed to audience and competitor research, social strategy and content planning for antimicrobial-resistance communications and the #NovartisLife diversity campaign."
           />
           <CaseStudy
             project="abba"
             artwork="ABBA Voyage"
             category="Aniara (later ABBA Voyage) · Digital Marketing Consultant"
             title="Understand the audience before the spotlight."
-            description="I joined the project while it was still called Aniara, before the ABBA Voyage name had been decided. I contributed to initial market research and social media launch planning, planned the posts shown here, developed more than £1 million of paid media recommendations, and presented them to investors. Selected materials cover audience segments, priority markets, campaign phases, partner guidance and the website roadmap."
+            description="I joined the project while it was still called Aniara, before the ABBA Voyage name had been decided. I contributed to initial market research and social media launch planning, planned launch posts like these, developed more than £1 million of paid media recommendations, and presented them to investors. Selected materials cover audience segments, priority markets, campaign phases, partner guidance and the website roadmap."
             metric="2020–21"
             measure="Pre-launch strategy"
             note="Audience research · Paid media recommendations"
