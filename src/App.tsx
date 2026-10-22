@@ -918,7 +918,7 @@ function App() {
             artwork="ABBA Voyage"
             category="Aniara (later ABBA Voyage) · Digital Marketing Consultant"
             title="Understand the audience before the spotlight."
-            description="I joined the project while it was still called Aniara, before the ABBA Voyage name had been decided. I contributed to initial market research and social media launch planning, and planned the posts shown here. Selected materials cover audience segments, priority markets, campaign phases, partner guidance and the website roadmap."
+            description="I joined the project while it was still called Aniara, before the ABBA Voyage name had been decided. I contributed to initial market research and social media launch planning, planned the posts shown here, developed more than £1 million of paid media recommendations, and presented them to investors. Selected materials cover audience segments, priority markets, campaign phases, partner guidance and the website roadmap."
             metric="2020–21"
             measure="Pre-launch strategy"
             note="Audience research · Paid media recommendations"
