@@ -977,9 +977,9 @@ function App() {
               <div className="camilla-instagram-grid">
                 <figure>
                   <a href="https://www.instagram.com/reel/DP3xk6PCGlV/" target="_blank" rel="noreferrer" aria-label="Watch the Buckinghamshire Business Awards 2025 reel on Instagram">
-                    <img src={bbfAwardsReelImage} alt="Buckinghamshire Business First Instagram reel from the Buckinghamshire Business Awards 2025, congratulating finalists and winners, with 74 likes, 6 comments, 2 reposts and 3 shares." />
+                    <img src={bbfAwardsReelImage} alt="Buckinghamshire Business First Instagram reel from the Buckinghamshire Business Awards 2025, congratulating finalists and winners, with 8,847 views, 74 likes, 6 comments, 2 reposts and 3 shares." />
                   </a>
-                  <figcaption><strong>Reel · Buckinghamshire Business Awards 2025</strong><span>I filmed, edited and produced it, music included.</span><span>74 likes · 6 comments · 2 reposts · 3 shares</span></figcaption>
+                  <figcaption><strong>Reel · Buckinghamshire Business Awards 2025</strong><span>I filmed, edited and produced it, music included.</span><span>8,847 views · 74 likes · 6 comments · 3 shares</span></figcaption>
                 </figure>
               </div>
             </div>
