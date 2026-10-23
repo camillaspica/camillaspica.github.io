@@ -5,7 +5,6 @@ import bbfNetworkingImage from "./assets/bbf-networking-member-story.webp";
 import bbfOpportunityImage from "./assets/bbf-opportunity-member-story.webp";
 import bbf15YearVideoImage from "./assets/bbf-15-year-video-post.webp";
 import bbfExpoStoryImage from "./assets/bbf-business-expo-member-story.webp";
-import bbfNameSwitchAdImage from "./assets/bbf-nameswitch-sponsored-video.jpeg";
 import bbfNameSwitchAdLibraryImage from "./assets/bbf-nameswitch-ad-library.webp";
 import workbookReportImage from "./assets/workbook-report.webp";
 import workbookSkillsShowImage from "./assets/workbook-skills-show.webp";
@@ -14,8 +13,6 @@ import workbookPacingImage from "./assets/workbook-pacing.webp";
 import workbookPriorityImage from "./assets/workbook-priority.webp";
 import workbookWorkflowImage from "./assets/workbook-workflow.webp";
 import workbookNamingImage from "./assets/workbook-naming.webp";
-import bbfNextGenBusinessAdImage from "./assets/bbf-next-gen-business-ad-library.webp";
-import bucksSkillsHubRegistrationAdImage from "./assets/bucks-skills-hub-sponsored-registration.jpeg";
 import bucksSkillsShowVideo from "./assets/bucks-skills-show-tiktok.mp4";
 import bucksSkillsShowPoster from "./assets/bucks-skills-show-tiktok-poster.jpg";
 import jpmamSentimentImage from "./assets/jpmam-sentiment-trend.webp";
@@ -410,7 +407,7 @@ function PaidMediaSection() {
         <div className="camilla-paid-spotlight">
           <div className="camilla-paid-visual">
             <div className="camilla-kicker">Buckinghamshire Skills Hub · Bucks Skills Show</div>
-            <div className="camilla-paid-showcase-gallery">
+            <div className="camilla-paid-showcase-gallery camilla-paid-showcase-single">
               <figure>
                 <video
                   controls
@@ -425,16 +422,6 @@ function PaidMediaSection() {
                   Your browser does not support embedded video.
                 </video>
                 <figcaption>TikTok creative · Ads ran on TikTok, YouTube and Facebook at different times</figcaption>
-              </figure>
-              <figure>
-                <img
-                  className="camilla-no-zoom"
-                  draggable={false}
-                  onContextMenu={(event) => event.preventDefault()}
-                  src={bucksSkillsHubRegistrationAdImage}
-                  alt="Buckinghamshire Skills Hub sponsored Facebook registration ad for the Bucks Skills Show, inviting students, educators and employers to book a place."
-                />
-                <figcaption>Facebook registration ad · 127 reactions · 12 comments · 28 shares</figcaption>
               </figure>
             </div>
           </div>
@@ -478,23 +465,12 @@ function PaidMediaSection() {
                 <div><strong>£25</strong><span>Target</span></div>
               </div>
               <p className="camilla-paid-case-note">Membership was free to join, with annual paid tiers at £500 and £2,500. If around 3.8% of registrants upgraded to Partner (£500), the £19 would be covered in the first year.</p>
-              <figure className="camilla-paid-case-image">
-                <img
-                  src={bbfNextGenBusinessAdImage}
-                  alt="LinkedIn Ad Library screenshot of Buckinghamshire Business First's Next Gen Business Network sponsored image ad."
-                />
-                <figcaption>LinkedIn Ad Library creative · Next Gen Business Network · 8,742 estimated impressions · 99% UK · 7–23 October 2024</figcaption>
-              </figure>
             </article>
 
           </div>
 
           <figure className="camilla-paid-ad-feature">
-            <div className="camilla-paid-ad-gallery">
-              <img
-                src={bbfNameSwitchAdImage}
-                alt="Sponsored Buckinghamshire Business First Facebook video ad featuring Cécile Mazuet-Eller of NameSwitch, with a Learn More call to action."
-              />
+            <div className="camilla-paid-ad-gallery camilla-paid-ad-single">
               <img
                 src={bbfNameSwitchAdLibraryImage}
                 alt="Meta Ad Library listing for the Buckinghamshire Business First NameSwitch sponsored video, active since 14 January 2024 across Facebook, Instagram, Messenger and Threads."
@@ -505,13 +481,13 @@ function PaidMediaSection() {
               <h4>A member story with a clear next step.</h4>
               <p>Facebook video ad featuring Cécile Mazuet-Eller sharing how Buckinghamshire businesses are growing with the right support.</p>
               <p className="camilla-paid-ad-flight">Meta Ad Library listing: active from 14 January 2024 across Facebook, Instagram, Messenger and Threads.</p>
-              <div className="camilla-paid-ad-metrics" aria-label="Engagement totals shown in the sponsored-ad screenshot">
+              <div className="camilla-paid-ad-metrics" aria-label="Engagement totals on the sponsored post">
                 <div><strong>6.4K</strong><span>Video views</span></div>
                 <div><strong>124</strong><span>Reactions</span></div>
                 <div><strong>12</strong><span>Comments</span></div>
                 <div><strong>18</strong><span>Shares</span></div>
               </div>
-              <small>On-post totals shown in the ad screenshot.</small>
+              <small>On-post totals from the Facebook ad.</small>
             </figcaption>
           </figure>
 
@@ -791,6 +767,10 @@ function App() {
         .camilla-paid-ad-feature { display:grid; grid-template-columns:minmax(250px,.78fr) 1.22fr; margin:14px 0 0; background:var(--cloud); color:var(--navy); }
         .camilla-paid-ad-gallery { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); align-items:center; gap:10px; padding:clamp(20px,3vw,36px); background:#e8e6dd; }
         .camilla-paid-ad-gallery img { display:block; width:100%; max-height:560px; object-fit:contain; }
+        .camilla-paid-ad-single { grid-template-columns:minmax(0,1fr); justify-items:center; }
+        .camilla-paid-ad-single img { max-width:420px; }
+        .camilla-paid-showcase-single { grid-template-columns:minmax(0,1fr); justify-items:center; }
+        .camilla-paid-showcase-single figure { max-width:280px; }
         .camilla-paid-ad-copy { align-self:center; padding:clamp(26px,4vw,54px); }
         .camilla-paid-ad-copy h4 { margin:14px 0 12px; font:500 clamp(27px,3.3vw,39px)/1.04 'Lora',serif; letter-spacing:-.055em; }
         .camilla-paid-ad-copy > p { max-width:470px; margin:0; color:var(--body); font-size:14px; line-height:1.7; }
