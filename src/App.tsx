@@ -256,7 +256,7 @@ function CampaignArtwork({ project, style }: { project: "bigger" | "aria" | "ski
       )}
       {project === "abba" && (
         <>
-          <span className="cdp-art-note">ANIARA → ABBA VOYAGE · MARKET RESEARCH + SOCIAL LAUNCH PLANNING · 2020–21</span>
+          <span className="cdp-art-note">ANIARA → ABBA VOYAGE · PLANNED DEC 2020 – MAR 2021 · POSTS PUBLISHED AFTER MY CONTRACT ENDED</span>
           <div className="cdp-bigger-gallery cdp-abba-gallery" tabIndex={0} aria-label="ABBA Voyage social launch posts planned by Camilla, alongside selected Aniara and ABBA Voyage audience research and strategy examples. Scroll to explore and open images at full size.">
             {abbaSamples.map((sample) => (
               <figure key={sample.caption}>
@@ -885,6 +885,8 @@ function App() {
           .camilla-paid-heading, .camilla-paid-spotlight, .camilla-paid-case-wide, .camilla-paid-ad-feature { grid-template-columns:1fr; }
           .camilla-paid-ad-gallery { grid-template-columns:1fr; }
           .camilla-method-heading, .camilla-method-week, .camilla-method-shots { grid-template-columns:1fr; }
+          .cdp-bigger-gallery-hint { display:none; }
+          .cdp-art-note { right:19px; line-height:1.5; }
           .camilla-method-heading { gap:16px; }
           .camilla-paid-heading { gap:18px; margin-bottom:30px; }
           .camilla-paid-visual { min-height:390px; }
@@ -1176,7 +1178,7 @@ function App() {
           </div>
           <div className="camilla-education-languages camilla-education-tools">
             <h3>Tools</h3>
-            <span>Sprout Social · Orlo · Sprinklr · Emplifi (SocialBakers) · Brandwatch · Talkwalker · Semrush · Canva · CapCut · Adobe Photoshop · Illustrator · Premiere Pro · After Effects · LinkedIn Campaign Manager · Meta Ads Manager · Google Analytics (GA4) · HubSpot · Salesforce · Mailchimp · WordPress · Monday.com · ChatGPT · Claude</span>
+            <span>Sprout Social · Orlo · Sprinklr · Emplifi (SocialBakers) · Brandwatch · Talkwalker · Semrush · Canva · CapCut · Adobe Photoshop · Illustrator · Premiere Pro · After Effects · LinkedIn Campaign Manager · Meta Ads Manager · Google Ads · Google Analytics (GA4) · HubSpot · Salesforce · Mailchimp · WordPress · Monday.com · ChatGPT · Claude</span>
           </div>
           <div className="camilla-education-languages">
             <h3>Languages</h3>
