@@ -148,7 +148,7 @@ const abbaSamples = [
   {
     image: abbaRevealDatePostImage,
     alt: "ABBA Voyage social post screenshot with gold eclipse-like artwork, the logo and the 2 September 2021 reveal date.",
-    caption: "Planned post · Reveal date",
+    caption: "Post I planned · Published 2 Sept 2021, after my contract",
   },
   {
     image: abbaAudienceSegmentsImage,
@@ -256,7 +256,7 @@ function CampaignArtwork({ project, style }: { project: "bigger" | "aria" | "ski
       )}
       {project === "abba" && (
         <>
-          <span className="cdp-art-note">ANIARA → ABBA VOYAGE · PLANNED DEC 2020 – MAR 2021 · POSTS PUBLISHED AFTER MY CONTRACT ENDED</span>
+          <span className="cdp-art-note">ANIARA → ABBA VOYAGE · MY WORK DEC 2020 – MAR 2021 · POST PUBLISHED AFTER MY CONTRACT ENDED</span>
           <div className="cdp-bigger-gallery cdp-abba-gallery" tabIndex={0} aria-label="ABBA Voyage social launch posts planned by Camilla, alongside selected Aniara and ABBA Voyage audience research and strategy examples. Scroll to explore and open images at full size.">
             {abbaSamples.map((sample) => (
               <figure key={sample.caption}>
