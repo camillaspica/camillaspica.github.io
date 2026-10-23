@@ -8,6 +8,7 @@ import bbfExpoStoryImage from "./assets/bbf-business-expo-member-story.webp";
 import bbfNameSwitchAdImage from "./assets/bbf-nameswitch-sponsored-video.jpeg";
 import bbfNameSwitchAdLibraryImage from "./assets/bbf-nameswitch-ad-library.webp";
 import workbookReportImage from "./assets/workbook-report.webp";
+import workbookSkillsShowImage from "./assets/workbook-skills-show.webp";
 import workbookTriageImage from "./assets/workbook-triage.webp";
 import workbookPacingImage from "./assets/workbook-pacing.webp";
 import workbookPriorityImage from "./assets/workbook-priority.webp";
@@ -384,6 +385,7 @@ function CaseStudy({
 
 const workbookShots = [
   { src: workbookReportImage, title: "Friday stakeholder report", caption: "Budget, spend, pacing and forecast for every programme, with a status and next action for each.", alt: "Weekly paid media portfolio report sheet showing total budget, spend, forecast and a status for each BBF and Bucks Skills Hub programme.", wide: true },
+  { src: workbookSkillsShowImage, title: "Skills Show TikTok and YouTube", caption: "The Skills Show video campaign, reported on its own so it isn’t counted twice in the totals.", alt: "Workbook sheet summarising the Bucks Skills Show TikTok and YouTube campaign: about 250,000 impressions, 5,000+ clicks, about £0.30 cost per click and 20% of event registrations.", wide: true, narrow: true },
   { src: workbookTriageImage, title: "Monday triage", caption: "Every live campaign scored and ranked P1 to P4, with the alert, KPI status, tracking and a first diagnosis.", alt: "Weekly triage sheet listing campaigns ranked by priority with alerts, pacing, KPI status and first diagnostic.", wide: true },
   { src: workbookPacingImage, title: "Pacing control", caption: "Expected spend from budget and days elapsed, so overspend and underspend show up early.", alt: "Pacing control sheet showing budget, spend, expected spend, pacing percentage and forecast for each campaign.", wide: true },
   { src: workbookPriorityImage, title: "Prioritisation rules", caption: "How the score is built, and how fast each priority level gets a response.", alt: "Prioritisation rules sheet scoring budget exposure, pacing, KPI, tracking, deadline and stakeholder risk.", wide: true },
@@ -514,7 +516,7 @@ function PaidMediaSection() {
               <div className="camilla-kicker">How I work · Paid media control system</div>
               <h3 id="camilla-method-title">109 campaigns.<br /><em>One Monday list.</em></h3>
             </div>
-            <p>I built this workbook to show how I run a paid portfolio day to day. It maps 109 campaigns across Google, Meta and LinkedIn onto BBF and Bucks Skills Hub’s FY 2024/25 programme calendar, from the Net Zero Summit to the Skills Show. The Skills Show TikTok and YouTube ads shown above ran separately and aren’t included.</p>
+            <p>I built this workbook to show how I run a paid portfolio day to day. It maps 109 campaigns across Google, Meta and LinkedIn onto BBF and Bucks Skills Hub’s FY 2024/25 programme calendar, from the Net Zero Summit to the Skills Show. The Skills Show TikTok and YouTube campaign has its own sheet.</p>
           </div>
 
           <div className="camilla-method-week">
