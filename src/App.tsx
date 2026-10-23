@@ -242,48 +242,48 @@ function CampaignArtwork({ project, style }: { project: "bigger" | "aria" | "ski
       {project === "jpmam" && (
         <>
           <span className="cdp-art-note">CONTENT EXAMPLES + SOCIAL LISTENING · 2020</span>
-          <div className="cdp-bigger-gallery cdp-jpmam-gallery" tabIndex={0} aria-label="Selected J.P. Morgan Asset Management content examples and social listening snapshots. Scroll horizontally to explore and open an image at full size.">
+          <div className="cdp-bigger-gallery cdp-jpmam-gallery" tabIndex={0} aria-label="Selected J.P. Morgan Asset Management content examples and social listening snapshots. Scroll horizontally to explore.">
             {jpmamSamples.map((sample) => (
               <figure key={sample.caption}>
-                <a href={sample.image} target="_blank" rel="noreferrer" aria-label={`Open full-size image: ${sample.caption}`}>
+                <div className="cdp-gallery-frame">
                   <img src={sample.image} alt={sample.alt} />
-                </a>
+                </div>
                 <figcaption>{sample.caption}</figcaption>
               </figure>
             ))}
-            <span className="cdp-bigger-gallery-hint" aria-hidden="true">SCROLL · CLICK TO ENLARGE <ArrowRight size={11} /></span>
+            <span className="cdp-bigger-gallery-hint" aria-hidden="true">SCROLL <ArrowRight size={11} /></span>
           </div>
         </>
       )}
       {project === "abba" && (
         <>
           <span className="cdp-art-note">ANIARA → ABBA VOYAGE · MY WORK DEC 2020 – MAR 2021 · POST PUBLISHED AFTER MY CONTRACT ENDED</span>
-          <div className="cdp-bigger-gallery cdp-abba-gallery" tabIndex={0} aria-label="ABBA Voyage social launch posts planned by Camilla, alongside selected Aniara and ABBA Voyage audience research and strategy examples. Scroll to explore and open images at full size.">
+          <div className="cdp-bigger-gallery cdp-abba-gallery" tabIndex={0} aria-label="ABBA Voyage social launch posts planned by Camilla, alongside selected Aniara and ABBA Voyage audience research and strategy examples. Scroll to explore.">
             {abbaSamples.map((sample) => (
               <figure key={sample.caption}>
-                <a href={sample.image} target="_blank" rel="noreferrer" aria-label={`Open full-size image: ${sample.caption}`}>
+                <div className="cdp-gallery-frame">
                   <img src={sample.image} alt={sample.alt} />
-                </a>
+                </div>
                 <figcaption>{sample.caption}</figcaption>
               </figure>
             ))}
-            <span className="cdp-bigger-gallery-hint" aria-hidden="true">SCROLL · CLICK TO ENLARGE <ArrowRight size={11} /></span>
+            <span className="cdp-bigger-gallery-hint" aria-hidden="true">SCROLL <ArrowRight size={11} /></span>
           </div>
         </>
       )}
       {project === "aria" && (
         <>
           <span className="cdp-art-note">CREATED NOV 2022 – FEB 2023 · PUBLISHED AFTER MY CONTRACT ENDED</span>
-          <div className="cdp-bigger-gallery cdp-aria-gallery" tabIndex={0} aria-label="ARIA interview-video screenshots edited to the prescribed simple branding, alongside social posts authored by Camilla. Scroll to explore and open images at full size.">
+          <div className="cdp-bigger-gallery cdp-aria-gallery" tabIndex={0} aria-label="ARIA interview-video screenshots edited to the prescribed simple branding, alongside social posts authored by Camilla. Scroll to explore.">
             {ariaSamples.map((sample) => (
               <figure key={sample.caption}>
-                <a href={sample.image} target="_blank" rel="noreferrer" aria-label={`Open full-size image: ${sample.caption}`}>
+                <div className="cdp-gallery-frame">
                   <img src={sample.image} alt={sample.alt} />
-                </a>
+                </div>
                 <figcaption>{sample.caption}</figcaption>
               </figure>
             ))}
-            <span className="cdp-bigger-gallery-hint" aria-hidden="true">SCROLL · CLICK TO ENLARGE <ArrowRight size={11} /></span>
+            <span className="cdp-bigger-gallery-hint" aria-hidden="true">SCROLL <ArrowRight size={11} /></span>
           </div>
         </>
       )}
@@ -293,6 +293,8 @@ function CampaignArtwork({ project, style }: { project: "bigger" | "aria" | "ski
           <video
             className="cdp-skills-video"
             controls
+            controlsList="nodownload"
+            disablePictureInPicture
             playsInline
             preload="metadata"
             poster={bucksSkillsShowPoster}
@@ -306,16 +308,16 @@ function CampaignArtwork({ project, style }: { project: "bigger" | "aria" | "ski
       {project === "novartis" && (
         <>
           <span className="cdp-art-note">NOVARTIS UK · STRATEGY, CAMPAIGNS + AUDIENCE INSIGHT · 2020</span>
-          <div className="cdp-bigger-gallery cdp-novartis-gallery" tabIndex={0} aria-label="Selected Novartis strategy, campaign and audience insight samples. Scroll horizontally to explore and open an image at full size.">
+          <div className="cdp-bigger-gallery cdp-novartis-gallery" tabIndex={0} aria-label="Selected Novartis strategy, campaign and audience insight samples. Scroll horizontally to explore.">
             {novartisSamples.map((sample) => (
               <figure key={sample.caption}>
-                <a href={sample.image} target="_blank" rel="noreferrer" aria-label={`Open full-size image: ${sample.caption}`}>
+                <div className="cdp-gallery-frame">
                   <img src={sample.image} alt={sample.alt} />
-                </a>
+                </div>
                 <figcaption>{sample.caption}</figcaption>
               </figure>
             ))}
-            <span className="cdp-bigger-gallery-hint" aria-hidden="true">SCROLL · CLICK TO ENLARGE <ArrowRight size={11} /></span>
+            <span className="cdp-bigger-gallery-hint" aria-hidden="true">SCROLL <ArrowRight size={11} /></span>
           </div>
         </>
       )}
@@ -412,6 +414,8 @@ function PaidMediaSection() {
               <figure>
                 <video
                   controls
+                  controlsList="nodownload"
+                  disablePictureInPicture
                   playsInline
                   preload="metadata"
                   poster={bucksSkillsShowPoster}
@@ -555,7 +559,11 @@ function App() {
   };
 
   return (
-    <main className="camilla">
+    <main
+      className="camilla"
+      onContextMenu={(event) => { if ((event.target as HTMLElement).closest("img, video")) event.preventDefault(); }}
+      onDragStart={(event) => { if ((event.target as HTMLElement).closest("img")) event.preventDefault(); }}
+    >
       <style>{`
         @import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&family=Lora:wght@400;500;600;700&display=swap');
         .camilla {
@@ -647,8 +655,7 @@ function App() {
         .cdp-jpmam-gallery img { max-height:400px; }
         .cdp-novartis-gallery { padding-top:42px; }
         .cdp-novartis-gallery figure { flex-basis:345px; }
-        .cdp-novartis-gallery a { display:block; width:100%; cursor:zoom-in; }
-        .cdp-novartis-gallery a:focus-visible { outline:2px solid var(--blue); outline-offset:4px; }
+        .cdp-novartis-gallery .cdp-gallery-frame { display:block; width:100%; }
         .cdp-novartis-gallery img { height:auto; max-height:300px; width:100%; aspect-ratio:16 / 9; object-fit:contain; }
         .cdp-artwork-aria { background:#aabdc0; }
         .cdp-aria-sphere { width:255px; height:255px; background:var(--navy); color:var(--white); display:flex; flex-direction:column; justify-content:center; align-items:center; border-radius:50%; text-align:center; position:relative; z-index:2; }
@@ -685,8 +692,7 @@ function App() {
         .cdp-artwork-abba .cdp-art-note { color:#f4f0e7; }
         .cdp-abba-gallery { padding-top:44px; }
         .cdp-abba-gallery figure { flex-basis:410px; }
-        .cdp-abba-gallery a { display:block; width:100%; cursor:zoom-in; }
-        .cdp-abba-gallery a:focus-visible { outline:2px solid #b59643; outline-offset:4px; }
+        .cdp-abba-gallery .cdp-gallery-frame { display:block; width:100%; }
         .cdp-abba-gallery img { max-height:390px; }
         .cdp-abba-gallery figcaption { color:#f4f0e7; }
         .cdp-case-copy { padding:clamp(30px,5vw,68px); display:flex; flex-direction:column; justify-content:center; }
@@ -736,6 +742,7 @@ function App() {
         .camilla-paid-showcase-gallery figure { display:grid; align-content:center; gap:12px; min-width:0; margin:0; }
         .camilla-paid-showcase-gallery video { display:block; width:100%; max-width:100%; max-height:420px; aspect-ratio:9 / 16; object-fit:contain; background:#111; }
         .camilla-paid-showcase-gallery img { display:block; width:100%; max-height:420px; aspect-ratio:1; object-fit:contain; background:var(--cloud); }
+        .camilla img { -webkit-user-drag:none; user-select:none; -webkit-user-select:none; -webkit-touch-callout:none; }
         .camilla-no-zoom { pointer-events:none; user-select:none; -webkit-user-select:none; -webkit-user-drag:none; -webkit-touch-callout:none; }
         .camilla-paid-showcase-gallery figcaption { color:#f2eadb; font:500 12px/1.5 'DM Mono',monospace; letter-spacing:.04em; text-transform:uppercase; }
         .camilla-paid-video-caption { align-self:flex-start; color:#d0d6cd; font:500 12px/1.4 'DM Mono',monospace; letter-spacing:.06em; text-transform:uppercase; }
