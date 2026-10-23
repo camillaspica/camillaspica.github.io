@@ -420,14 +420,14 @@ function PaidMediaSection() {
                   <source src={bucksSkillsShowVideo} type="video/mp4" />
                   Your browser does not support embedded video.
                 </video>
-                <figcaption>TikTok creative · Campaign also ran on YouTube</figcaption>
+                <figcaption>TikTok creative · Ads ran on TikTok, YouTube and Facebook at different times</figcaption>
               </figure>
               <figure>
                 <img
                   src={bucksSkillsHubRegistrationAdImage}
-                  alt="Buckinghamshire Skills Hub sponsored registration ad for the Bucks Skills Show, inviting students, educators and employers to book a place."
+                  alt="Buckinghamshire Skills Hub sponsored Facebook registration ad for the Bucks Skills Show, inviting students, educators and employers to book a place."
                 />
-                <figcaption>Sponsored ad · 127 reactions · 12 comments · 28 shares</figcaption>
+                <figcaption>Facebook registration ad · 127 reactions · 12 comments · 28 shares</figcaption>
               </figure>
             </div>
           </div>
@@ -1032,8 +1032,8 @@ function App() {
             <div className="camilla-results-grid">
               <div><strong>+859%</strong><span>LinkedIn link clicks</span><small>Weighted monthly average · 1,333 (2022/23) → 12,780 (2025/26)</small></div>
               <div><strong>+722%</strong><span>Instagram engagement rate</span><small>0.52% → 4.30%</small></div>
-              <div><strong>7.94%</strong><span>LinkedIn engagement rate</span><small>Weighted average</small></div>
-              <div><strong>12–15%</strong><span>LinkedIn click-through rate</span><small>2024–25 average · up from 7–8% in 2022</small></div>
+              <div><strong>12–15%</strong><span>LinkedIn engagement rate</span><small>Organic · 2024–25 average · up from 7–8% in 2022</small></div>
+              <div><strong>7.94%</strong><span>LinkedIn click-through rate</span><small>Organic · weighted average</small></div>
             </div>
           </div>
 
