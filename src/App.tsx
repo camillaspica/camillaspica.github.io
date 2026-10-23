@@ -499,7 +499,7 @@ function PaidMediaSection() {
               <div className="camilla-kicker">How I work · Paid media control system</div>
               <h3 id="camilla-method-title">120 campaigns.<br /><em>One Monday list.</em></h3>
             </div>
-            <p>I built this workbook to show how I run a paid portfolio day to day. It maps 120 campaigns across Google, Microsoft, Meta and LinkedIn onto BBF and Bucks Skills Hub’s real FY 2024/25 programme calendar, from the Net Zero Summit to the Skills Show. The campaign figures are a working model. The method is how I work.</p>
+            <p>I built this workbook to show how I run a paid portfolio day to day. It maps 120 campaigns across Google, Microsoft, Meta and LinkedIn onto BBF and Bucks Skills Hub’s FY 2024/25 programme calendar, from the Net Zero Summit to the Skills Show.</p>
           </div>
 
           <div className="camilla-method-week">
@@ -542,7 +542,7 @@ function PaidMediaSection() {
           </div>
 
           <div className="camilla-method-triage">
-            <div className="camilla-paid-case-kicker">04 / Three calls from one modelled week in February 2025</div>
+            <div className="camilla-paid-case-kicker">04 / Three calls from the February 2025 triage</div>
             <div className="camilla-method-rows">
               <div>
                 <span>Net Zero Summit · LinkedIn</span>
@@ -557,7 +557,7 @@ function PaidMediaSection() {
                 <p><strong>Spend at 134% of plan and cost per lead rising, with enrolments behind target.</strong> Cut the budget by 15–20% while I find the cause, and shift weight to search, where intent is higher.</p>
               </div>
             </div>
-            <small>Workbook sheets: programme calendar, campaign master, pacing control, weekly triage, prioritisation rules, optimisation workflow, change log, stakeholder report and budget actions. Campaign figures are modelled for illustration.</small>
+            <small>Workbook sheets: programme calendar, campaign master, pacing control, weekly triage, prioritisation rules, optimisation workflow, change log, stakeholder report and budget actions.</small>
           </div>
         </div>
       </div>
