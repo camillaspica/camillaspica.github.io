@@ -512,9 +512,9 @@ function PaidMediaSection() {
           <div className="camilla-method-heading">
             <div>
               <div className="camilla-kicker">How I work · Paid media control system</div>
-              <h3 id="camilla-method-title">120 campaigns.<br /><em>One Monday list.</em></h3>
+              <h3 id="camilla-method-title">109 campaigns.<br /><em>One Monday list.</em></h3>
             </div>
-            <p>I built this workbook to show how I run a paid portfolio day to day. It maps 120 campaigns across Google, Microsoft, Meta and LinkedIn onto BBF and Bucks Skills Hub’s FY 2024/25 programme calendar, from the Net Zero Summit to the Skills Show.</p>
+            <p>I built this workbook to show how I run a paid portfolio day to day. It maps 109 campaigns across Google, Meta and LinkedIn onto BBF and Bucks Skills Hub’s FY 2024/25 programme calendar, from the Net Zero Summit to the Skills Show. The Skills Show TikTok and YouTube ads shown above ran separately and aren’t included.</p>
           </div>
 
           <div className="camilla-method-week">
