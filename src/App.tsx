@@ -200,12 +200,12 @@ const experience = [
 ];
 
 const capabilities = [
-  ["Social listening & audience insight", "Understand what people are saying, searching for and responding to."],
-  ["Social and content strategy", "Turn business priorities into a focused, practical plan."],
-  ["Accessible communications", "Make complex subjects clearer, more human and easier to act on."],
-  ["Stakeholder leadership", "Connect senior voices, subject experts, agencies and delivery teams."],
-  ["Analytics & optimisation", "Track meaningful signals, share the learning and improve the work."],
-  ["Campaign delivery", "Coordinate content, publishing, paid activation and reporting."],
+  ["Social listening & audience insight", "Brandwatch and Talkwalker queries, audience mapping and insight reports written in plain English."],
+  ["Social and content strategy", "Content pillars, calendars and KPIs that programme teams can actually follow."],
+  ["Accessible communications", "Clear language and captioned video, so posts work for everyone who sees them."],
+  ["Stakeholder leadership", "Ghostwriting for a Managing Director, briefing suppliers and running weekly check-ins across teams."],
+  ["Analytics & optimisation", "Monthly reports on clicks, engagement and sign-ups, and changing the plan when the numbers say so."],
+  ["Campaign delivery", "Everything from the first draft to the paid push and the final report."],
 ];
 
 function CampaignArtwork({ project, style }: { project: "bigger" | "aria" | "skills" | "jpmam" | "novartis" | "abba"; style: string }) {
@@ -399,9 +399,9 @@ function PaidMediaSection() {
         <div className="camilla-paid-heading">
           <div>
             <div className="camilla-kicker">Paid media · Buckinghamshire Business First</div>
-            <h2 id="paid-media-title">Built to reach.<br /><em>Measured to move.</em></h2>
+            <h2 id="paid-media-title">Paid campaigns I<br /><em>planned and ran.</em></h2>
           </div>
-          <p>Across BBF, I planned and optimised paid campaigns for events, membership, skills programmes and service launches—combining creative testing, audience planning and performance reporting.</p>
+          <p>At BBF I ran paid campaigns for events, membership, skills programmes and new services. I wrote and tested the ads, picked the audiences and reported on the registrations each one brought in.</p>
         </div>
 
         <div className="camilla-paid-spotlight">
@@ -445,15 +445,15 @@ function PaidMediaSection() {
         <div className="camilla-paid-cases">
           <div className="camilla-paid-cases-heading">
             <div className="camilla-kicker">More paid-media case studies · Buckinghamshire Business First</div>
-            <h3>Better decisions.<br /><em>Stronger outcomes.</em></h3>
+            <h3>Two more<br /><em>paid campaigns.</em></h3>
           </div>
           <div className="camilla-paid-case-grid">
             <article className="camilla-paid-case">
               <div className="camilla-paid-case-kicker">01 / Programme sign-ups</div>
-              <h4>Fewer updates.<br />More action.</h4>
+              <h4>Posting less to get more sign-ups.</h4>
               <p><strong>The challenge</strong> Programme teams wanted frequent posts on the main channels; in 2022/23 the four accounts published around 2,300 posts. The data showed that volume was dragging performance.</p>
               <p><strong>What changed</strong> I worked with the team to focus on fewer, member-story-led posts, supported by a small targeted paid push.</p>
-              <div className="camilla-paid-case-outcome"><strong>Sign-ups increased</strong><span>Engagement held</span></div>
+              <div className="camilla-paid-case-outcome"><strong>More sign-ups</strong><span>from fewer posts, with engagement holding steady</span></div>
             </article>
 
             <article className="camilla-paid-case">
@@ -497,7 +497,7 @@ function PaidMediaSection() {
           <div className="camilla-method-heading">
             <div>
               <div className="camilla-kicker">How I work · Paid media control system</div>
-              <h3 id="camilla-method-title">109 campaigns.<br /><em>One Monday list.</em></h3>
+              <h3 id="camilla-method-title">How I run<br /><em>a paid portfolio.</em></h3>
             </div>
             <p>I built this workbook to show how I run a paid portfolio day to day. It maps 109 campaigns across Google, Meta and LinkedIn onto BBF and Bucks Skills Hub’s FY 2024/25 programme calendar, from the Net Zero Summit to the Skills Show. The Skills Show TikTok and YouTube campaign has its own sheet.</p>
           </div>
@@ -958,7 +958,7 @@ function App() {
           </div>
           <h1 className="camilla-reveal">Complex ideas.<br /><span>Clear impact.</span></h1>
           <div className="camilla-hero-foot camilla-reveal-delay">
-            <p>Camilla Du Preez makes complex B2B subjects human, useful and worth paying attention to — from first insight to the final measure.</p>
+            <p>I help B2B organisations explain what they do in a way people want to read, then check whether it worked.</p>
             <a href="#work">Explore the case studies <ArrowDown size={14} /></a>
           </div>
         </div>
@@ -1006,7 +1006,7 @@ function App() {
         <div className="camilla-intro-label camilla-kicker">Agency · in-house · consultancy · freelance</div>
         <h2>Good communication starts with a useful question: <em>what does this audience need to know, feel or do?</em></h2>
         <div className="camilla-intro-foot">
-          <p>I’ve spent over ten years in social media and digital communications, mostly in B2B, in-house and agency. I bring listening, audience understanding and clear thinking together with the hands-on craft of making the work happen.</p>
+          <p>I’ve spent over ten years in social media and digital communications, mostly B2B, both in-house and at agencies. I listen to what audiences are saying, then write, design, film and report on the content myself.</p>
           <a className="camilla-text-link" href="#experience">A little about me <ArrowRight size={14} /></a>
         </div>
       </section>
@@ -1015,7 +1015,7 @@ function App() {
         <div className="camilla-shell">
           <div className="camilla-work-heading">
             <div><h2>Selected visuals and impact</h2></div>
-            <p>Each project starts with the audience and the business need. Here’s a closer look at the thinking, coordination and outcomes.</p>
+            <p>Below is what each project set out to do and what I did on it.</p>
           </div>
 
           <div className="camilla-results" aria-labelledby="camilla-results-title">
@@ -1081,7 +1081,7 @@ function App() {
             project="novartis"
             artwork="Novartis UK"
             category="Novartis UK · dentsu · Social strategy"
-            title="Make a complex healthcare story more human."
+            title="Make a healthcare story feel human."
             brief="Set a 2020 UK social strategy built around the patient journey, reputation, and attracting and retaining talent."
             description="The 2020 UK strategy focused on the patient journey, reputation, and attracting and retaining talent. Selected material pairs AMR Action Fund posts with Facebook and LinkedIn audience snapshots and #NovartisLife diversity campaign assets."
             roleDescription="For Novartis UK, I contributed to audience and competitor research, social strategy and content planning for antimicrobial-resistance communications and the #NovartisLife diversity campaign."
@@ -1136,7 +1136,7 @@ function App() {
 
       <section className="camilla-shell camilla-practice">
         <div className="camilla-practice-grid">
-          <div><div className="camilla-kicker">How I make it work</div><h2>Sleeves rolled up</h2><p className="camilla-practice-intro">Research, creative craft and delivery detail in the same room. Practical communications people can use, stories people want to read and outcomes teams can understand.</p></div>
+          <div><div className="camilla-kicker">How I make it work</div><h2>Sleeves rolled up</h2><p className="camilla-practice-intro">I do the research, make the content and see it through to publishing and reporting, so less gets lost between the plan and the post.</p></div>
           <div className="camilla-capabilities">
             {capabilities.map(([title, copy]) => <article className="camilla-capability" key={title}><div><h3>{title}</h3><p>{copy}</p></div><span>↗</span></article>)}
           </div>
@@ -1180,7 +1180,7 @@ function App() {
       <footer className="camilla-contact" id="contact">
         <div className="camilla-shell">
           <div className="camilla-contact-grid">
-            <div><div className="camilla-kicker">Have a complex story to tell?</div><h2>Let’s make<br />it clear.</h2></div>
+            <div><div className="camilla-kicker">Get in touch</div><h2>Let’s talk.</h2></div>
             <div className="camilla-contact-links">
               <a href="mailto:camillaadupreez@gmail.com"><span>camillaadupreez@gmail.com</span><MoveUpRight size={16} /></a>
               <a href="https://www.linkedin.com/in/camilladupreez" target="_blank" rel="noreferrer"><span>LinkedIn · Camilla Du Preez</span><MoveUpRight size={16} /></a>
@@ -1194,7 +1194,7 @@ function App() {
               </div>
             </div>
           </div>
-          <div className="camilla-footer camilla-kicker"><span>Camilla Du Preez · London</span><span>Thoughtful communication. Measurable progress.</span><a href="#top">Back to top ↑</a></div>
+          <div className="camilla-footer camilla-kicker"><span>Camilla Du Preez · London</span><span>Social media and digital communications</span><a href="#top">Back to top ↑</a></div>
         </div>
       </footer>
     </main>
