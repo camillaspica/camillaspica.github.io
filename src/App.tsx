@@ -526,14 +526,13 @@ function PaidMediaSection() {
           <div className="camilla-method-shots">
             {workbookShots.map((shot) => (
               <figure key={shot.title} className={`${shot.wide ? "camilla-method-shot-wide" : ""} ${"narrow" in shot && shot.narrow ? "camilla-method-shot-narrow" : ""}`}>
-                <a href={shot.src} target="_blank" rel="noreferrer" aria-label={`Open full-size screenshot: ${shot.title}`}>
+                <div className="camilla-method-shot-frame">
                   <img src={shot.src} alt={shot.alt} loading="lazy" />
-                </a>
+                </div>
                 <figcaption><strong>{shot.title}</strong>{shot.caption}</figcaption>
               </figure>
             ))}
           </div>
-          <p className="camilla-method-hint">Select any screenshot to open it full size.</p>
         </div>
       </div>
     </section>
@@ -802,13 +801,11 @@ function App() {
         .camilla-method-shots { display:grid; grid-template-columns:minmax(0,1fr) minmax(0,1fr); gap:13px; }
         .camilla-method-shots figure { min-width:0; margin:0; padding:14px; background:var(--cloud); color:var(--navy); }
         .camilla-method-shots .camilla-method-shot-wide { grid-column:1 / -1; }
-        .camilla-method-shots a { display:block; background:#fff; border:1px solid var(--line); }
+        .camilla-method-shot-frame { display:block; background:#fff; border:1px solid var(--line); }
         .camilla-method-shots img { display:block; width:100%; height:auto; }
-        .camilla-method-shots .camilla-method-shot-narrow a, .camilla-method-shots .camilla-method-shot-narrow figcaption { max-width:820px; }
-        .camilla-method-shots a:hover img, .camilla-method-shots a:focus-visible img { opacity:.9; }
+        .camilla-method-shots .camilla-method-shot-narrow .camilla-method-shot-frame, .camilla-method-shots .camilla-method-shot-narrow figcaption { max-width:820px; }
         .camilla-method-shots figcaption { margin-top:11px; color:var(--body); font-size:13px; line-height:1.6; }
         .camilla-method-shots figcaption strong { display:block; margin-bottom:2px; color:var(--blue); font:500 12px/1.5 'DM Mono',monospace; letter-spacing:.07em; text-transform:uppercase; }
-        .camilla-method-hint { margin:14px 0 0; color:#d0d6cd; font:500 12px/1.5 'DM Mono',monospace; letter-spacing:.05em; }
         .camilla-about { background:var(--navy); color:var(--white); padding:91px 0 95px; }
         .camilla-about-top { display:grid; grid-template-columns:.8fr 1.2fr; gap:8%; align-items:end; margin-bottom:48px; }
         .camilla-about-top .camilla-kicker { color:var(--yellow); }
