@@ -424,6 +424,9 @@ function PaidMediaSection() {
               </figure>
               <figure>
                 <img
+                  className="camilla-no-zoom"
+                  draggable={false}
+                  onContextMenu={(event) => event.preventDefault()}
                   src={bucksSkillsHubRegistrationAdImage}
                   alt="Buckinghamshire Skills Hub sponsored Facebook registration ad for the Bucks Skills Show, inviting students, educators and employers to book a place."
                 />
@@ -733,6 +736,7 @@ function App() {
         .camilla-paid-showcase-gallery figure { display:grid; align-content:center; gap:12px; min-width:0; margin:0; }
         .camilla-paid-showcase-gallery video { display:block; width:100%; max-width:100%; max-height:420px; aspect-ratio:9 / 16; object-fit:contain; background:#111; }
         .camilla-paid-showcase-gallery img { display:block; width:100%; max-height:420px; aspect-ratio:1; object-fit:contain; background:var(--cloud); }
+        .camilla-no-zoom { pointer-events:none; user-select:none; -webkit-user-select:none; -webkit-user-drag:none; -webkit-touch-callout:none; }
         .camilla-paid-showcase-gallery figcaption { color:#f2eadb; font:500 12px/1.5 'DM Mono',monospace; letter-spacing:.04em; text-transform:uppercase; }
         .camilla-paid-video-caption { align-self:flex-start; color:#d0d6cd; font:500 12px/1.4 'DM Mono',monospace; letter-spacing:.06em; text-transform:uppercase; }
         .camilla-paid-results { padding:clamp(28px,4vw,54px); }
