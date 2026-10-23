@@ -7,6 +7,12 @@ import bbf15YearVideoImage from "./assets/bbf-15-year-video-post.webp";
 import bbfExpoStoryImage from "./assets/bbf-business-expo-member-story.webp";
 import bbfNameSwitchAdImage from "./assets/bbf-nameswitch-sponsored-video.jpeg";
 import bbfNameSwitchAdLibraryImage from "./assets/bbf-nameswitch-ad-library.webp";
+import workbookReportImage from "./assets/workbook-report.webp";
+import workbookTriageImage from "./assets/workbook-triage.webp";
+import workbookPacingImage from "./assets/workbook-pacing.webp";
+import workbookPriorityImage from "./assets/workbook-priority.webp";
+import workbookWorkflowImage from "./assets/workbook-workflow.webp";
+import workbookNamingImage from "./assets/workbook-naming.webp";
 import bbfNextGenBusinessAdImage from "./assets/bbf-next-gen-business-ad-library.webp";
 import bucksSkillsHubRegistrationAdImage from "./assets/bucks-skills-hub-sponsored-registration.jpeg";
 import bucksSkillsShowVideo from "./assets/bucks-skills-show-tiktok.mp4";
@@ -376,6 +382,15 @@ function CaseStudy({
   );
 }
 
+const workbookShots = [
+  { src: workbookReportImage, title: "Friday stakeholder report", caption: "Budget, spend, pacing and forecast for every programme, with a status and next action for each.", alt: "Weekly paid media portfolio report sheet showing total budget, spend, forecast and a status for each BBF and Bucks Skills Hub programme.", wide: true },
+  { src: workbookTriageImage, title: "Monday triage", caption: "Every live campaign scored and ranked P1 to P4, with the alert, KPI status, tracking and a first diagnosis.", alt: "Weekly triage sheet listing campaigns ranked by priority with alerts, pacing, KPI status and first diagnostic.", wide: true },
+  { src: workbookPacingImage, title: "Pacing control", caption: "Expected spend from budget and days elapsed, so overspend and underspend show up early.", alt: "Pacing control sheet showing budget, spend, expected spend, pacing percentage and forecast for each campaign.", wide: true },
+  { src: workbookPriorityImage, title: "Prioritisation rules", caption: "How the score is built, and how fast each priority level gets a response.", alt: "Prioritisation rules sheet scoring budget exposure, pacing, KPI, tracking, deadline and stakeholder risk.", wide: true },
+  { src: workbookWorkflowImage, title: "Optimisation workflow", caption: "The order I work through when something is flagged, from checking the data to logging the change.", alt: "Optimisation workflow sheet listing steps from checking data to logging changes.", wide: true },
+  { src: workbookNamingImage, title: "Naming convention", caption: "Campaign names that can be filtered and reported on without cleaning.", alt: "Campaign naming convention sheet setting out market, portfolio, tactic, objective, wave and financial year.", wide: true, narrow: true },
+];
+
 function PaidMediaSection() {
   return (
     <section className="camilla-paid-media" id="paid-media" aria-labelledby="paid-media-title">
@@ -508,57 +523,17 @@ function PaidMediaSection() {
             <div><span>Friday</span><strong>Stakeholder update</strong><p>One line per programme: outcome, risk, action, and any decision I need from them.</p></div>
           </div>
 
-          <div className="camilla-method-grid">
-            <div className="camilla-method-card">
-              <div className="camilla-paid-case-kicker">01 / Order of questions</div>
-              <ol>
-                <li><strong>Can I trust the data?</strong> If a tag or CRM sync is broken, I stop interpreting and fix that first.</li>
-                <li><strong>Is spend on plan?</strong> Expected spend is budget × days elapsed ÷ days total. Under 80% or over 115% gets flagged.</li>
-                <li><strong>Is the business KPI healthy?</strong> Cost per qualified lead, registration or ticket, not CTR on its own.</li>
-                <li><strong>Where is the problem?</strong> Search terms, audience, placement, creative or landing page, until one likely cause is left.</li>
-                <li><strong>What’s the smallest change I can undo?</strong> One budget, bid, audience or creative change at a time.</li>
-                <li><strong>Is it logged?</strong> Before and after, the reason, and when I’ll judge it.</li>
-                <li><strong>Did it work?</strong> Keep, revert, try again or call it inconclusive.</li>
-              </ol>
-            </div>
-
-            <div className="camilla-method-card">
-              <div className="camilla-paid-case-kicker">02 / Deciding what comes first</div>
-              <p>Each campaign gets a score for budget at stake, pacing, KPI, tracking, days left and stakeholder risk.</p>
-              <div className="camilla-method-priority">
-                <div><strong>P1</strong><span>14+ · same day</span></div>
-                <div><strong>P2</strong><span>11–13 · within 48 hours</span></div>
-                <div><strong>P3</strong><span>6–10 · weekly cycle</span></div>
-                <div><strong>P4</strong><span>0–5 · leave it alone</span></div>
-              </div>
-              <p>Fixed dates count for more as they get closer. A cheap Meta click isn’t a priority if it never becomes a qualified enquiry, a registration or a ticket.</p>
-              <div className="camilla-paid-case-kicker camilla-method-sub">03 / Naming that reports itself</div>
-              <code>[Market]_[Portfolio]_[Tactic]_[Objective]_[Wave]_[FY]</code>
-              <div className="camilla-method-names">
-                <div><span>Yes</span><code>BKS_GRW_NB_LG_AlwaysOn_FY25</code></div>
-                <div><span>No</span><code>Net Zero Summit Silverstone LinkedIn - final v2</code></div>
-              </div>
-            </div>
+          <div className="camilla-method-shots">
+            {workbookShots.map((shot) => (
+              <figure key={shot.title} className={`${shot.wide ? "camilla-method-shot-wide" : ""} ${"narrow" in shot && shot.narrow ? "camilla-method-shot-narrow" : ""}`}>
+                <a href={shot.src} target="_blank" rel="noreferrer" aria-label={`Open full-size screenshot: ${shot.title}`}>
+                  <img src={shot.src} alt={shot.alt} loading="lazy" />
+                </a>
+                <figcaption><strong>{shot.title}</strong>{shot.caption}</figcaption>
+              </figure>
+            ))}
           </div>
-
-          <div className="camilla-method-triage">
-            <div className="camilla-paid-case-kicker">04 / Three calls from the February 2025 triage</div>
-            <div className="camilla-method-rows">
-              <div>
-                <span>Net Zero Summit · LinkedIn</span>
-                <p><strong>Spend at 62% of plan, cost per registration on target, 11 days to the event.</strong> Raise the daily budget by 20% until the day before, cap frequency, and stop if cost per registration passes target or the event fills.</p>
-              </div>
-              <div>
-                <span>Skills Bootcamps employers · LinkedIn</span>
-                <p><strong>Lead form not syncing to the CRM, so leads were being exported by hand.</strong> No budget changes and no reading of results until the sync is fixed.</p>
-              </div>
-              <div>
-                <span>Skills Bootcamps learners · Meta</span>
-                <p><strong>Spend at 134% of plan and cost per lead rising, with enrolments behind target.</strong> Cut the budget by 15–20% while I find the cause, and shift weight to search, where intent is higher.</p>
-              </div>
-            </div>
-            <small>Workbook sheets: programme calendar, campaign master, pacing control, weekly triage, prioritisation rules, optimisation workflow, change log, stakeholder report and budget actions.</small>
-          </div>
+          <p className="camilla-method-hint">Select any screenshot to open it full size.</p>
         </div>
       </div>
     </section>
@@ -824,30 +799,16 @@ function App() {
         .camilla-method-week span { color:var(--yellow); font:500 12px/1.5 'DM Mono',monospace; letter-spacing:.07em; text-transform:uppercase; }
         .camilla-method-week strong { display:block; margin:6px 0 6px; font:500 22px/1.1 'Lora',serif; letter-spacing:-.04em; }
         .camilla-method-week p { margin:0; color:#d0d6cd; font-size:13px; line-height:1.65; }
-        .camilla-method-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:13px; }
-        .camilla-method-card, .camilla-method-triage { min-width:0; padding:clamp(23px,3vw,35px); background:var(--cloud); color:var(--navy); }
-        .camilla-method-card ol { margin:14px 0 0; padding-left:20px; color:var(--body); font-size:14px; line-height:1.6; }
-        .camilla-method-card li { margin-bottom:9px; padding-left:4px; }
-        .camilla-method-card li strong { color:var(--navy); }
-        .camilla-method-card > p { margin:14px 0 0; color:var(--body); font-size:14px; line-height:1.7; }
-        .camilla-method-priority { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:8px; margin-top:16px; }
-        .camilla-method-priority > div { display:grid; gap:4px; padding-top:10px; border-top:1px solid var(--line); }
-        .camilla-method-priority strong { color:var(--blue); font:600 26px/1 'Lora',serif; }
-        .camilla-method-priority span { color:#596158; font:500 12px/1.45 'DM Mono',monospace; letter-spacing:.02em; }
-        .camilla-method-sub { margin-top:26px; padding-top:18px; border-top:1px solid var(--line); }
-        .camilla-method-card code { display:block; margin-top:10px; color:var(--navy); font:500 12px/1.5 'DM Mono',monospace; overflow-wrap:anywhere; }
-        .camilla-method-names { display:grid; gap:6px; margin-top:8px; }
-        .camilla-method-names > div { display:grid; grid-template-columns:40px 1fr; align-items:baseline; }
-        .camilla-method-names span { color:#596158; font:500 12px 'DM Mono',monospace; text-transform:uppercase; }
-        .camilla-method-names code { margin-top:0; }
-        .camilla-method-names > div:last-child code { color:#8a5a4a; text-decoration:line-through; }
-        .camilla-method-triage { margin-top:13px; }
-        .camilla-method-rows { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:22px; margin-top:16px; }
-        .camilla-method-rows > div { padding-top:12px; border-top:1px solid var(--line); }
-        .camilla-method-rows span { color:var(--blue); font:500 12px/1.5 'DM Mono',monospace; letter-spacing:.05em; text-transform:uppercase; }
-        .camilla-method-rows p { margin:8px 0 0; color:var(--body); font-size:14px; line-height:1.65; }
-        .camilla-method-rows p strong { display:block; margin-bottom:6px; color:var(--navy); }
-        .camilla-method-triage > small { display:block; margin-top:20px; color:#737a71; font-size:13px; line-height:1.5; }
+        .camilla-method-shots { display:grid; grid-template-columns:minmax(0,1fr) minmax(0,1fr); gap:13px; }
+        .camilla-method-shots figure { min-width:0; margin:0; padding:14px; background:var(--cloud); color:var(--navy); }
+        .camilla-method-shots .camilla-method-shot-wide { grid-column:1 / -1; }
+        .camilla-method-shots a { display:block; background:#fff; border:1px solid var(--line); }
+        .camilla-method-shots img { display:block; width:100%; height:auto; }
+        .camilla-method-shots .camilla-method-shot-narrow a, .camilla-method-shots .camilla-method-shot-narrow figcaption { max-width:820px; }
+        .camilla-method-shots a:hover img, .camilla-method-shots a:focus-visible img { opacity:.9; }
+        .camilla-method-shots figcaption { margin-top:11px; color:var(--body); font-size:13px; line-height:1.6; }
+        .camilla-method-shots figcaption strong { display:block; margin-bottom:2px; color:var(--blue); font:500 12px/1.5 'DM Mono',monospace; letter-spacing:.07em; text-transform:uppercase; }
+        .camilla-method-hint { margin:14px 0 0; color:#d0d6cd; font:500 12px/1.5 'DM Mono',monospace; letter-spacing:.05em; }
         .camilla-about { background:var(--navy); color:var(--white); padding:91px 0 95px; }
         .camilla-about-top { display:grid; grid-template-columns:.8fr 1.2fr; gap:8%; align-items:end; margin-bottom:48px; }
         .camilla-about-top .camilla-kicker { color:var(--yellow); }
@@ -926,9 +887,8 @@ function App() {
           .camilla-paid-media { padding:72px 0; }
           .camilla-paid-heading, .camilla-paid-spotlight, .camilla-paid-case-wide, .camilla-paid-ad-feature { grid-template-columns:1fr; }
           .camilla-paid-ad-gallery { grid-template-columns:1fr; }
-          .camilla-method-heading, .camilla-method-week, .camilla-method-grid, .camilla-method-rows { grid-template-columns:1fr; }
+          .camilla-method-heading, .camilla-method-week, .camilla-method-shots { grid-template-columns:1fr; }
           .camilla-method-heading { gap:16px; }
-          .camilla-method-priority { grid-template-columns:repeat(2,minmax(0,1fr)); gap:12px; }
           .camilla-paid-heading { gap:18px; margin-bottom:30px; }
           .camilla-paid-visual { min-height:390px; }
           .camilla-paid-showcase-gallery video, .camilla-paid-showcase-gallery img { max-height:310px; }
