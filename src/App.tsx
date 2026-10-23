@@ -1083,9 +1083,6 @@ function App() {
             brief="Keep online conversation healthy and on-brand, and make sure sensitive comments reach the right people quickly."
             description="At dentsu I recruited and managed a multilingual moderation team, built response matrices for sensitive interactions that set out which conversations stay with the social team and which are escalated elsewhere in the organisation, and set up listening workflows in Brandwatch and Talkwalker. At ARIA I developed community management processes ahead of launch. At BBF I handled inbound messages across X, Facebook, Instagram and LinkedIn. I also ran and moderated webinars for freelance clients."
             roleDescription="Hiring and managing moderators, writing response and escalation guidance, and moderating live sessions."
-            metric="2.1k"
-            measure="Inbound messages in one year at BBF"
-            note="Apr 2022 – Mar 2023 · 80% positive or semi-positive · 4% negative or semi-negative"
           />
           <CaseStudy
             project="novartis"
