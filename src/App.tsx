@@ -1,4 +1,4 @@
-import { ArrowDown, ArrowLeft, ArrowRight, ArrowUpRight, Github, MoveUpRight } from "lucide-react";
+import { ArrowDown, ArrowLeft, ArrowRight, ArrowUpRight, MoveUpRight } from "lucide-react";
 import { useState } from "react";
 import portraitImage from "./assets/camilla-portrait.webp";
 import bbfNetworkingImage from "./assets/bbf-networking-member-story.webp";
@@ -1185,13 +1185,6 @@ function App() {
               <a href="mailto:camillaadupreez@gmail.com"><span>camillaadupreez@gmail.com</span><MoveUpRight size={16} /></a>
               <a href="https://www.linkedin.com/in/camilladupreez" target="_blank" rel="noreferrer"><span>LinkedIn · Camilla Du Preez</span><MoveUpRight size={16} /></a>
               <p className="camilla-open-roles">Open to new roles in social media, community and digital communications · London</p>
-              <div className="camilla-contact-project" data-testid="current-project">
-                <div className="camilla-kicker">Currently building</div>
-                <p>I’m working on a social listening agent. More screenshots and project details will be added as the work develops.</p>
-                <a href="https://github.com/camillaspica" target="_blank" rel="noreferrer" aria-label="Visit Camilla Du Preez on GitHub" data-testid="github-profile-link">
-                  <span>GitHub · camillaspica</span><MoveUpRight size={16} />
-                </a>
-              </div>
             </div>
           </div>
           <div className="camilla-footer camilla-kicker"><span>Camilla Du Preez · London</span><span>Social media and digital communications</span><a href="#top">Back to top ↑</a></div>
