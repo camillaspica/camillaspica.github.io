@@ -208,6 +208,23 @@ const capabilities = [
   ["Campaign delivery", "Everything from the first draft to the paid push and the final report."],
 ];
 
+const accountWork = [
+  ["Hartley-Stone · 2015–19", "Account Manager for B2B technology and industrial clients, including Vanderbilt, Siemens UK, Lucideon and Westcoast. I planned campaigns, managed monthly ad budgets and produced the reports and presentations behind long-term client relationships."],
+  ["2112 Communications · HSBC Asset Management", "Ran LinkedIn publishing and paid activation through multi-stage approvals with internal and client stakeholders, and gave the client regular reports and optimisation recommendations."],
+  ["dentsu · J.P. Morgan, Novartis, Unilever", "Worked across three global clients, and with J.P. Morgan Asset Management’s regional marketing teams in 12 EMEA markets."],
+  ["ABBA Voyage", "Presented more than £1 million of paid media recommendations to investors and senior stakeholders."],
+  ["Two Lane Social", "Worked directly with founders of SMEs, start-ups and financial services businesses, reporting results to them and running webinars for their audiences."],
+];
+
+const stakeholderWork = [
+  ["Senior leaders", "Ghostwrote all LinkedIn content for BBF’s Managing Director and some for another senior leader, keeping each voice distinct."],
+  ["Programme teams", "When a team asked me to “promote this”, I asked who it was for and what they needed people to do, then showed them their own post data. That’s how we moved to fewer, member-led posts that brought more sign-ups."],
+  ["Agencies and suppliers", "Coordinated Cerub PR, CUBE Video, Framework Digital and Pragmatiq, and ran the weekly check-ins that kept PR, video, digital and marketing working together on “Part of Something Bigger”."],
+  ["Sales and membership", "Worked with the sales and membership team on account-based marketing aimed at the region’s top 100 businesses."],
+  ["Reporting", "Reported reach, traffic and registrations to senior stakeholders, with a Friday update covering outcome, risk, action and any decision I needed from them."],
+  ["Colleagues", "Wrote an employee social media playbook and ran training so colleagues could post consistently and on-brand."],
+];
+
 function CampaignArtwork({ project, style }: { project: "bigger" | "aria" | "skills" | "jpmam" | "novartis" | "abba"; style: string }) {
   const artworkLabel = project === "bigger"
     ? `${style} member-story campaign posts`
@@ -810,6 +827,16 @@ function App() {
         .camilla-role h3 { font:500 19px 'Lora',serif; letter-spacing:-.035em; margin:0 0 5px; }
         .camilla-role-title { color:var(--yellow); font-size:13px; line-height:1.5; }
         .camilla-role p { color:#d0d6cd; font-size:13px; line-height:1.7; margin:0; max-width:550px; }
+        .camilla-relations { padding:93px 0 0; }
+        .camilla-relations-top { display:grid; grid-template-columns:.8fr 1.2fr; gap:9%; align-items:end; margin-bottom:34px; }
+        .camilla-relations .camilla-kicker { color:var(--blue); }
+        .camilla-relations h2 { font:500 clamp(42px,6vw,71px)/.94 'Lora',serif; letter-spacing:-.07em; margin:14px 0 0; }
+        .camilla-relations-top p { color:var(--body); font-size:14px; line-height:1.75; max-width:470px; margin:0 0 4px; }
+        .camilla-relations-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:0 48px; }
+        .camilla-relations-grid h3 { color:var(--blue); font:500 12px 'DM Mono',monospace; letter-spacing:.1em; text-transform:uppercase; margin:0; padding-bottom:12px; border-bottom:1px solid var(--navy); }
+        .camilla-relation { border-bottom:1px solid var(--line); padding:16px 0; }
+        .camilla-relation h4 { font:600 14px 'Lora',serif; margin:0; color:var(--navy); }
+        .camilla-relation p { color:#626b63; font-size:13px; line-height:1.6; margin:5px 0 0; }
         .camilla-practice { padding:93px 0 0; }
         .camilla-practice-grid { display:grid; grid-template-columns:.8fr 1.2fr; gap:9%; }
         .camilla-practice .camilla-kicker { color:var(--blue); }
@@ -910,6 +937,9 @@ function App() {
           .camilla-about-top { grid-template-columns:1fr; gap:18px; margin-bottom:32px; }
           .camilla-role { grid-template-columns:1fr; gap:7px; }
           .camilla-practice { padding-top:72px; }
+          .camilla-relations { padding-top:72px; }
+          .camilla-relations-top, .camilla-relations-grid { grid-template-columns:1fr; gap:18px; }
+          .camilla-relations-grid > div + div { margin-top:30px; }
           .camilla-practice-grid { grid-template-columns:1fr; gap:27px; }
           .camilla-education-section { padding:57px 0 68px; }
           .camilla-education { grid-template-columns:1fr; gap:18px; }
@@ -1130,6 +1160,23 @@ function App() {
                 <p>{copy}</p>
               </article>
             ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="camilla-shell camilla-relations" aria-labelledby="camilla-relations-title">
+        <div className="camilla-relations-top">
+          <div><div className="camilla-kicker">Account and stakeholder management</div><h2 id="camilla-relations-title">Clients, partners<br />and colleagues</h2></div>
+          <p>I’ve managed client accounts at agencies and worked with senior leaders, programme teams, suppliers and sales colleagues in-house. Most of the job is the same in both: understand what each person needs, agree what success looks like and keep them up to date.</p>
+        </div>
+        <div className="camilla-relations-grid">
+          <div>
+            <h3>Account management</h3>
+            {accountWork.map(([title, copy]) => <article className="camilla-relation" key={title}><h4>{title}</h4><p>{copy}</p></article>)}
+          </div>
+          <div>
+            <h3>Stakeholder management</h3>
+            {stakeholderWork.map(([title, copy]) => <article className="camilla-relation" key={title}><h4>{title}</h4><p>{copy}</p></article>)}
           </div>
         </div>
       </section>
