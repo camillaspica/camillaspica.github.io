@@ -1231,6 +1231,7 @@ function App() {
             <div className="camilla-contact-links">
               <a href="mailto:camillaadupreez@gmail.com"><span>camillaadupreez@gmail.com</span><MoveUpRight size={16} /></a>
               <a href="https://www.linkedin.com/in/camilladupreez" target="_blank" rel="noreferrer"><span>LinkedIn · Camilla Du Preez</span><MoveUpRight size={16} /></a>
+              <a href="https://github.com/camillaspica" target="_blank" rel="noreferrer" data-testid="github-profile-link"><span>GitHub · camillaspica</span><MoveUpRight size={16} /></a>
               <p className="camilla-open-roles">Open to new roles in social media, community and digital communications · London</p>
             </div>
           </div>
